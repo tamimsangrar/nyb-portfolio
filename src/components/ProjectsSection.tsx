@@ -1,6 +1,10 @@
 import React, { useRef, useState, useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ProjectCard } from './ProjectCard';
+import HRXImage from "../images/cards/HRX.png";
+import FortunaImage from "../images/cards/Fortuna.png";
+import SEImage from "../images/cards/se.png";
+import GoogleImage from "../images/cards/google.png";
 
 const projectCards = [
   {
@@ -8,7 +12,7 @@ const projectCards = [
     title: "HRX",
     description: "Brand identity and communication design for fitness apparel",
     bgColor: "bg-[#FFD700]",
-    bgImage: "./src/images/cards/HRX.png",
+    bgImage: HRXImage,  // Use imported image
     path: "/projects/communication-design/hrx"
   },
   {
@@ -16,7 +20,7 @@ const projectCards = [
     title: "Fortuna Insights",
     description: "AI-powered content generation platform",
     bgColor: "bg-[#8A2BE2]",
-    bgImage: "./src/images/cards/Fortuna.png",
+    bgImage: FortunaImage,  // Use imported image
     path: "/projects/uiux-design/promptcraft-ai"
   },
   {
@@ -24,7 +28,7 @@ const projectCards = [
     title: "Sriram Emani",
     description: "Personal portfolio website design",
     bgColor: "bg-[#1E1E1E]",
-    bgImage: "./src/images/cards/se.png",
+    bgImage: SEImage,  // Use imported image
     path: "/projects/uiux-design/sriram-emani"
   },
   {
@@ -32,7 +36,7 @@ const projectCards = [
     title: "Google Assistant",
     description: "Voice interface design system",
     bgColor: "bg-[#4285F4]",
-    bgImage: "./src/images/cards/google.png",
+    bgImage: GoogleImage,  // Use imported image
     path: "/projects/uiux-design/google-assistant"
   }
 ] as const;

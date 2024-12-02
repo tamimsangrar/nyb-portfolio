@@ -78,7 +78,7 @@ function GoogleAssistantPage() {
               <AnimatedSection animation="slide-from-right" delay={200}>
                 <div className="space-y-2">
                   <h2 className="text-2xl text-gray-400">Year</h2>
-                  <p className="text-4xl">2022</p>
+                  <p className="text-4xl">2023</p>
                 </div>
               </AnimatedSection>
 

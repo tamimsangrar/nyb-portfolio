@@ -3,28 +3,35 @@ import { WorkWithMeSection } from '../components/WorkWithMeSection';
 import { AnimatedSection } from '../components/AnimatedSection';
 import { InterestCard } from '../components/InterestCard';
 import { Footer } from '../components/Footer';
+import netflixLogo from "../images/logos/netflix.png";
+import mediumLogo from "../images/logos/medium.png";
+import playstationLogo from "../images/logos/playstation.png";
+// Import card images
+import culinaryImage from "../images/cards/culinary.jpg";
+import mediumPostImage from "../images/cards/medium-post.png";
+import wukongImage from "../images/cards/wukong.jpg";
 
 const interestCards = [
   {
-    icon: <img src="./src/images/logos/netflix.png" alt="Netflix" className="w-8 h-8"/>,
+    icon: <img src={netflixLogo} alt="Netflix" className="w-8 h-8"/>,
     subtitle: "Currently Watching",
     title: "Culinary Class Wars",
-    image: "./src/images/cards/culinary.jpg",
-    link: "https://www.netflix.com/title/81728365" // Replace with actual Netflix link
+    image: culinaryImage,
+    link: "https://www.netflix.com/title/81728365"
   },
   {
-    icon: <img src="./src/images/logos/medium.png" alt="Netflix" className="w-8 h-8"/>,
+    icon: <img src={mediumLogo} alt="Medium" className="w-8 h-8"/>,
     subtitle: "Medium post",
     title: "Tired of waiting for permission?",
-    image: "./src/images/cards/medium-post.png",
-    link: "https://medium.com/@nybkazi/tired-of-waiting-for-permission-heres-why-you-don-t-need-it-c6f42bba8f0b" // Replace with actual Medium article link
+    image: mediumPostImage,
+    link: "https://medium.com/@nybkazi/tired-of-waiting-for-permission-heres-why-you-don-t-need-it-c6f42bba8f0b"
   },
   {
-    icon: <img src="./src/images/logos/playstation.png" alt="Netflix" className="w-8 h-8"/>,
+    icon: <img src={playstationLogo} alt="Playstation" className="w-8 h-8"/>,
     subtitle: "Currently Playing",
     title: "Black Myth Wukong",
-    image: "./src/images/cards/wukong.jpg",
-    link: "https://www.playstation.com/en-us/games/black-myth-wukong/" // Replace with actual game link
+    image: wukongImage,
+    link: "https://www.playstation.com/en-us/games/black-myth-wukong/"
   }
 ];
 
@@ -34,14 +41,14 @@ function AboutPage() {
       <div className="pt-24 px-4 sm:px-6 md:px-8">
         <div className="max-w-[1400px] mx-auto">
           {/* About Me Section */}
-          <section className="mb-32">
+          <section className="mb-32 max-w-3xl mx-auto">
             <AnimatedSection animation="fade-in">
-              <h1 className="text-3xl sm:text-4xl font-bold mb-8 tracking-tight">
+              <h1 className="text-3xl sm:text-4xl font-bold mb-8 tracking-tight text-left">
                 About Me.
               </h1>
             </AnimatedSection>
 
-            <div className="space-y-8 text-base sm:text-lg leading-relaxed font-light text-white/90 max-w-3xl mx-auto">
+            <div className="space-y-8 text-base sm:text-lg leading-relaxed font-light text-white/90">
               <AnimatedSection animation="fade-in" delay={300}>
                 <p className="text-left">
                   A former fashion designer who transitioned into graphic design and now thrives as a UX 
