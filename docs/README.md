@@ -21,3 +21,4 @@ This documentation provides comprehensive guidelines for developing and maintain
 - Maintain documentation
 - Update requirements as needed
 - Keep standards current
+- Always keep it simple
