@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
-import ga_header from '../images/headers/google_assistant.png';
+import ga_header from '../images/headers/google_assistant.svg';
 import ga1 from "../images/GA/1.png";
 import ga2 from "../images/GA/2.png";
 import ga3 from "../images/GA/3.png";
@@ -75,14 +75,14 @@ function GoogleAssistantPage() {
 
             {/* Content Section */}
             <div className="space-y-8">
-              <AnimatedSection animation="slide-from-right" delay={200}>
+              <AnimatedSection animation="fade-in" delay={200}>
                 <div className="space-y-2">
                   <h2 className="text-2xl text-gray-400">Year</h2>
                   <p className="text-4xl">2023</p>
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-from-right" delay={400}>
+              <AnimatedSection animation="fade-in" delay={400}>
                 <div className="space-y-4">
                   <h2 className="text-2xl text-gray-400">Skills</h2>
                   <ul className="space-y-3">
@@ -98,7 +98,7 @@ function GoogleAssistantPage() {
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-from-right" delay={600}>
+              <AnimatedSection animation="fade-in" delay={600}>
                 <div className="pt-4">
                   <p className="text-xl sm:text-2xl leading-relaxed mb-8">
                     This project aimed to design a seamless user experience for a new Google Assistant feature, the Personalized Wellness Coach, which assists users in tracking habits, planning nutrition, and improving sleep. Integrating AI-driven recommendations and voice interactions, the feature is accessible to users of varying wellness knowledge and technology comfort levels.

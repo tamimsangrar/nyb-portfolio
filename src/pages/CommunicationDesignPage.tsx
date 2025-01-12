@@ -4,7 +4,7 @@ import { AnimatedSection } from '../components/AnimatedSection';
 import hrxlogo from '../images/cards/HRX.png';
 import almlogo from '../images/cards/AH.png';
 import gpvplogo from '../images/cards/GV.png';
-// import commdesignlogo from '../images/headers/commdesign.png';
+import commdesignlogo from '../images/headers/Commdesign.svg';
 
 const projects = [
   {
@@ -38,12 +38,13 @@ function CommunicationDesignPage() {
         {/* Logo */}
         <AnimatedSection animation="fade-in" className="w-full text-center">
           <div 
-            className="relative animate-float-slow"
+            className="relative flex justify-center items-center animate-float-slow"
           >
-            {/* Replace with image once available */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
-              Communication Design
-            </h1>
+            <img
+                  src={commdesignlogo}
+                  alt="Communication Design"
+                  className="w-auto h-24 sm:h-24 md:h-32 lg:h-40 object-contain"
+                />
           </div>
         </AnimatedSection>
       </section>
@@ -59,7 +60,7 @@ function CommunicationDesignPage() {
             >
               <Link
                 to={project.path}
-                className="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-black block"
+                className="group relative aspect-square overflow-hidden rounded-2xl bg-black block"
               >
                 {/* Image */}
                 <img

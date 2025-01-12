@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { Mail, Check } from 'lucide-react';
 import { AnimatedSection } from './AnimatedSection';
-import WWM from "../images/headers/WWM.png";
+import WWM from "../images/headers/WWM.svg";
 
 const EMAIL = 'nybkazi@gmail.com' as const;
 
@@ -33,7 +33,7 @@ export function WorkWithMeSection() {
             <img
               src={WWM}
               alt="WORK WITH ME"
-              className="w-auto h-[100px] sm:h-[120px] md:h-[150px] lg:h-[200px] object-contain"
+              className="w-auto h-32 sm:h-36 md:h-44 lg:h-60 object-contain"
             />
           </div>
         </AnimatedSection>
@@ -41,9 +41,8 @@ export function WorkWithMeSection() {
         {/* Description */}
         <AnimatedSection animation="slide-from-bottom" delay={400} className="mb-8 sm:mb-16">
           <p className="text-sm sm:text-lg md:text-xl leading-relaxed opacity-90">
-            I design things that make it easy for your audience 
-            to get to know you, blending storytelling, clever writing, and a clear 
-            reflection of your unique identity.
+          I create designs that help your audience connect with you effortlessly, <br className="hidden sm:block"></br>
+          combining storytelling, sharp writing, and a true reflection of your unique identity.
           </p>
         </AnimatedSection>
 
@@ -56,7 +55,7 @@ export function WorkWithMeSection() {
           >
             <div className="flex items-center gap-3">
               <Mail className="w-5 h-5 sm:w-12 sm:h-12 group-hover:rotate-12 transition-transform duration-300" />
-              <span className="font-medium">{EMAIL}</span>
+              <span className="font-medium font-['Comic_Neue']">{EMAIL}</span>
             </div>
             {copied ? (
               <Check className="w-5 h-5 sm:w-12 sm:h-12 text-green-500 animate-bounce" />

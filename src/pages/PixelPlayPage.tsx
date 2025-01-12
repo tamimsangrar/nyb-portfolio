@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
 import { ImageModal } from '../components/ImageModal';
-import pixeplaylogo from "../images/headers/pixelplay.png"
+import pixeplaylogo from "../images/headers/pixelplay.svg"
 import pp1 from "../images/Pixelplay/1.jpg";
 import pp2 from "../images/Pixelplay/2.jpg";
 import pp3 from "../images/Pixelplay/3.jpg";
@@ -83,10 +83,10 @@ function PixelPlayPage() {
 
         {/* Description */}
         <AnimatedSection animation="fade-in" delay={300} className="w-full md:w-1/2 max-w-2xl">
-          <p className="text-xl sm:text-2xl md:text-3xl leading-relaxed text-white/90">
-            Exploring Pixelplay is my way of unwinding, a break from creating things for everyone else. 
-            It's a departure from the pursuit of likes or money. Instead, it's about unleashing creativity 
-            without the pressure to be the absolute best.
+          <p className="text-xl sm:text-2xl md:text-2xl leading-relaxed text-white/90">
+          Exploring Pixelplay is my way of unwinding, a break from creating for everyone else. It's a departure from the pursuit of likes or money. 
+          Instead, it's about unleashing creativity without pressure. It's my way of bringing whatever comes to mind into existence. 
+          Illustrations, in particular, allow me to invest my mind and heart, embracing a slower pace to savor the process and create joy.
           </p>
         </AnimatedSection>
       </section>

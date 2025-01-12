@@ -5,7 +5,7 @@ import { WorkHistorySection } from '../components/WorkHistorySection';
 import { WorkWithMeSection } from '../components/WorkWithMeSection';
 import { AnimatedSection } from '../components/AnimatedSection';
 import { Footer } from '../components/Footer';
-import nyblogo from '../images/logos/nyb-logo.png';
+import nyblogo from '../images/logos/nyb-logo.svg';
 
 function HomePage() {
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -87,9 +87,10 @@ function HomePage() {
         {/* Introduction Text */}
         <div ref={introTextRef} className="max-w-3xl text-center px-4 sm:px-6 transition-all duration-300">
           <p className="text-lg sm:text-xl md:text-2xl leading-relaxed fade-in opacity-0" style={{ animationDelay: '1.2s' }}>
-          Hi, I'm Nayab. I design digital products that make a difference, 
-          combining human-centered design with innovation. 
-          After taking some time to refresh and hone my skills, I'm ready to step back into the design world with renewed focus and enthusiasm.
+          Hi, I’m Nayab — a designer who loves turning tricky problems into simple, human-centered solutions. 
+          With fresh ideas and a creative toolkit I’ve built through lots of practice, I’m all about creating 
+          digital experiences that stick with people.
+
           </p>
         </div>
 

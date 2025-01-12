@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
-import gp_logo from '../images/headers/gp.png';
+import gp_logo from '../images/headers/gp.svg';
 import gp1 from "../images/GV/1.png";
 import gp2 from "../images/GV/2.png";
 import gp3 from "../images/GV/3.png";
@@ -138,7 +138,7 @@ function GappeVappePage() {
       <AnimatedSection animation="fade-in" className="w-full py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="flex items-center">
-            <p className="text-3xl sm:text-4xl md:text-5xl leading-relaxed font-light">
+            <p className="text-xl sm:text-2xl md:text-2xl leading-relaxed font-light">
               I've consistently boosted product sales by creating tailored social media posts 
               that align with seasonal marketing strategies. Collaborating closely with 
               content writers, we crafted compelling copy that resonated with our target 
@@ -158,7 +158,7 @@ function GappeVappePage() {
                 key={image.id}
                 animation="fade-in"
                 delay={index * 200}
-                className="relative aspect-[4/3] overflow-hidden rounded-lg"
+                className="relative aspect-square overflow-hidden rounded-lg"
               >
                 <img
                   src={image.image}

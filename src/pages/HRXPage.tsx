@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
-import hrx_logo from '../images/headers/HRX_logo.png';
+import hrx_logo from '../images/headers/HRX_logo.svg';
 import hrx1 from "../images/HRX/1.png";
 import hrx2 from "../images/HRX/2.png";
 import hrx3 from "../images/HRX/3.png";
@@ -160,7 +160,7 @@ function HRXPage() {
       <AnimatedSection animation="fade-in" className="w-full py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="flex items-center">
-            <p className="text-3xl sm:text-4xl md:text-5xl leading-relaxed font-light">
+            <p className="text-xl sm:text-2xl md:text-2xl leading-relaxed font-light">
               I've consistently boosted product sales by creating tailored social media posts 
               that align with seasonal marketing strategies. Collaborating closely with 
               content writers, we crafted compelling copy that resonated with our target 

@@ -7,7 +7,7 @@ import ga_logo from '../images/cards/google.png';
 import cc_logo from '../images/cards/cc.png';
 import sa_logo from '../images/cards/sa.png';
 import pc_logo from '../images/cards/pcai.png';
-// import uiuxlogo from '../images/headers/uiux.png';
+import uiuxlogo from '../images/headers/uxdesign.svg';
 
 const projects = [
   {
@@ -61,13 +61,14 @@ function UIUXDesignPage() {
       <section className="min-h-[40vh] flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 px-4 sm:px-6 md:px-8 pt-24">
         {/* Logo */}
         <AnimatedSection animation="fade-in" className="w-full text-center">
-          <div 
-            className="relative animate-float-slow"
+        <div 
+            className="relative flex justify-center items-center animate-float-slow"
           >
-            {/* Replace with image once available */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
-              UI/UX Design
-            </h1>
+            <img
+                  src={uiuxlogo}
+                  alt="Communication Design"
+                  className="w-auto h-12 sm:h-12 md:h-16 lg:h-24 object-contain"
+                />
           </div>
         </AnimatedSection>
       </section>
@@ -83,7 +84,7 @@ function UIUXDesignPage() {
             >
               <Link
                 to={project.path}
-                className="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-black block"
+                className="group relative aspect-square overflow-hidden rounded-2xl bg-black block"
               >
                 {/* Image */}
                 <img

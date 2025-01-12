@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
 import { ImageModal } from '../components/ImageModal';
-import illuslogo from "../images/headers/illustration.png"
+import illuslogo from "../images/headers/Illustration.svg"
 import illus1 from "../images/Illustration/1.png";
 import illus2 from "../images/Illustration/2.png";
 import illus3 from "../images/Illustration/3.png";
@@ -77,10 +77,11 @@ function IllustrationPage() {
 
         {/* Description */}
         <AnimatedSection animation="fade-in" delay={300} className="w-full md:w-1/2 max-w-2xl">
-          <p className="text-xl sm:text-2xl md:text-3xl leading-relaxed text-white/90">
-            Illustrations, in particular, enable me to immerse myself fully, engaging both my mind and heart. 
-            Embracing a slower pace allows me to appreciate the process and create something truly meaningful. 
-            I dedicate days, weeks, even months to these creations.
+          <p className="text-xl sm:text-2xl md:text-2xl leading-relaxed text-white/90">
+          Illustrations are where I really get to dive in, connecting both my mind and heart with every stroke. 
+          Slowing down lets me enjoy the process and make something that feels truly meaningful and authentic. 
+          I'll spend days, weeks, or months on a single piece, perfecting each detail. 
+          It's a beautiful reminder that taking your time and putting in care can create something you'll deeply love.
           </p>
         </AnimatedSection>
       </section>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
-import fi_header from '../images/headers/fortuna_header.png';
+import fi_header from '../images/headers/fortuna_header.svg';
 import fi1 from "../images/Fortuna/1.png";
 import fi2 from "../images/Fortuna/2.png";
 import fi3 from "../images/Fortuna/3.png";
@@ -34,14 +34,14 @@ function FortunaInsightPage() {
 
             {/* Content Section */}
             <div className="space-y-8">
-              <AnimatedSection animation="slide-from-right" delay={200}>
+              <AnimatedSection animation="fade-in" delay={200}>
                 <div className="space-y-2">
                   <h2 className="text-2xl text-gray-400">Year</h2>
-                  <p className="text-4xl">2022</p>
+                  <p className="text-4xl">2023</p>
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-from-right" delay={400}>
+              <AnimatedSection animation="fade-in" delay={400}>
                 <div className="space-y-4">
                   <h2 className="text-2xl text-gray-400">Skills</h2>
                   <ul className="space-y-3">
@@ -57,7 +57,7 @@ function FortunaInsightPage() {
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-from-right" delay={600}>
+              <AnimatedSection animation="fade-in" delay={600}>
                 <div className="pt-4">
                   <p className="text-xl sm:text-2xl leading-relaxed mb-8">
                     At Aiolos, I helped build the Fortuna-Insights website and develop its brand 
@@ -66,7 +66,7 @@ function FortunaInsightPage() {
                     detailed brand guideline to ensure consistency across all assets.
                   </p>
                   <a 
-                    href="#project-details"
+                    href="https://www.fortuna-insights.com/" target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-black bg-white rounded-full hover:bg-white/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
                   >
                     View Project

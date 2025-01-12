@@ -4,34 +4,34 @@ import { AnimatedSection } from '../components/AnimatedSection';
 import { InterestCard } from '../components/InterestCard';
 import { Footer } from '../components/Footer';
 import netflixLogo from "../images/logos/netflix.png";
-import mediumLogo from "../images/logos/medium.png";
+import subslogo from "../images/logos/substack.png";
 import playstationLogo from "../images/logos/playstation.png";
 // Import card images
-import culinaryImage from "../images/cards/culinary.jpg";
-import mediumPostImage from "../images/cards/medium-post.png";
-import wukongImage from "../images/cards/wukong.jpg";
+import dungeonImage from "../images/cards/dungeon.png";
+import SSPostImage from "../images/cards/cliff.png";
+import DSImage from "../images/cards/demonssouls.jpg";
 
 const interestCards = [
   {
     icon: <img src={netflixLogo} alt="Netflix" className="w-8 h-8"/>,
     subtitle: "Currently Watching",
-    title: "Culinary Class Wars",
-    image: culinaryImage,
-    link: "https://www.netflix.com/title/81728365"
+    title: "Delicious in Dungeon",
+    image: dungeonImage,
+    link: "https://www.netflix.com/title/81564899"
   },
   {
-    icon: <img src={mediumLogo} alt="Medium" className="w-8 h-8"/>,
-    subtitle: "Medium post",
+    icon: <img src={subslogo} alt="Substack" className="w-8 h-8"/>,
+    subtitle: "Substack post",
     title: "Tired of waiting for permission?",
-    image: mediumPostImage,
-    link: "https://medium.com/@nybkazi/tired-of-waiting-for-permission-heres-why-you-don-t-need-it-c6f42bba8f0b"
+    image: SSPostImage,
+    link: "https://substack.com/home/post/p-154424966"
   },
   {
     icon: <img src={playstationLogo} alt="Playstation" className="w-8 h-8"/>,
     subtitle: "Currently Playing",
-    title: "Black Myth Wukong",
-    image: wukongImage,
-    link: "https://www.playstation.com/en-us/games/black-myth-wukong/"
+    title: "Demon's Souls",
+    image: DSImage,
+    link: "https://www.playstation.com/en-us/games/demons-souls/"
   }
 ];
 

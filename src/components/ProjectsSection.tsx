@@ -10,7 +10,7 @@ const projectCards = [
   {
     id: 'hrx',
     title: "HRX",
-    description: "Brand identity and communication design for fitness apparel",
+    description: "Social media design for India's leading fitness brand",
     bgColor: "bg-[#FFD700]",
     bgImage: HRXImage,  // Use imported image
     path: "/projects/communication-design/hrx"
@@ -18,7 +18,7 @@ const projectCards = [
   {
     id: 'fei',
     title: "Fortuna Insights",
-    description: "AI-powered content generation platform",
+    description: "Website design for an AI-powered legal solutions app",
     bgColor: "bg-[#8A2BE2]",
     bgImage: FortunaImage,  // Use imported image
     path: "/projects/uiux-design/promptcraft-ai"
@@ -26,7 +26,7 @@ const projectCards = [
   {
     id: 'se',
     title: "Sriram Emani",
-    description: "Personal portfolio website design",
+    description: "Digital portfolio for a multifaceted performer",
     bgColor: "bg-[#1E1E1E]",
     bgImage: SEImage,  // Use imported image
     path: "/projects/uiux-design/sriram-emani"
@@ -34,7 +34,7 @@ const projectCards = [
   {
     id: 'ga',
     title: "Google Assistant",
-    description: "Voice interface design system",
+    description: "Personalized wellness coach for Google Assistant",
     bgColor: "bg-[#4285F4]",
     bgImage: GoogleImage,  // Use imported image
     path: "/projects/uiux-design/google-assistant"

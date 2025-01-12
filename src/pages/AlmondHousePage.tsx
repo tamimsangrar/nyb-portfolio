@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
-import ah_logo from '../images/headers/ah_logo.png';
+import ah_logo from '../images/headers/ah_logo.svg';
 import ah1 from "../images/AH/1.png";
 import ah2 from "../images/AH/2.png";
 import ah3 from "../images/AH/3.png";
@@ -109,7 +109,7 @@ function AlmondHousePage() {
       <AnimatedSection animation="fade-in" className="w-full py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="flex items-center">
-            <p className="text-3xl sm:text-4xl md:text-5xl leading-relaxed font-light">
+            <p className="text-xl sm:text-2xl md:text-2xl leading-relaxed font-light">
               I've consistently boosted product sales by creating tailored social media posts 
               that align with seasonal marketing strategies. Collaborating closely with 
               content writers, we crafted compelling copy that resonated with our target 

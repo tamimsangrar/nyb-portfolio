@@ -8,19 +8,13 @@ interface WorkExperienceProps {
 }
 
 const workHistory = [
-  {
-    id: 'visa-break',
-    role: "Visa related break",
-    company: "",
-    period: "January 2023 - January 2025",
-    description: "After I got married, I moved to the United States to be with my husband, due to visa restrictions, I could not work. I spent my time learning new skills and exploring the world of AI, as I acclimated to the new country."
-  },
+ 
   {
     id: 'aiolos',
     role: "UX designer",
     company: "Aiolos Cloud",
     period: "October 22 - January 2023",
-    description: "Led the conceptualization and development of visual directions, ensuring alignment with project goals and stakeholder expectations. Created brand guidelines to maintain consistent visual identity across all design elements."
+    description: "Led the conceptualization and development of visual strategies, aligning designs with project objectives and stakeholder expectations. Developed comprehensive brand guidelines to ensure a cohesive and consistent visual identity across all elements. Recognized for expertise in organizing information architecture across multiple projects."
   },
   {
     id: 'howl',
@@ -89,7 +83,7 @@ function WorkExperience({ role, company, period, description }: WorkExperiencePr
         <h3 className="text-xl sm:text-2xl md:text-3xl">{role} {company && `at ${company}`}</h3>
         <span className="text-base sm:text-lg md:text-xl opacity-80">{period}</span>
       </div>
-      <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-80 max-w-4xl mb-8">
+      <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-80 w-full md:w-5/12 mb-8">
         {description}
       </p>
       <div 

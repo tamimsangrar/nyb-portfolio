@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
-import pc_header from '../images/headers/promptc.png';
+import pc_header from '../images/headers/promptc.svg';
 
 const skills = [
   "UX/UI Design",
@@ -92,53 +92,63 @@ const galleryImages = [
 
 function PromptcraftAIPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-24">
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-4 sm:px-6 md:px-8 pt-24">
-        {/* Logo */}
-        <AnimatedSection animation="fade-in" className="w-full md:w-1/2">
-          <div 
-            className="relative animate-float-slow"
-          >
-            <img
-              src={pc_header}
-              alt="PROMPTCRAFT AI"
-              className="w-auto h-[120px] sm:h-[150px] md:h-[200px] lg:h-[300px] object-contain"
-            />
-          </div>
-        </AnimatedSection>
-
-        {/* Description */}
-        <AnimatedSection animation="fade-in" delay={300} className="w-full md:w-1/2 max-w-2xl">
-          <div className="space-y-8">
-            <div className="space-y-2">
-              <h2 className="text-2xl text-gray-400">Year</h2>
-              <p className="text-4xl">2023</p>
+      <section className="px-4 sm:px-6 md:px-8 mb-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+            {/* Logo Section */}
+            <div className="relative">
+              <div 
+                className="relative animate-float-slow"
+              >
+                <img
+                  src={pc_header}
+                  alt="PROMPTCRAFT AI"
+                  className="w-auto h-[120px] sm:h-[150px] md:h-[200px] lg:h-[300px] object-contain"
+                />
+              </div>
             </div>
 
-            <div className="space-y-4">
-              <h2 className="text-2xl text-gray-400">Skills</h2>
-              <ul className="space-y-3">
-                {skills.map((skill, index) => (
-                  <li 
-                    key={index}
-                    className="text-xl sm:text-2xl"
-                  >
-                    {skill}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Content Section */}
+            <div className="space-y-8">
+              <AnimatedSection animation="fade-in" delay={200}>
+                <div className="space-y-2">
+                  <h2 className="text-2xl text-gray-400">Year</h2>
+                  <p className="text-4xl">2023</p>
+                </div>
+              </AnimatedSection>
 
-            <p className="text-xl sm:text-2xl leading-relaxed text-white/90">
-              The AI Writing Assistant Plugin was designed to streamline content creation for 
-              designers, helping them generate engaging copy effortlessly within their design 
-              software. This plugin integrates seamlessly with tools like Figma, Adobe XD, and 
-              Sketch, enabling users to create high-quality content without disrupting their 
-              workflow.
-            </p>
+              <AnimatedSection animation="fade-in" delay={400}>
+                <div className="space-y-4">
+                  <h2 className="text-2xl text-gray-400">Skills</h2>
+                  <ul className="space-y-3">
+                    {skills.map((skill, index) => (
+                      <li 
+                        key={index}
+                        className="text-xl sm:text-2xl"
+                      >
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection animation="fade-in" delay={600}>
+                <div className="pt-4">
+                  <p className="text-xl sm:text-2xl leading-relaxed mb-8">
+                    The AI Writing Assistant Plugin was designed to streamline content creation for 
+                    designers, helping them generate engaging copy effortlessly within their design 
+                    software. This plugin integrates seamlessly with tools like Figma, Adobe XD, and 
+                    Sketch, enabling users to create high-quality content without disrupting their 
+                    workflow.
+                  </p>
+                </div>
+              </AnimatedSection>
+            </div>
           </div>
-        </AnimatedSection>
+        </div>
       </section>
 
       {/* Gallery Section */}

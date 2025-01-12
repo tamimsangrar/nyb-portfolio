@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
-import sa_header from '../images/headers/sa_header.png';
+import sa_header from '../images/headers/sa_header.svg';
 import sa1 from "../images/SA/1.png";
 import sa2 from "../images/SA/2.png";
 
