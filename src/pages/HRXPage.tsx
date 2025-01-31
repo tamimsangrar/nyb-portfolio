@@ -1,15 +1,13 @@
 import React from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
-import hrx_logo from '../images/headers/HRX_logo.svg';
-import hrx1 from "../images/HRX/1.png";
-import hrx2 from "../images/HRX/2.png";
-import hrx3 from "../images/HRX/3.png";
-import hrx4 from "../images/HRX/4.png";
-import hrx5 from "../images/HRX/5.png";
-import hrx6 from "../images/HRX/6.png";
-import hrx7 from "../images/HRX/7.png";
-import hrx8 from "../images/HRX/8.png";
-import hrx9 from "../images/HRX/9.png";
+import header from '../images/headers/HRX_logo.svg';
+import endurancePost from '../images/HRX/1.png';
+import achievementPost from '../images/HRX/2.png';
+import tipsPost from '../images/HRX/3.png';
+import shoePost from '../images/HRX/4.png';
+import marathonPost from '../images/HRX/5.png';
+import trackingPost from '../images/HRX/6.png';
+
 const skills = [
   "Virtual Engagement",
   "Social Media Strategy",
@@ -17,90 +15,47 @@ const skills = [
   "Adaptability and Innovation"
 ];
 
-const galleryImages = [
-  {
-    id: 1,
-    title: "Boost Running Endurance",
-    image: hrx1,
-    className: "col-span-2"
-  },
-  {
-    id: 2,
-    title: "Virtual Finish Line",
-    image: hrx2,
-    className: "col-span-2"
-  },
-  {
-    id: 3,
-    title: "Training Tips",
-    image: hrx3,
-    className: "col-span-2"
-  },
-  {
-    id: 4,
-    title: "Running Gear",
-    image: hrx4,
-    className: "col-span-2"
-  },
-  {
-    id: 5,
-    title: "Ambassador Spotlight",
-    image: hrx5,
-    className: "col-span-2"
-  },
-  {
-    id: 6,
-    title: "Track Your Goals",
-    image: hrx6,
-    className: "col-span-2"
-  }
+const galleryItems = [
+  { image: endurancePost },
+  { image: achievementPost },
+  { image: tipsPost },
+  { image: shoePost },
+  { image: marathonPost },
+  { image: trackingPost }
 ];
 
-const finalGalleryImages = [
-  {
-    id: 'final-1',
-    image: hrx7,
-    className: "col-span-2"
-  },
-  {
-    id: 'final-2',
-    image: hrx8,
-    className: "col-span-2"
-    },
-  {
-    id: 'final-3',
-    image: hrx9,
-    className: "col-span-2"
-    
-  }
-];
-
-function HRXPage() {
+function HrxPage() {
   return (
     <div className="min-h-screen pt-24">
-      {/* Hero Section */}
       <section className="px-4 sm:px-6 md:px-8 mb-24">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
-            {/* Logo Section */}
             <div className="relative">
-              <div 
-                className="relative animate-float-slow"
-             >
-               <img
-                 src={hrx_logo}
-                 alt="HRX"
-                 className="w-auto h-[120px] sm:h-[150px] md:h-[200px] lg:h-[300px] object-contain"
-               /> 
-             </div>
+              <div className="relative animate-float-slow">
+                <img
+                  src={header}
+                  alt="HRX"
+                  className="w-auto h-[120px] sm:h-[150px] md:h-[200px] lg:h-[300px] object-contain"
+                />
+              </div>
             </div>
 
-            {/* Content Section */}
             <div className="space-y-8">
-              <AnimatedSection animation="fade-in" delay={200}>
-                <div className="space-y-2">
+            <AnimatedSection animation="fade-in" delay={200}>
+                <div>
                   <h2 className="text-2xl text-gray-400">Year</h2>
-                  <p className="text-4xl">2022</p>
+                  <p className="text-lg text-gray-300 leading-relaxed mt-4">
+                    2021
+                  </p>
+                </div>
+              </AnimatedSection>
+              <AnimatedSection animation="fade-in" delay={200}>
+                <div>
+                  <h2 className="text-2xl text-gray-400">Challenge</h2>
+                  <p className="text-lg text-gray-300 leading-relaxed mt-4">
+                    Transform traditional marathon experience into a virtual format during COVID-19 lockdown 
+                    while maintaining engagement and community aspects.
+                  </p>
                 </div>
               </AnimatedSection>
 
@@ -109,23 +64,18 @@ function HRXPage() {
                   <h2 className="text-2xl text-gray-400">Skills</h2>
                   <ul className="space-y-3">
                     {skills.map((skill, index) => (
-                      <li 
-                        key={index}
-                        className="text-xl sm:text-2xl"
-                      >
-                        {skill}
-                      </li>
+                      <li key={index} className="text-xl sm:text-2xl">{skill}</li>
                     ))}
                   </ul>
                 </div>
               </AnimatedSection>
 
               <AnimatedSection animation="fade-in" delay={600}>
-                <div className="pt-4">
-                  <p className="text-xl sm:text-2xl leading-relaxed mb-8">
-                    I've had the privilege of collaborating with India's top fitness and lifestyle brands. A 
-                    highlight was leading the creation of the first virtual marathon during the COVID-19 
-                    pandemic, which attracted over 1,500 participants for a unique and inspiring fitness experience.
+                <div>
+                  <h2 className="text-2xl text-gray-400">Outcome</h2>
+                  <p className="text-lg text-gray-300 leading-relaxed mt-4">
+                    Successfully launched India's first virtual marathon with 1,500+ participants 
+                    and 80% completion rate.
                   </p>
                 </div>
               </AnimatedSection>
@@ -134,66 +84,139 @@ function HRXPage() {
         </div>
       </section>
 
-      {/* Main Gallery Section */}
-      <AnimatedSection animation="fade-in" className="px-4 sm:px-6 md:px-8 pt-8 sm:pt-16 md:pt-24" id="project-details">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-            {galleryImages.map((image, index) => (
-              <AnimatedSection 
-                key={image.id}
-                animation="fade-in"
-                delay={index * 200}
-                className={`relative aspect-square overflow-hidden rounded-lg ${image.className}`}
+      {/* Gallery Section */}
+      <section className="py-20">
+        <div className="overflow-hidden">
+          <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory no-scrollbar">
+            {galleryItems.map((item, index) => (
+              <div 
+                key={index} 
+                className={`flex-shrink-0 w-[500px] h-[500px] ${index === 0 ? 'first:pl-8' : ''} ${
+                  index === galleryItems.length - 1 ? 'last:pr-8' : ''
+                }`}
               >
-                <img
-                  src={image.image}
-                  alt={image.title}
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-                />
-              </AnimatedSection>
+                <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-full h-full overflow-hidden">
+                  <div className="relative h-full w-full">
+                    <img 
+                      src={item.image} 
+                      alt="HRX Project" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
-      </AnimatedSection>
+      </section>
 
-      {/* Text Break Section */}
-      <AnimatedSection animation="fade-in" className="w-full py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-          <div className="flex items-center">
-            <p className="text-xl sm:text-2xl md:text-2xl leading-relaxed font-light">
-              I've consistently boosted product sales by creating tailored social media posts 
-              that align with seasonal marketing strategies. Collaborating closely with 
-              content writers, we crafted compelling copy that resonated with our target 
-              audience, ensuring our products left a lasting impression and drove sales 
-              growth year-round.
-            </p>
+{/* Design Process Section */}
+<section className="px-4 sm:px-6 md:px-8 py-24">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-16">Design Process</h2>
+
+          <div className="space-y-20">
+            {/* Research & Discovery */}
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold">1. Research & Discovery</h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                When COVID-19 disrupted traditional marathons, we needed to understand how to 
+                translate the physical experience into a meaningful virtual event. I led a 
+                comprehensive research phase that included:
+              </p>
+
+              <div className="pl-6 border-l border-gray-700 space-y-8">
+                <div>
+                  <h4 className="text-xl font-bold mb-4">User Research</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Conducted in-depth interviews with 20 regular marathon participants to 
+                    understand their motivations, concerns, and what aspects of physical 
+                    marathons they valued most. Key findings revealed that community 
+                    engagement and progress tracking were essential elements.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold mb-4">Competitive Analysis</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Analyzed 5 leading virtual fitness platforms to identify best practices 
+                    and potential gaps. This helped us understand how to differentiate our 
+                    solution while maintaining familiar user patterns.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Design & Iteration */}
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold">2. Design & Iteration</h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Based on our research insights, I developed a design strategy that focused 
+                on three key areas:
+              </p>
+
+              <div className="pl-6 border-l border-gray-700">
+                <h4 className="text-xl font-bold mb-4">User Experience Framework</h4>
+                <p className="text-gray-300 leading-relaxed">
+                  Created detailed user journey maps highlighting key touchpoints from 
+                  registration to completion. This helped identify potential pain points 
+                  and opportunities for engagement. I developed wireframes for critical 
+                  features like progress tracking and virtual achievement displays.
+                </p>
+              </div>
+            </div>
+
+            {/* Implementation & Launch */}
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold">3. Implementation & Launch</h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                The implementation phase focused on bringing the design to life while 
+                maintaining user engagement:
+              </p>
+
+              <div className="pl-6 border-l border-gray-700 space-y-8">
+                <div>
+                  <h4 className="text-xl font-bold mb-4">Integration</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Created detailed documentation and interaction specifications to 
+                    maintain design integrity.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold mb-4">Launch Strategy</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Developed a comprehensive social media campaign that generated 
+                    pre-launch excitement. Created educational content to help users 
+                    transition to the virtual format, resulting in a successful launch 
+                    with over 1,500 participants.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </AnimatedSection>
+      </section>
 
-      {/* Final Gallery Section */}
-      <AnimatedSection animation="fade-in" className="px-4 sm:px-6 md:px-8 py-24">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-            {finalGalleryImages.map((image, index) => (
-              <AnimatedSection 
-                key={image.id}
-                animation="fade-in"
-                delay={index * 200}
-                className={`relative aspect-square overflow-hidden rounded-lg ${image.className}`}
-              >
-                <img
-                  src={image.image}
-                  alt={image.title}
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-                />
-              </AnimatedSection>
-            ))}
+      {/* Stats Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 md:px-8">
+          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
+            <h3 className="text-5xl font-bold text-white/90">1,500+</h3>
+            <p className="text-white/70 mt-2">Active Participants</p>
+          </div>
+          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
+            <h3 className="text-5xl font-bold text-white/90">80%</h3>
+            <p className="text-white/70 mt-2">Completion Rate</p>
+          </div>
+          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
+            <h3 className="text-5xl font-bold text-white/90">4.8/5</h3>
+            <p className="text-white/70 mt-2">User Satisfaction</p>
           </div>
         </div>
-      </AnimatedSection>
+      </section>
     </div>
   );
 }
 
-export default HRXPage;
+export default HrxPage;

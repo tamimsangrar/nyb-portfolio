@@ -12,67 +12,19 @@ const skills = [
   "Documentation and Product Strategy"
 ];
 
-const features = [
-  {
-    title: "Wardrobe Digitization",
-    description: "Users can photograph and catalog their wardrobe items, with an AI outfit generator suggesting combinations."
-  },
-  {
-    title: "Personalized Shopping",
-    description: "Smart recommendations that align with current wardrobe items and user style."
-  },
-  {
-    title: "Community Engagement",
-    description: "Social features enable sharing and feedback within a style-focused community."
-  },
-  {
-    title: "Personalized Tips",
-    description: "AI-driven advice on styling, layering, and accessorizing based on weather and user preferences."
-  }
-];
-
-const userJourney = [
-  {
-    step: "Onboarding",
-    description: "Users sign up, complete a style quiz, and input measurements for personalized recommendations."
-  },
-  {
-    step: "Wardrobe Management",
-    description: "Users digitize their wardrobe for tailored outfit ideas."
-  },
-  {
-    step: "Daily Outfit Planning",
-    description: "AI suggests outfits based on occasions, weather, and style goals."
-  },
-  {
-    step: "Social Engagement",
-    description: "Users can share and receive feedback on outfits within the StyleAI community."
-  },
-  {
-    step: "Advanced Features",
-    description: "Tools like AI chatbot deepen engagement and confidence in styling choices."
-  }
-];
-
-const userInsights = [
-  "65% shop monthly but feel they don't maximize their wardrobe.",
-  "55% struggle with outfit creation.",
-  "Many desire personalized guidance without extensive effort."
+const galleryItems = [
+  { image: sa1 },
+  { image: sa2 }
 ];
 
 function StyleAIPage() {
   return (
     <div className="min-h-screen pt-24">
-      {/* Hero Section */}
       <section className="px-4 sm:px-6 md:px-8 mb-24">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
-            {/* Logo Section */}
             <div className="relative">
-              <div 
-                className="relative animate-float-slow"
-              >
-
+              <div className="relative animate-float-slow">
                 <img
                   src={sa_header}
                   alt="STYLE AI"
@@ -81,44 +33,36 @@ function StyleAIPage() {
               </div>
             </div>
 
-            {/* Content Section */}
             <div className="space-y-8">
-              <AnimatedSection animation="slide-from-right" delay={200}>
-                <div className="space-y-2">
-                  <h2 className="text-2xl text-gray-400">Year</h2>
-                  <p className="text-4xl">2023</p>
+              <AnimatedSection animation="fade-in" delay={200}>
+                <div>
+                  <h2 className="text-2xl text-gray-400">Challenge</h2>
+                  <p className="text-lg text-gray-300 leading-relaxed mt-4">
+                    Create an AI-driven mobile app that simplifies outfit planning and improves shopping 
+                    decisions by providing personalized fashion recommendations based on users' existing 
+                    wardrobe and preferences.
+                  </p>
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-from-right" delay={400}>
+              <AnimatedSection animation="fade-in" delay={400}>
                 <div className="space-y-4">
                   <h2 className="text-2xl text-gray-400">Skills</h2>
                   <ul className="space-y-3">
                     {skills.map((skill, index) => (
-                      <li 
-                        key={index}
-                        className="text-xl sm:text-2xl"
-                      >
-                        {skill}
-                      </li>
+                      <li key={index} className="text-xl sm:text-2xl">{skill}</li>
                     ))}
                   </ul>
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-from-right" delay={600}>
-                <div className="pt-4">
-                  <p className="text-xl sm:text-2xl leading-relaxed mb-8">
-                    The StyleAI mobile app uses AI to provide personalized fashion recommendations 
-                    based on users' existing wardrobe, body type, and style preferences. It aims to 
-                    simplify outfit planning, improve shopping decisions, and reduce wardrobe inefficiency.
+              <AnimatedSection animation="fade-in" delay={600}>
+                <div>
+                  <h2 className="text-2xl text-gray-400">Outcome</h2>
+                  <p className="text-lg text-gray-300 leading-relaxed mt-4">
+                    Developed an intuitive styling assistant that combines AI technology with user-friendly 
+                    features to help users maximize their wardrobes and make informed fashion choices.
                   </p>
-                  <a 
-                    href="#project-details"
-                    className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-black bg-white rounded-full hover:bg-white/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    View Project
-                  </a>
                 </div>
               </AnimatedSection>
             </div>
@@ -126,112 +70,123 @@ function StyleAIPage() {
         </div>
       </section>
 
-      {/* Main Image Section */}
-      <AnimatedSection animation="fade-in" className="px-4 sm:px-6 md:px-8 py-24" id="project-details">
-        <div className="max-w-7xl mx-auto">
-          <div className="aspect-[21/9] w-full overflow-hidden rounded-2xl">
-            <img
-              src={sa1}
-              alt="StyleAI Interface"
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-            />
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* Problem & Solution Section */}
-      <AnimatedSection animation="fade-in" className="px-4 sm:px-6 md:px-8 py-24">
-        <div className="max-w-7xl mx-auto space-y-16">
-          {/* Problem Statement */}
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-gray-300">Problem Statement</h2>
-            <p className="text-xl sm:text-2xl leading-relaxed">
-              People often struggle to style their existing clothes and make smart fashion purchases, 
-              leading to underused wardrobes and impulsive buying. StyleAI addresses these challenges 
-              by offering an intuitive, AI-driven styling assistant that provides outfit ideas and 
-              strategic shopping suggestions.
-            </p>
-          </div>
-
-          {/* Solution */}
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-gray-300">Solution</h2>
-            <p className="text-xl sm:text-2xl leading-relaxed mb-8">
-              The app includes the following key features:
-            </p>
-            <ul className="space-y-6">
-              {features.map((feature, index) => (
-                <li key={index} className="flex gap-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-white">{feature.title}:</h3>
-                    <p className="text-lg text-gray-300">{feature.description}</p>
+      {/* Gallery Section */}
+      <section className="py-20">
+        <div className="overflow-hidden">
+          <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory no-scrollbar">
+            {galleryItems.map((item, index) => (
+              <div 
+                key={index} 
+                className={`flex-shrink-0 w-[500px] h-[500px] ${index === 0 ? 'first:pl-8' : ''} ${
+                  index === galleryItems.length - 1 ? 'last:pr-8' : ''
+                }`}
+              >
+                <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-full h-full overflow-hidden">
+                  <div className="relative h-full w-full">
+                    <img 
+                      src={item.image} 
+                      alt="Style AI Project" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                </li>
-              ))}
-            </ul>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </AnimatedSection>
+      </section>
 
-      {/* Second Image Section */}
-      <AnimatedSection animation="fade-in" className="px-4 sm:px-6 md:px-8 py-24">
-        <div className="max-w-7xl mx-auto">
-          <div className="aspect-auto w-full overflow-hidden rounded-2xl bg-[#1A1A1A]">
-            <img
-              src={sa2}
-              alt="StyleAI App Experience"
-              className="w-full h-full object-contain transition-transform duration-700 hover:scale-105"
-            />
+      {/* Design Process Section */}
+      <section className="px-4 sm:px-6 md:px-8 py-24">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-16">Design Process</h2>
+
+          <div className="space-y-20">
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold">1. Research & Analysis</h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Conducted user research to understand fashion planning and shopping habits.
+              </p>
+
+              <div className="pl-6 border-l border-gray-700 space-y-8">
+                <div>
+                  <h4 className="text-xl font-bold mb-4">User Research</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Identified key pain points: wardrobe inefficiency, outfit planning struggles, 
+                    and desire for personalized guidance.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold mb-4">Market Analysis</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Studied existing fashion apps to identify opportunities for AI integration 
+                    and improved user experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold">2. Feature Development</h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Created core features focused on personalization and ease of use.
+              </p>
+
+              <div className="pl-6 border-l border-gray-700">
+                <h4 className="text-xl font-bold mb-4">Key Features</h4>
+                <p className="text-gray-300 leading-relaxed">
+                  Developed wardrobe digitization, outfit generation, personalized shopping, 
+                  and community engagement features.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold">3. AI Integration</h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Implemented AI technology for personalized recommendations.
+              </p>
+
+              <div className="pl-6 border-l border-gray-700 space-y-8">
+                <div>
+                  <h4 className="text-xl font-bold mb-4">Smart Recommendations</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Created algorithms for outfit suggestions based on style preferences, 
+                    weather, and occasions.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold mb-4">User Experience</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Designed intuitive interfaces for AI features while maintaining 
+                    transparency and user trust.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </AnimatedSection>
+      </section>
 
-      {/* User Journey & Insights Section */}
-      <AnimatedSection animation="fade-in" className="px-4 sm:px-6 md:px-8 py-24">
-        <div className="max-w-7xl mx-auto space-y-16">
-          {/* User Journey */}
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-gray-300">User Journey Highlights</h2>
-            <ul className="space-y-6">
-              {userJourney.map((step, index) => (
-                <li key={index} className="flex gap-4">
-                  <span className="text-xl font-bold text-gray-400">{index + 1}.</span>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">{step.step}</h3>
-                    <p className="text-lg text-gray-300">{step.description}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
+      {/* Stats Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 md:px-8">
+          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
+            <h3 className="text-5xl font-bold text-white/90">65%</h3>
+            <p className="text-white/70 mt-2">Wardrobe Usage</p>
           </div>
-
-          {/* User Insights */}
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-gray-300">User Insights</h2>
-            <p className="text-xl sm:text-2xl leading-relaxed mb-8">
-              After conducting surveys and interviews with users aged 18-45, we found that:
-            </p>
-            <ul className="space-y-4">
-              {userInsights.map((insight, index) => (
-                <li key={index} className="text-lg text-gray-300">
-                  • {insight}
-                </li>
-              ))}
-            </ul>
+          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
+            <h3 className="text-5xl font-bold text-white/90">55%</h3>
+            <p className="text-white/70 mt-2">Styling Confidence</p>
           </div>
-
-          {/* Outcome */}
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-gray-300">Outcome</h2>
-            <p className="text-xl sm:text-2xl leading-relaxed">
-              As a self-initiated project, StyleAI emphasized integrating AI to make personal styling 
-              accessible and engaging. This case study highlights the potential of AI-driven fashion 
-              solutions that combine ease of use with tailored recommendations, encouraging sustainable 
-              wardrobe habits and empowering users with personalized styling advice.
-            </p>
+          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
+            <h3 className="text-5xl font-bold text-white/90">40%</h3>
+            <p className="text-white/70 mt-2">Shopping Efficiency</p>
           </div>
         </div>
-      </AnimatedSection>
+      </section>
     </div>
   );
 }

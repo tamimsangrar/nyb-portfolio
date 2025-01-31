@@ -51,19 +51,24 @@ function AboutPage() {
             <div className="space-y-8 text-base sm:text-lg leading-relaxed font-light text-white/90">
               <AnimatedSection animation="fade-in" delay={300}>
                 <p className="text-left">
-                  A former fashion designer who transitioned into graphic design and now thrives as a UX 
-                  designer, driven by an endless curiosity and a love for learning. Lately, I've been diving into 
-                  personal projects and sharpening my skills after my big move to Seattle. My experience 
-                  covers web and mobile app design, communication design, graphic design, UI/UX, user 
-                  research, information architecture, prototyping, and illustration, all with a strong emphasis 
-                  on identity.
+                A designer who traded fashion runways for user journeys - bringing five years of haute couture thinking 
+                to digital experiences. Armed with Figma, Adobe Suite, Sketch and a human-centered mindset, I transform 
+                complex problems into clean, intuitive experiences that users actually love to use.
                 </p>
               </AnimatedSection>
 
               <AnimatedSection animation="fade-in" delay={600}>
                 <p className="text-left">
-                  When I'm not immersed in design, you'll find me writing blogs on Medium, admiring the 
-                  work of fellow designers, watching cooking shows, playing video games, hiking.
+                My toolkit includes web and mobile app design, UI/UX, user research, information architecture, prototyping, and 
+                illustration - all with a strong emphasis on identity and accessibility. Recently moved to Seattle where the 
+                coffee is as strong as my passion for pixel-perfect designs.
+                </p>
+              </AnimatedSection>
+
+              <AnimatedSection animation="fade-in" delay={600}>
+                <p className="text-left">
+                Outside the design world (but let's be honest, everything is design), you'll find me writing on Substack, 
+                watching anime and cooking shows, playing video games, hiking, or plotting my next creative project.
                 </p>
               </AnimatedSection>
             </div>
