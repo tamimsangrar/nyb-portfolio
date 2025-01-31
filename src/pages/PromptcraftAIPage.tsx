@@ -1,6 +1,10 @@
 import React from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
 import pc_header from '../images/headers/promptc.svg';
+import pc1 from "../images/PC/pc_header1.png";
+import pc2 from "../images/PC/pc_header2.png";
+import pc3 from "../images/PC/pc_header3.png";
+import pc4 from "../images/PC/pc_header4.png";
 
 const skills = [
   "UX/UI Design",
@@ -10,98 +14,21 @@ const skills = [
   "Documentation and Product Strategy"
 ];
 
-const features = [
-  {
-    title: "Contextual Content Generation",
-    description: "AI-driven content suggestions based on the design context."
-  },
-  {
-    title: "Customization Options",
-    description: "Users can adjust tone, style, and content length."
-  },
-  {
-    title: "Version History",
-    description: "Access and edit previous content versions."
-  },
-  {
-    title: "Seamless Integration",
-    description: "Compatible with Figma, Adobe XD, and Sketch."
-  },
-  {
-    title: "Intuitive Interface",
-    description: "Simple and visually appealing UI for easy use."
-  }
-];
-
-const userJourney = [
-  {
-    step: "Discovery and Installation",
-    description: "Users find the plugin online and install it within their design tool."
-  },
-  {
-    step: "Initial Use",
-    description: "They configure settings (tone, style) and test content generation."
-  },
-  {
-    step: "Regular Use",
-    description: "Plugin becomes a part of their workflow, used for generating and customizing content for projects."
-  },
-  {
-    step: "Continuous Improvement",
-    description: "Users benefit from plugin updates and ongoing support."
-  }
-];
-
-const painPoints = [
-  {
-    title: "Time Constraints",
-    description: "Difficulty allocating time for content creation."
-  },
-  {
-    title: "Consistency Issues",
-    description: "Challenges in maintaining a consistent tone across projects."
-  },
-  {
-    title: "Creativity Blocks",
-    description: "Need for inspiration and overcoming writer's block."
-  }
-];
-
-const galleryImages = [
-  {
-    id: 1,
-    url: "https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?auto=format&fit=crop&q=80&w=2000",
-    title: "Content Generation Interface"
-  },
-  {
-    id: 2,
-    url: "https://images.unsplash.com/photo-1618788372246-79faff0c3742?auto=format&fit=crop&q=80&w=2000",
-    title: "Style Customization"
-  },
-  {
-    id: 3,
-    url: "https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&q=80&w=2000",
-    title: "Version History"
-  },
-  {
-    id: 4,
-    url: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=2000",
-    title: "Integration Settings"
-  }
+const galleryItems = [
+  { image: pc1, alt: "Content Generation Interface" },
+  { image: pc2, alt: "Style Customization" },
+  { image: pc3, alt: "Version History" },
+  { image: pc4, alt: "Integration Settings" }
 ];
 
 function PromptcraftAIPage() {
   return (
     <div className="min-h-screen pt-24">
-      {/* Hero Section */}
       <section className="px-4 sm:px-6 md:px-8 mb-24">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
-            {/* Logo Section */}
             <div className="relative">
-              <div 
-                className="relative animate-float-slow"
-              >
+              <div className="relative animate-float-slow">
                 <img
                   src={pc_header}
                   alt="PROMPTCRAFT AI"
@@ -110,12 +37,14 @@ function PromptcraftAIPage() {
               </div>
             </div>
 
-            {/* Content Section */}
             <div className="space-y-8">
               <AnimatedSection animation="fade-in" delay={200}>
-                <div className="space-y-2">
-                  <h2 className="text-2xl text-gray-400">Year</h2>
-                  <p className="text-4xl">2023</p>
+                <div>
+                  <h2 className="text-2xl text-gray-400">Challenge</h2>
+                  <p className="text-lg text-gray-300 leading-relaxed mt-4">
+                    Create an AI writing assistant plugin that seamlessly integrates with design software 
+                    to help designers generate high-quality content without disrupting their workflow.
+                  </p>
                 </div>
               </AnimatedSection>
 
@@ -124,25 +53,18 @@ function PromptcraftAIPage() {
                   <h2 className="text-2xl text-gray-400">Skills</h2>
                   <ul className="space-y-3">
                     {skills.map((skill, index) => (
-                      <li 
-                        key={index}
-                        className="text-xl sm:text-2xl"
-                      >
-                        {skill}
-                      </li>
+                      <li key={index} className="text-xl sm:text-2xl">{skill}</li>
                     ))}
                   </ul>
                 </div>
               </AnimatedSection>
 
               <AnimatedSection animation="fade-in" delay={600}>
-                <div className="pt-4">
-                  <p className="text-xl sm:text-2xl leading-relaxed mb-8">
-                    The AI Writing Assistant Plugin was designed to streamline content creation for 
-                    designers, helping them generate engaging copy effortlessly within their design 
-                    software. This plugin integrates seamlessly with tools like Figma, Adobe XD, and 
-                    Sketch, enabling users to create high-quality content without disrupting their 
-                    workflow.
+                <div>
+                  <h2 className="text-2xl text-gray-400">Outcome</h2>
+                  <p className="text-lg text-gray-300 leading-relaxed mt-4">
+                    Developed a user-friendly plugin that streamlines content creation within design tools, 
+                    featuring AI-powered suggestions and customization options.
                   </p>
                 </div>
               </AnimatedSection>
@@ -152,118 +74,118 @@ function PromptcraftAIPage() {
       </section>
 
       {/* Gallery Section */}
-      <section className="px-4 sm:px-6 md:px-8 py-24 bg-black" id="gallery">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 gap-4">
-            {galleryImages.map((image, index) => (
-              <AnimatedSection 
-                key={image.id} 
-                animation="fade-in" 
-                delay={index * 100}
-                className="relative overflow-hidden rounded-2xl aspect-[16/9]"
+      <section className="py-20">
+        <div className="overflow-hidden">
+          <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory no-scrollbar">
+            {galleryItems.map((item, index) => (
+              <div 
+                key={index} 
+                className={`flex-shrink-0 w-[500px] h-[500px] ${index === 0 ? 'first:pl-8' : ''} ${
+                  index === galleryItems.length - 1 ? 'last:pr-8' : ''
+                }`}
               >
-                <div className="absolute inset-0 bg-black/20 transition-opacity duration-300 opacity-0 hover:opacity-100" />
-                <img
-                  src={image.url}
-                  alt={image.title}
-                  className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-110"
-                  loading="lazy"
-                />
-              </AnimatedSection>
+                <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-full h-full overflow-hidden">
+                  <div className="relative h-full w-full">
+                    <img 
+                      src={item.image} 
+                      alt={item.alt} 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Challenge & Solution Section */}
-      <AnimatedSection animation="fade-in" className="px-4 sm:px-6 md:px-8 py-24">
-        <div className="max-w-7xl mx-auto space-y-16">
-          {/* Challenge */}
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-gray-300">Challenge</h2>
-            <p className="text-xl sm:text-2xl leading-relaxed">
-              Designers often struggle with content creation, which can be time-consuming and impact 
-              productivity. They need a solution to generate contextually relevant content that aligns 
-              with project tone and style, helping them focus more on design.
-            </p>
-          </div>
+      {/* Design Process Section */}
+      <section className="px-4 sm:px-6 md:px-8 py-24">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-16">Design Process</h2>
 
-          {/* Solution */}
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-gray-300">Solution</h2>
-            <p className="text-xl sm:text-2xl leading-relaxed mb-8">
-              The AI Writing Assistant Plugin allows designers to generate tailored content for various 
-              projects, such as product descriptions and social media captions. Key features include:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
-                <AnimatedSection 
-                  key={index}
-                  animation="fade-in"
-                  delay={index * 200}
-                  className="space-y-4"
-                >
-                  <h3 className="text-xl font-bold text-white">{feature.title}</h3>
-                  <p className="text-lg text-gray-300">{feature.description}</p>
-                </AnimatedSection>
-              ))}
+          <div className="space-y-20">
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold">1. Research & Discovery</h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Investigated designer pain points and content creation needs.
+              </p>
+
+              <div className="pl-6 border-l border-gray-700 space-y-8">
+                <div>
+                  <h4 className="text-xl font-bold mb-4">User Research</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Identified key challenges: time constraints, consistency issues, and creativity blocks.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold mb-4">Market Analysis</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Studied existing tools and identified opportunities for AI integration.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold">2. Feature Development</h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Created core plugin functionality and interface.
+              </p>
+
+              <div className="pl-6 border-l border-gray-700">
+                <h4 className="text-xl font-bold mb-4">Key Features</h4>
+                <p className="text-gray-300 leading-relaxed">
+                  Developed contextual content generation, customization options, version history, 
+                  and design tool integration.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold">3. Integration & Testing</h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Implemented plugin across design platforms.
+              </p>
+
+              <div className="pl-6 border-l border-gray-700 space-y-8">
+                <div>
+                  <h4 className="text-xl font-bold mb-4">Software Integration</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Ensured seamless functionality with Figma, Adobe XD, and Sketch.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold mb-4">User Testing</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Conducted extensive testing to refine features and user experience.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-
-          {/* User Research and Insights */}
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-gray-300">User Research and Insights</h2>
-            <p className="text-xl sm:text-2xl leading-relaxed mb-8">
-              Our target audience included designers and content creators who need content for projects 
-              frequently. Through interviews and surveys, we identified common pain points:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {painPoints.map((point, index) => (
-                <AnimatedSection 
-                  key={index}
-                  animation="fade-in"
-                  delay={index * 200}
-                  className="space-y-4"
-                >
-                  <h3 className="text-xl font-bold text-white">{point.title}</h3>
-                  <p className="text-lg text-gray-300">{point.description}</p>
-                </AnimatedSection>
-              ))}
-            </div>
-          </div>
-
-          {/* User Journey */}
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-gray-300">User Journey</h2>
-            <div className="space-y-6">
-              {userJourney.map((step, index) => (
-                <AnimatedSection 
-                  key={index}
-                  animation="fade-in"
-                  delay={index * 200}
-                  className="flex gap-4"
-                >
-                  <span className="text-xl font-bold text-gray-400">{index + 1}.</span>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">{step.step}</h3>
-                    <p className="text-lg text-gray-300">{step.description}</p>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-          </div>
-
-          {/* Outcome */}
-          <AnimatedSection animation="fade-in" delay={800} className="space-y-8">
-            <h2 className="text-4xl font-bold text-gray-300">Outcome</h2>
-            <p className="text-xl sm:text-2xl leading-relaxed">
-              This project enhanced user productivity by allowing designers to quickly generate 
-              on-brand content, leading to faster project completion and improved consistency 
-              across designs.
-            </p>
-          </AnimatedSection>
         </div>
-      </AnimatedSection>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 md:px-8">
+          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
+            <h3 className="text-5xl font-bold text-white/90">40%</h3>
+            <p className="text-white/70 mt-2">Time Saved</p>
+          </div>
+          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
+            <h3 className="text-5xl font-bold text-white/90">3+</h3>
+            <p className="text-white/70 mt-2">Design Tools</p>
+          </div>
+          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
+            <h3 className="text-5xl font-bold text-white/90">90%</h3>
+            <p className="text-white/70 mt-2">User Satisfaction</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

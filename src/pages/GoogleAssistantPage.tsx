@@ -5,6 +5,7 @@ import ga1 from "../images/GA/1.png";
 import ga2 from "../images/GA/2.png";
 import ga3 from "../images/GA/3.png";
 import ga4 from "../images/GA/4.png";
+
 const skills = [
   "Voice UI Design",
   "UX Design",
@@ -13,58 +14,21 @@ const skills = [
   "Usability Testing"
 ];
 
-const mockupImages = [
-  {
-    id: 1,
-    url: ga2,
-    title: "Wellness Coach Introduction"
-  },
-  {
-    id: 2,
-    url: ga3,
-    title: "Progress Tracking"
-  },
-  {
-    id: 3,
-    url: ga4,
-    title: "Daily Summary"
-  }
-];
-
-const features = [
-  "• Track habits like exercise, water intake, and sleep",
-  "• Get customized nutrition plans and meal suggestions",
-  "• Receive personalized exercise recommendations",
-  "• Monitor your progress with easy-to-understand insights"
-];
-
-const challenges = [
-  {
-    title: "Privacy Concerns",
-    description: "• Addressed user privacy and data security related to wellness tracking"
-  },
-  {
-    title: "Feature Complexity",
-    description: "• Balanced robust functionality for all users, from beginners to advanced"
-  },
-  {
-    title: "Trust in AI",
-    description: "• Emphasized transparency in AI-driven suggestions to build user confidence"
-  }
+const galleryItems = [
+  { image: ga1 },
+  { image: ga2 },
+  { image: ga3 },
+  { image: ga4 }
 ];
 
 function GoogleAssistantPage() {
   return (
     <div className="min-h-screen pt-24">
-      {/* Hero Section */}
       <section className="px-4 sm:px-6 md:px-8 mb-24">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
-            {/* Logo Section */}
             <div className="relative">
-              <div 
-                className="relative animate-float-slow"
-              >
+              <div className="relative animate-float-slow">
                 <img
                   src={ga_header}
                   alt="GOOGLE ASSISTANT"
@@ -73,12 +37,15 @@ function GoogleAssistantPage() {
               </div>
             </div>
 
-            {/* Content Section */}
             <div className="space-y-8">
               <AnimatedSection animation="fade-in" delay={200}>
-                <div className="space-y-2">
-                  <h2 className="text-2xl text-gray-400">Year</h2>
-                  <p className="text-4xl">2023</p>
+                <div>
+                  <h2 className="text-2xl text-gray-400">Challenge</h2>
+                  <p className="text-lg text-gray-300 leading-relaxed mt-4">
+                    Create a hands-free, personalized wellness solution that integrates with users' daily 
+                    routines using Google Assistant's voice and AI capabilities, eliminating the need for 
+                    manual tracking.
+                  </p>
                 </div>
               </AnimatedSection>
 
@@ -87,21 +54,18 @@ function GoogleAssistantPage() {
                   <h2 className="text-2xl text-gray-400">Skills</h2>
                   <ul className="space-y-3">
                     {skills.map((skill, index) => (
-                      <li 
-                        key={index}
-                        className="text-xl sm:text-2xl"
-                      >
-                        {skill}
-                      </li>
+                      <li key={index} className="text-xl sm:text-2xl">{skill}</li>
                     ))}
                   </ul>
                 </div>
               </AnimatedSection>
 
               <AnimatedSection animation="fade-in" delay={600}>
-                <div className="pt-4">
-                  <p className="text-xl sm:text-2xl leading-relaxed mb-8">
-                    This project aimed to design a seamless user experience for a new Google Assistant feature, the Personalized Wellness Coach, which assists users in tracking habits, planning nutrition, and improving sleep. Integrating AI-driven recommendations and voice interactions, the feature is accessible to users of varying wellness knowledge and technology comfort levels.
+                <div>
+                  <h2 className="text-2xl text-gray-400">Outcome</h2>
+                  <p className="text-lg text-gray-300 leading-relaxed mt-4">
+                    Designed an intuitive voice-first wellness coach that seamlessly integrates with Google 
+                    Assistant, featuring personalized recommendations and cross-device consistency.
                   </p>
                 </div>
               </AnimatedSection>
@@ -110,120 +74,123 @@ function GoogleAssistantPage() {
         </div>
       </section>
 
-      {/* Main Image Section */}
-      <AnimatedSection animation="fade-in" className="px-4 sm:px-6 md:px-8 py-24">
-        <div className="max-w-7xl mx-auto">
-          <div className="w-full max-w-4xl mx-auto overflow-hidden rounded-2xl bg-white">
-            <img
-              src={ga1}
-              alt="Google Assistant Interface"
-              className="w-full h-full object-contain transition-transform duration-700 hover:scale-105 mx-auto"
-            />
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* Problem Statement & Solution Section */}
-      <AnimatedSection animation="fade-in" className="px-4 sm:px-6 md:px-8 py-24">
-        <div className="max-w-7xl mx-auto space-y-8">
-          {/* Problem Statement */}
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-gray-300">Problem Statement</h2>
-            <p className="text-base sm:text-lg leading-relaxed text-gray-300">
-              Maintaining healthy habits is challenging for busy individuals, and existing wellness apps often require time-consuming manual inputs. The objective was to create a hands-free, personalised wellness solution that fits into users' routines without requiring significant effort, using Google Assistant's voice and AI capabilities.
-            </p>
-          </div>
-
-          {/* Solution */}
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-gray-300">Solution</h2>
-            <p className="text-base sm:text-lg leading-relaxed text-gray-300">
-              The AI-powered Wellness Coach within Google Assistant delivers voice-activated wellness insights and an accessible wellness hub, featuring:</p>
-
-            <ul className="space-y-4 mt-8">
-              <li className="text-base sm:text-lg leading-relaxed flex items-start text-gray-300">
-                <span className="mr-4 text-gray-400">•</span>
-                <span><strong>Voice-First Commands:</strong> Quick actions like tracking water intake or checking sleep quality.</span>
-              </li>
-
-              <li className="text-base sm:text-lg leading-relaxed flex items-start text-gray-300">
-                <span className="mr-4 text-gray-400">•</span>
-                <span><strong>Visual Components:</strong> Progress and nutrition visuals on Google Assistant's interface.</span>
-              </li>
-
-              <li className="text-base sm:text-lg leading-relaxed flex items-start text-gray-300">
-                <span className="mr-4 text-gray-400">•</span>
-                <span><strong>Personalized Suggestions:</strong> Wellness tips triggered by user behavior and routines.</span>
-              </li>
-
-              <li className="text-base sm:text-lg leading-relaxed flex items-start text-gray-300">
-                <span className="mr-4 text-gray-400">•</span>
-                <span><strong>Consistent Experience:</strong> A unified design across devices, from phones to smart displays.</span>
-              </li>
-
-              <li className="text-base sm:text-lg leading-relaxed flex items-start text-gray-300">
-                <span className="mr-4 text-gray-400">•</span>
-                <span><strong>User-Friendly Onboarding:</strong> Simple setup to personalize goals and connect devices.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* Phone Mockups Section */}
-      <AnimatedSection animation="fade-in" className="px-4 sm:px-6 md:px-8 py-24">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            {mockupImages.map((image, index) => (
-              <AnimatedSection 
-                key={image.id}
-                animation="fade-in"
-                delay={index * 200}
-                className="relative aspect-[9/19] overflow-hidden rounded-[24px]"
+      {/* Gallery Section */}
+      <section className="py-20">
+        <div className="overflow-hidden">
+          <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory no-scrollbar">
+            {galleryItems.map((item, index) => (
+              <div 
+                key={index} 
+                className={`flex-shrink-0 w-[500px] h-[500px] ${index === 0 ? 'first:pl-8' : ''} ${
+                  index === galleryItems.length - 1 ? 'last:pr-8' : ''
+                }`}
               >
-                
-                {/* Screen Content */}
-                <div className="absolute inset-0 bg-black/20 transition-opacity duration-300 opacity-0 hover:opacity-100" />
-                <img
-                  src={image.url}
-                  alt={image.title}
-                  className="w-full h-full object-contain transform transition-transform duration-700 hover:scale-110"
-                />
-              </AnimatedSection>
+                <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-full h-full overflow-hidden">
+                  <div className="relative h-full w-full">
+                    <img 
+                      src={item.image} 
+                      alt="Google Assistant Project" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
-      </AnimatedSection>
+      </section>
 
-      {/* Challenges Section */}
-      <AnimatedSection animation="fade-in" className="px-4 sm:px-6 md:px-8 py-24">
-        <div className="max-w-7xl mx-auto space-y-16">
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-gray-300">Challenges</h2>
-            <div className="space-y-6">
-              {challenges.map((challenge, index) => (
-                <div key={index} className="flex gap-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-white">{challenge.title}</h3>
-                    <p className="text-base sm:text-lg leading-relaxed text-gray-300">{challenge.description}</p>
-                  </div>
+      {/* Design Process Section */}
+      <section className="px-4 sm:px-6 md:px-8 py-24">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-16">Design Process</h2>
+
+          <div className="space-y-20">
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold">1. Research & Discovery</h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Analyzed current wellness tracking applications and voice assistant behaviors.
+              </p>
+
+              <div className="pl-6 border-l border-gray-700 space-y-8">
+                <div>
+                  <h4 className="text-xl font-bold mb-4">Market Analysis</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Studied existing wellness apps' limitations and voice assistant capabilities 
+                    to identify opportunities for innovation.
+                  </p>
                 </div>
-              ))}
+
+                <div>
+                  <h4 className="text-xl font-bold mb-4">User Research</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Identified key user needs: hands-free tracking, privacy concerns, and 
+                    preference for simple, actionable insights.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold">2. Solution Development</h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Created comprehensive voice-first wellness experience.
+              </p>
+
+              <div className="pl-6 border-l border-gray-700">
+                <h4 className="text-xl font-bold mb-4">Feature Design</h4>
+                <p className="text-gray-300 leading-relaxed">
+                  Developed voice commands, visual components, and personalized suggestions 
+                  while ensuring consistent experience across devices.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold">3. Implementation & Testing</h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Refined the design through iterative testing and feedback.
+              </p>
+
+              <div className="pl-6 border-l border-gray-700 space-y-8">
+                <div>
+                  <h4 className="text-xl font-bold mb-4">Interface Design</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Created minimalist visual design aligned with Google's Material Design 
+                    principles and clear data visualization patterns.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold mb-4">Privacy Implementation</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Integrated robust privacy measures and transparent AI-driven suggestions 
+                    to build user trust.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Outcome */}
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-gray-300">Outcome</h2>
-            <p className="text-base sm:text-lg leading-relaxed text-gray-300">
-              Though a self-initiated concept, this project highlighted strategies for blending wellness 
-              and AI-driven voice interactions. Key learnings included balancing complexity with simplicity, 
-              prioritizing privacy, and ensuring multi-device consistency, ultimately envisioning a wellness 
-              feature that aligns with Google Assistant's user-friendly design.
-            </p>
+      {/* Stats Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 md:px-8">
+          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
+            <h3 className="text-5xl font-bold text-white/90">Voice UI</h3>
+            <p className="text-white/70 mt-2">First Approach</p>
+          </div>
+          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
+            <h3 className="text-5xl font-bold text-white/90">5+</h3>
+            <p className="text-white/70 mt-2">Key Features</p>
+          </div>
+          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
+            <h3 className="text-5xl font-bold text-white/90">100%</h3>
+            <p className="text-white/70 mt-2">Privacy Focus</p>
           </div>
         </div>
-      </AnimatedSection>
+      </section>
     </div>
   );
 }
