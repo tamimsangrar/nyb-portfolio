@@ -2,6 +2,8 @@ import React from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
 import cc_header from '../images/headers/cc.svg';
 import cc1 from "../images/CC/1.png";
+import cc2 from "../images/CC/2.png";
+import cc3 from "../images/CC/3.png";
 
 const skills = [
   "User Research",
@@ -89,11 +91,11 @@ function CulturalConnectPage() {
       {/* First Horizontal Image */}
       <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
   <div className="max-w-7xl mx-auto">
-    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105">
+    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[70%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
       <img 
         src={cc1} 
-        alt="Google Assistant Overview"
-        className="w-full h-full object-contain"
+        alt="Cultural Connect Overview"
+        className="w-full h-full object-contain rounded-3xl"
       />
     </div>
   </div>
@@ -131,11 +133,11 @@ function CulturalConnectPage() {
       {/* Second Horizontal Image */}
       <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
   <div className="max-w-7xl mx-auto">
-    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105">
+    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[70%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
       <img 
-        src={cc1} 
-        alt="Google Assistant Overview"
-        className="w-full h-full object-contain"
+        src={cc2} 
+        alt="Cultural Connect Overview"
+        className="w-full h-full object-contain rounded-3xl"
       />
     </div>
   </div>
@@ -164,11 +166,11 @@ function CulturalConnectPage() {
       {/* Third Horizontal Image */}
       <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
   <div className="max-w-7xl mx-auto">
-    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105">
+    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[70%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
       <img 
-        src={cc1} 
-        alt="Google Assistant Overview"
-        className="w-full h-full object-contain"
+        src={cc3} 
+        alt="Cultural Connect Overview"
+        className="w-full h-full object-contain rounded-3xl"
       />
     </div>
   </div>

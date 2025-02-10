@@ -68,11 +68,11 @@ function FortunaInsightPage() {
       {/* First Horizontal Image */}
       <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
   <div className="max-w-7xl mx-auto">
-    <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105">
+    <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
       <img 
         src={fi1} 
         alt="Fortuna Insight Strategy"
-        className="w-full h-full object-contain"
+        className="w-full h-full object-contain rounded-3xl"
       />
     </div>
   </div>
@@ -111,11 +111,11 @@ function FortunaInsightPage() {
       {/* Second Horizontal Image */}
       <section className="px-4 sm:px-6 md:px-8 mb-24">
   <div className="max-w-7xl mx-auto">
-    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105">
+    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
       <img 
         src={fi2} 
         alt="Fortuna Insight Information Architecture"
-        className="w-full h-full object-contain"
+        className="w-full h-full object-contain rounded-3xl"
       />
     </div>
   </div>
@@ -144,11 +144,11 @@ function FortunaInsightPage() {
       {/* Third Horizontal Image */}
       <section className="px-4 sm:px-6 md:px-8 mb-24">
   <div className="max-w-7xl mx-auto">
-    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105">
+    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
       <img 
         src={fi3} 
         alt="Fortuna Insight Brand Guidelines"
-        className="w-full h-full object-contain"
+        className="w-full h-full object-contain rounded-3xl"
       />
     </div>
   </div>

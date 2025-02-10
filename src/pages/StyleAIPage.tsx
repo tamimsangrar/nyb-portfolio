@@ -3,6 +3,9 @@ import { AnimatedSection } from '../components/AnimatedSection';
 import sa_header from '../images/headers/sa_header.svg';
 import sa1 from "../images/SA/1.png";
 import sa2 from "../images/SA/2.png";
+import sa3 from "../images/SA/SA_1.png";
+import sa4 from "../images/SA/SA_2.png";
+import sa5 from "../images/SA/SA_3.png";
 
 const skills = [
   "UX/UI Design",
@@ -89,16 +92,12 @@ function StyleAIPage() {
       </section>
 
       {/* First Horizontal Image */}
-      <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
-  <div className="max-w-7xl mx-auto">
-    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105">
-      <img 
-        src={sa1} 
-        alt="Google Assistant Overview"
-        className="w-full h-full object-contain"
-      />
-    </div>
-  </div>
+      <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36"> 
+  <div className="max-w-7xl mx-auto"> 
+    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[80%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden"> 
+      <img src={sa1} alt="StyleAI Overview" className="w-full h-full object-contain rounded-3xl" /> 
+    </div> 
+  </div> 
 </section>
 
       {/* Research & Analysis Section */}
@@ -157,21 +156,21 @@ function StyleAIPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
               <img 
-                src={sa1} 
+                src={sa3} 
                 alt="Style AI Mobile Screen 1"
                 className="w-full h-full object-contain"
               />
             </div>
             <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
               <img 
-                src={sa2} 
+                src={sa4} 
                 alt="Style AI Mobile Screen 2"
                 className="w-full h-full object-contain"
               />
             </div>
             <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
               <img 
-                src={sa1} 
+                src={sa5} 
                 alt="Style AI Mobile Screen 3"
                 className="w-full h-full object-contain"
               />
@@ -211,17 +210,17 @@ function StyleAIPage() {
       </section>
 
       {/* Final Horizontal Image */}
-      <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
+      {/* <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
   <div className="max-w-7xl mx-auto">
-    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105">
+    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[70%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
       <img 
         src={sa2} 
-        alt="Google Assistant Overview"
-        className="w-full h-full object-contain"
+        alt="StyleAI Complete Overview"
+        className="w-full h-full object-contain rounded-3xl"
       />
     </div>
   </div>
-</section>
+</section> */}
 
       {/* Stats Section */}
       {/* <section className="py-24">
