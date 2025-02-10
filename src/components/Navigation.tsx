@@ -1,390 +1,281 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, X } from 'lucide-react';
 
-function Navigation() {
+const Navigation = () => {
   const location = useLocation();
-  const [isProjectsOpen, setIsProjectsOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<'comm' | 'uiux' | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState(null);
+  const [openMobileCategories, setOpenMobileCategories] = useState([]);
+  const navRef = useRef(null);
 
-  const handleMouseLeave = () => {
-    setActiveSubmenu(null);
+  const toggleMobileCategory = (category) => {
+    setOpenMobileCategories(prev => 
+      prev.includes(category) 
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    );
   };
 
-  const isActive = (path: string) => {
-    if (path === '/') {
-      return location.pathname === '/';
+  const isActive = (path) => path === '/' ? location.pathname === '/' : location.pathname.startsWith(path);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsOpen(false);
+        setActiveSubmenu(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
     }
-    return location.pathname.startsWith(path);
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    setIsOpen(false);
+    setActiveSubmenu(null);
+    setOpenMobileCategories([]);
+  }, [location]);
+
+  const menuItems = {
+    main: [
+      { path: '/', label: 'home' },
+      { path: '/about', label: 'about me' }
+    ],
+    projects: [
+      { path: '/projects/uiux-design', label: 'ui/ux design' },
+      { path: '/projects/communication-design', label: 'communication design' },
+      { path: '/projects/pixelplay', label: 'pixelplay' },
+      { path: '/projects/illustration', label: 'illustration' }
+    ],
+    uiuxDesign: {
+      title: 'ui/ux design',
+      path: '/projects/uiux-design',
+      items: [
+        { path: '/projects/uiux-design/sriram-emani', label: 'sriram emani' },
+        { path: '/projects/uiux-design/fortuna-insight', label: 'fortuna insight' },
+        { path: '/projects/uiux-design/google-assistant', label: 'google assistant' },
+        { path: '/projects/uiux-design/cultural-connect', label: 'cultural connect' },
+        { path: '/projects/uiux-design/styleai', label: 'styleAI' },
+        { path: '/projects/uiux-design/promptcraft-ai', label: 'promptcraftAI' }
+      ]
+    },
+    commDesign: {
+      title: 'communication design',
+      path: '/projects/communication-design',
+      items: [
+        { path: '/projects/communication-design/hrx', label: 'hrx' },
+        { path: '/projects/communication-design/almond-house', label: 'almond house' },
+        { path: '/projects/communication-design/gappe-vappe', label: 'gappe vappe' }
+      ]
+    }
   };
+
+  const NavLink = ({ to, children, className = '', onClick }) => (
+    <Link
+      to={to}
+      className={`hover:text-gray-300 transition-colors ${isActive(to) ? 'text-white' : 'text-gray-400'} ${className}`}
+      onClick={onClick}
+    >
+      {children}
+    </Link>
+  );
 
   return (
-    <nav className="fixed w-full p-6 flex justify-between items-center z-50 bg-black/80 backdrop-blur-sm">
-      <Link to="/" className="text-xl font-light">nyb.</Link>
-      <div className="hidden md:flex gap-8">
-        <Link 
-          to="/" 
-          className={`hover:text-gray-300 transition-colors ${isActive('/') ? 'text-white' : 'text-gray-400'}`}
-        >
-          home
-        </Link>
-        <Link 
-          to="/about" 
-          className={`hover:text-gray-300 transition-colors ${isActive('/about') ? 'text-white' : 'text-gray-400'}`}
-        >
-          about me
-        </Link>
-        <div className="relative group">
-          <button 
-            onClick={() => setIsProjectsOpen(!isProjectsOpen)}
-            className={`flex items-center gap-1 hover:text-gray-300 transition-colors ${
-              isActive('/projects') ? 'text-white' : 'text-gray-400'
-            }`}
-          >
-            projects
-            <ChevronDown className={`w-4 h-4 transform transition-transform ${isProjectsOpen ? 'rotate-180' : ''}`} />
-          </button>
-          {/* Projects Dropdown */}
-          <div 
-            className={`absolute top-full right-0 mt-2 py-2 w-48 bg-black/90 backdrop-blur-sm rounded-lg shadow-xl transition-all duration-200 ${isProjectsOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Link 
-              to="/projects/pixelplay"
-              className={`block px-4 py-2 text-sm hover:bg-white/10 transition-colors ${
-                isActive('/projects/pixelplay') ? 'text-white' : 'text-gray-400'
-              }`}
-              onClick={() => setIsProjectsOpen(false)}
+    <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50">
+      {/* Main navigation bar */}
+      <div className="relative flex items-center justify-between p-4 md:px-12 md:pr-32 bg-black/80 backdrop-blur-sm max-w-[1920px] mx-auto z-50">
+        <NavLink to="/" className="text-xl font-light">
+          nyb.
+        </NavLink>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex gap-8">
+          {menuItems.main.map((item) => (
+            <NavLink key={item.path} to={item.path}>
+              {item.label}
+            </NavLink>
+          ))}
+          <div className="relative">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="flex items-center gap-1 hover:text-gray-300 transition-colors"
             >
-              Pixelplay
-            </Link>
-            <Link 
-              to="/projects/illustration"
-              className={`block px-4 py-2 text-sm hover:bg-white/10 transition-colors ${
-                isActive('/projects/illustration') ? 'text-white' : 'text-gray-400'
-              }`}
-              onClick={() => setIsProjectsOpen(false)}
-            >
-              Illustration
-            </Link>
-            {/* Communication Design with sub-items */}
+              <span className={isActive('/projects') ? 'text-white' : 'text-gray-400'}>
+                projects
+              </span>
+              <ChevronDown 
+                className={`w-4 h-4 transform transition-transform ${isOpen ? 'rotate-180' : ''}`}
+              />
+            </button>
+
             <div 
-              className="relative"
-              onMouseEnter={() => setActiveSubmenu('comm')}
+              className={`absolute top-full left-0 mt-1 py-1 w-44 bg-black/90 backdrop-blur-sm rounded-lg shadow-xl transition-all duration-200 ${
+                isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+              }`}
+              onMouseLeave={() => setActiveSubmenu(null)}
             >
-              <div className="w-full px-4 py-2 text-sm hover:bg-white/10 transition-colors flex items-center justify-between">
-                <Link
-                  to="/projects/communication-design"
-                  className={`flex-grow ${
-                    isActive('/projects/communication-design') ? 'text-white' : 'text-gray-400'
-                  }`}
-                  onClick={() => {
-                    setIsProjectsOpen(false);
-                    setActiveSubmenu(null);
-                  }}
+              {menuItems.projects.slice(0, 2).map((category) => (
+                <div
+                  key={category.path}
+                  className="relative group"
+                  onMouseEnter={() => setActiveSubmenu(category.path)}
+                  onMouseLeave={() => setActiveSubmenu(null)}
                 >
-                  Communication Design
-                </Link>
-                <ChevronDown className={`w-3 h-3 transform transition-transform ${activeSubmenu === 'comm' ? 'rotate-180' : ''}`} />
-              </div>
-              {/* Communication Design Sub-menu */}
-              <div 
-                className={`absolute right-full top-0 mt-0 mr-0.5 py-2 w-48 bg-black/90 backdrop-blur-sm rounded-lg shadow-xl transition-all duration-200 ${activeSubmenu === 'comm' ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
-                style={{ zIndex: 60 }}
-              >
-                <Link 
-                  to="/projects/communication-design/hrx"
-                  className={`block px-4 py-2 text-sm hover:bg-white/10 transition-colors ${
-                    isActive('/projects/communication-design/hrx') ? 'text-white' : 'text-gray-400'
-                  }`}
-                  onClick={() => {
-                    setIsProjectsOpen(false);
-                    setActiveSubmenu(null);
-                  }}
+                  <div className="flex items-center justify-between px-3 py-1.5 text-sm hover:bg-white/10">
+                    <NavLink to={category.path}>
+                      {category.label}
+                    </NavLink>
+                    <ChevronDown 
+                      className={`w-4 h-4 transform transition-transform ${activeSubmenu === category.path ? 'rotate-180' : ''}`}
+                    />
+                  </div>
+
+                  <div 
+                    className={`absolute right-full top-0 py-1 w-44 bg-black/90 backdrop-blur-sm rounded-lg shadow-xl mr-1 ${
+                      activeSubmenu === category.path ? 'opacity-100 visible' : 'opacity-0 invisible'
+                    }`}
+                  >
+                    {(category.path === '/projects/uiux-design' ? menuItems.uiuxDesign.items : menuItems.commDesign.items).map((item) => (
+                      <NavLink
+                        key={item.path}
+                        to={item.path}
+                        className="block px-3 py-1.5 text-sm hover:bg-white/10"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </NavLink>
+                    ))}
+                  </div>
+                </div>
+              ))}
+
+              {menuItems.projects.slice(2).map((item) => (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className="block px-3 py-1.5 text-sm hover:bg-white/10"
+                  onClick={() => setIsOpen(false)}
                 >
-                  HRX
-                </Link>
-                <Link 
-                  to="/projects/communication-design/almond-house"
-                  className={`block px-4 py-2 text-sm hover:bg-white/10 transition-colors ${
-                    isActive('/projects/communication-design/almond-house') ? 'text-white' : 'text-gray-400'
-                  }`}
-                  onClick={() => {
-                    setIsProjectsOpen(false);
-                    setActiveSubmenu(null);
-                  }}
-                >
-                  Almond House
-                </Link>
-                <Link 
-                  to="/projects/communication-design/gappe-vappe"
-                  className={`block px-4 py-2 text-sm hover:bg-white/10 transition-colors ${
-                    isActive('/projects/communication-design/gappe-vappe') ? 'text-white' : 'text-gray-400'
-                  }`}
-                  onClick={() => {
-                    setIsProjectsOpen(false);
-                    setActiveSubmenu(null);
-                  }}
-                >
-                  Gappe Vappe
-                </Link>
-              </div>
-            </div>
-            {/* UI/UX Design with sub-items */}
-            <div 
-              className="relative"
-              onMouseEnter={() => setActiveSubmenu('uiux')}
-            >
-              <div className="w-full px-4 py-2 text-sm hover:bg-white/10 transition-colors flex items-center justify-between">
-                <Link
-                  to="/projects/uiux-design"
-                  className={`flex-grow ${
-                    isActive('/projects/uiux-design') ? 'text-white' : 'text-gray-400'
-                  }`}
-                  onClick={() => {
-                    setIsProjectsOpen(false);
-                    setActiveSubmenu(null);
-                  }}
-                >
-                  UI/UX Design
-                </Link>
-                <ChevronDown className={`w-3 h-3 transform transition-transform ${activeSubmenu === 'uiux' ? 'rotate-180' : ''}`} />
-              </div>
-              {/* UI/UX Design Sub-menu */}
-              <div 
-                className={`absolute right-full top-0 mt-0 mr-0.5 py-2 w-48 bg-black/90 backdrop-blur-sm rounded-lg shadow-xl transition-all duration-200 ${activeSubmenu === 'uiux' ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
-                style={{ zIndex: 60 }}
-              >
-                <Link 
-                  to="/projects/uiux-design/sriram-emani"
-                  className={`block px-4 py-2 text-sm hover:bg-white/10 transition-colors ${
-                    isActive('/projects/uiux-design/sriram-emani') ? 'text-white' : 'text-gray-400'
-                  }`}
-                  onClick={() => {
-                    setIsProjectsOpen(false);
-                    setActiveSubmenu(null);
-                  }}
-                >
-                  Sriram Emani
-                </Link>
-                <Link 
-                  to="/projects/uiux-design/fortuna-insight"
-                  className={`block px-4 py-2 text-sm hover:bg-white/10 transition-colors ${
-                    isActive('/projects/uiux-design/fortuna-insight') ? 'text-white' : 'text-gray-400'
-                  }`}
-                  onClick={() => {
-                    setIsProjectsOpen(false);
-                    setActiveSubmenu(null);
-                  }}
-                >
-                  Fortuna Insight
-                </Link>
-                <Link 
-                  to="/projects/uiux-design/google-assistant"
-                  className={`block px-4 py-2 text-sm hover:bg-white/10 transition-colors ${
-                    isActive('/projects/uiux-design/google-assistant') ? 'text-white' : 'text-gray-400'
-                  }`}
-                  onClick={() => {
-                    setIsProjectsOpen(false);
-                    setActiveSubmenu(null);
-                  }}
-                >
-                  Google Assistant
-                </Link>
-                <Link 
-                  to="/projects/uiux-design/cultural-connect"
-                  className={`block px-4 py-2 text-sm hover:bg-white/10 transition-colors ${
-                    isActive('/projects/uiux-design/cultural-connect') ? 'text-white' : 'text-gray-400'
-                  }`}
-                  onClick={() => {
-                    setIsProjectsOpen(false);
-                    setActiveSubmenu(null);
-                  }}
-                >
-                  Cultural Connect
-                </Link>
-                <Link 
-                  to="/projects/uiux-design/styleai"
-                  className={`block px-4 py-2 text-sm hover:bg-white/10 transition-colors ${
-                    isActive('/projects/uiux-design/styleai') ? 'text-white' : 'text-gray-400'
-                  }`}
-                  onClick={() => {
-                    setIsProjectsOpen(false);
-                    setActiveSubmenu(null);
-                  }}
-                >
-                  StyleAI
-                </Link>
-                <Link 
-                  to="/projects/uiux-design/promptcraft-ai"
-                  className={`block px-4 py-2 text-sm hover:bg-white/10 transition-colors ${
-                    isActive('/projects/uiux-design/promptcraft-ai') ? 'text-white' : 'text-gray-400'
-                  }`}
-                  onClick={() => {
-                    setIsProjectsOpen(false);
-                    setActiveSubmenu(null);
-                  }}
-                >
-                  Promptcraft AI
-                </Link>
-              </div>
+                  {item.label}
+                </NavLink>
+              ))}
             </div>
           </div>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden z-50 text-white"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          {isOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <ChevronDown className="w-6 h-6" />
+          )}
+        </button>
       </div>
-      <button 
-        className="md:hidden"
-        onClick={() => setIsProjectsOpen(!isProjectsOpen)}
+
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`md:hidden fixed inset-0 bg-black transition-all duration-300 ${
+          isOpen ? 'opacity-95 visible' : 'opacity-0 invisible'
+        }`}
+        style={{ zIndex: 40 }}
       >
-        <ChevronDown className={`w-6 h-6 transform transition-transform ${isProjectsOpen ? 'rotate-180' : ''}`} />
-      </button>
-      
-      {/* Mobile Menu */}
-      <div className={`md:hidden absolute top-full left-0 right-0 bg-black/90 backdrop-blur-sm transition-all duration-200 ${isProjectsOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-        <div className="p-4 space-y-4">
-          <Link 
-            to="/"
-            className={`block py-2 hover:text-gray-300 transition-colors ${
-              isActive('/') ? 'text-white' : 'text-gray-400'
-            }`}
-            onClick={() => setIsProjectsOpen(false)}
-          >
-            home
-          </Link>
-          <Link 
-            to="/about"
-            className={`block py-2 hover:text-gray-300 transition-colors ${
-              isActive('/about') ? 'text-white' : 'text-gray-400'
-            }`}
-            onClick={() => setIsProjectsOpen(false)}
-          >
-            about me
-          </Link>
-          <Link 
-            to="/projects/pixelplay"
-            className={`block py-2 hover:text-gray-300 transition-colors ${
-              isActive('/projects/pixelplay') ? 'text-white' : 'text-gray-400'
-            }`}
-            onClick={() => setIsProjectsOpen(false)}
-          >
-            pixelplay
-          </Link>
-          <Link 
-            to="/projects/illustration"
-            className={`block py-2 hover:text-gray-300 transition-colors ${
-              isActive('/projects/illustration') ? 'text-white' : 'text-gray-400'
-            }`}
-            onClick={() => setIsProjectsOpen(false)}
-          >
-            illustration
-          </Link>
-          <div className="pl-4 space-y-2">
-            <Link 
-              to="/projects/communication-design"
-              className={`block py-2 hover:text-gray-300 transition-colors font-medium ${
-                isActive('/projects/communication-design') ? 'text-white' : 'text-gray-400'
-              }`}
-              onClick={() => setIsProjectsOpen(false)}
+        <div className="pt-20 px-6 h-full overflow-y-auto">
+          {menuItems.main.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              className="block py-3 text-lg"
+              onClick={() => setIsOpen(false)}
             >
-              communication design
-            </Link>
-            <Link 
-              to="/projects/communication-design/hrx"
-              className={`block py-2 hover:text-gray-300 transition-colors pl-4 text-sm ${
-                isActive('/projects/communication-design/hrx') ? 'text-white' : 'text-gray-400'
-              }`}
-              onClick={() => setIsProjectsOpen(false)}
+              {item.label}
+            </NavLink>
+          ))}
+          
+          {[menuItems.uiuxDesign, menuItems.commDesign].map((category) => (
+            <div key={category.path} className="py-3">
+              <div className="flex items-center justify-between w-full">
+                <NavLink
+                  to={category.path}
+                  className={`text-lg font-medium mb-2 ${isActive(category.path) ? 'text-white' : 'text-gray-400'} hover:text-gray-300 transition-colors`}
+                  onClick={() => {
+                    setIsOpen(false);
+                    setOpenMobileCategories([]);
+                  }}
+                >
+                  {category.title}
+                </NavLink>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleMobileCategory(category.path);
+                  }}
+                  className="hover:text-gray-300 transition-colors"
+                >
+                  <ChevronDown 
+                    className={`w-4 h-4 transform transition-transform ${
+                      openMobileCategories.includes(category.path) ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+              </div>
+              <div 
+                className={`pl-4 space-y-2 transition-all duration-300 ${
+                  openMobileCategories.includes(category.path) 
+                    ? 'max-h-96 opacity-100' 
+                    : 'max-h-0 opacity-0'
+                }`}
+                style={{
+                  pointerEvents: openMobileCategories.includes(category.path) ? 'auto' : 'none'
+                }}
+              >
+                {category.items.map((item) => (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    className="block py-2 text-base"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setOpenMobileCategories([]);
+                    }}
+                  >
+                    {item.label}
+                  </NavLink>
+                ))}
+              </div>
+            </div>
+          ))}
+
+          {menuItems.projects.slice(2).map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              className="block py-3 text-lg"
+              onClick={() => setIsOpen(false)}
             >
-              HRX
-            </Link>
-            <Link 
-              to="/projects/communication-design/almond-house"
-              className={`block py-2 hover:text-gray-300 transition-colors pl-4 text-sm ${
-                isActive('/projects/communication-design/almond-house') ? 'text-white' : 'text-gray-400'
-              }`}
-              onClick={() => setIsProjectsOpen(false)}
-            >
-              Almond House
-            </Link>
-            <Link 
-              to="/projects/communication-design/gappe-vappe"
-              className={`block py-2 hover:text-gray-300 transition-colors pl-4 text-sm ${
-                isActive('/projects/communication-design/gappe-vappe') ? 'text-white' : 'text-gray-400'
-              }`}
-              onClick={() => setIsProjectsOpen(false)}
-            >
-              Gappe Vappe
-            </Link>
-          </div>
-          <div className="pl-4 space-y-2">
-            <Link 
-              to="/projects/uiux-design"
-              className={`block py-2 hover:text-gray-300 transition-colors font-medium ${
-                isActive('/projects/uiux-design') ? 'text-white' : 'text-gray-400'
-              }`}
-              onClick={() => setIsProjectsOpen(false)}
-            >
-              UI/UX design
-            </Link>
-            <Link 
-              to="/projects/uiux-design/sriram-emani"
-              className={`block py-2 hover:text-gray-300 transition-colors pl-4 text-sm ${
-                isActive('/projects/uiux-design/sriram-emani') ? 'text-white' : 'text-gray-400'
-              }`}
-              onClick={() => setIsProjectsOpen(false)}
-            >
-              Sriram Emani
-            </Link>
-            <Link 
-              to="/projects/uiux-design/fortuna-insight"
-              className={`block py-2 hover:text-gray-300 transition-colors pl-4 text-sm ${
-                isActive('/projects/uiux-design/fortuna-insight') ? 'text-white' : 'text-gray-400'
-              }`}
-              onClick={() => setIsProjectsOpen(false)}
-            >
-              Fortuna Insight
-            </Link>
-            <Link 
-              to="/projects/uiux-design/google-assistant"
-              className={`block py-2 hover:text-gray-300 transition-colors pl-4 text-sm ${
-                isActive('/projects/uiux-design/google-assistant') ? 'text-white' : 'text-gray-400'
-              }`}
-              onClick={() => setIsProjectsOpen(false)}
-            >
-              Google Assistant
-            </Link>
-            <Link 
-              to="/projects/uiux-design/cultural-connect"
-              className={`block py-2 hover:text-gray-300 transition-colors pl-4 text-sm ${
-                isActive('/projects/uiux-design/cultural-connect') ? 'text-white' : 'text-gray-400'
-              }`}
-              onClick={() => setIsProjectsOpen(false)}
-            >
-              Cultural Connect
-            </Link>
-            <Link 
-              to="/projects/uiux-design/styleai"
-              className={`block py-2 hover:text-gray-300 transition-colors pl-4 text-sm ${
-                isActive('/projects/uiux-design/styleai') ? 'text-white' : 'text-gray-400'
-              }`}
-              onClick={() => setIsProjectsOpen(false)}
-            >
-              StyleAI
-            </Link>
-            <Link 
-              to="/projects/uiux-design/promptcraft-ai"
-              className={`block py-2 hover:text-gray-300 transition-colors pl-4 text-sm ${
-                isActive('/projects/uiux-design/promptcraft-ai') ? 'text-white' : 'text-gray-400'
-              }`}
-              onClick={() => setIsProjectsOpen(false)}
-            >
-              Promptcraft AI
-            </Link>
-          </div>
+              {item.label}
+            </NavLink>
+          ))}
         </div>
       </div>
     </nav>
   );
-}
+};
 
 export default Navigation;

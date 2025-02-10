@@ -8,9 +8,9 @@ import { Footer } from '../components/Footer';
 import nyblogo from '../images/logos/nyb-logo.svg';
 
 function HomePage() {
-  const projectsRef = useRef<HTMLDivElement>(null);
-  const introTextRef = useRef<HTMLDivElement>(null);
-  const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number }>>([]);
+  const projectsRef = useRef(null);
+  const introTextRef = useRef(null);
+  const [particles, setParticles] = useState([]);
   const nextParticleId = useRef(0);
 
   const scrollToProjects = () => {
@@ -18,18 +18,22 @@ function HomePage() {
   };
 
   useEffect(() => {
-    const addParticle = (x: number, y: number) => {
+    const addParticle = (x, y) => {
       const id = nextParticleId.current++;
-      setParticles(prev => [...prev.slice(-20), { id, x, y }]);
+      // Generate random size between 20 and 40 pixels
+      const size = 15;
+      // Generate random opacity between 0.3 and 0.6
+      const opacity = 0.3;
+      setParticles(prev => [...prev.slice(-25), { id, x, y, size, opacity }]);
       setTimeout(() => {
         setParticles(prev => prev.filter(particle => particle.id !== id));
-      }, 1000);
+      }, 1500); // Increased duration for more visible effect
     };
 
     let lastTime = 0;
-    const throttleMs = 50;
+    const throttleMs = 20; // Slightly reduced throttle for more particles
 
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e) => {
       const now = Date.now();
       if (now - lastTime >= throttleMs) {
         addParticle(e.clientX, e.clientY);
@@ -57,25 +61,28 @@ function HomePage() {
 
   return (
     <>
-      {/* Hero Section */}
       <main className="min-h-screen flex flex-col items-center justify-center relative px-4 overflow-hidden">
-        {/* Mouse Trail Effect */}
+        {/* Enhanced Mouse Trail Effect */}
         {particles.map(particle => (
           <div
             key={particle.id}
-            className="mouse-particle"
+            className="absolute rounded-full bg-white transition-all duration-1000 ease-out"
             style={{
               left: `${particle.x}px`,
-              top: `${particle.y}px`
+              top: `${particle.y}px`,
+              width: `${particle.size}px`,
+              height: `${particle.size}px`,
+              opacity: particle.opacity,
+              transform: 'translate(-50%, -50%)',
+              filter: 'blur(4px)',
+              animation: 'fadeOut 1.5s ease-out forwards'
             }}
           />
         ))}
 
-        {/* NYB Logo */}
+        {/* Rest of your components remain the same */}
         <AnimatedSection animation="fade-in" className="mb-12">
-          <div 
-            className="relative animate-float-slow" 
-          >
+          <div className="relative animate-float-slow">
             <img
               src={nyblogo}
               alt="NYB"
@@ -84,17 +91,14 @@ function HomePage() {
           </div>
         </AnimatedSection>
 
-        {/* Introduction Text */}
         <div ref={introTextRef} className="max-w-3xl text-center px-4 sm:px-6 transition-all duration-300">
           <p className="text-lg sm:text-xl md:text-2xl leading-relaxed fade-in opacity-0" style={{ animationDelay: '1.2s' }}>
-          Hi, I’m Nayab — a designer who loves turning tricky problems into simple, human-centered solutions. 
-          With fresh ideas and a creative toolkit I’ve built through lots of practice, I’m all about creating 
-          digital experiences that stick with people.
-
+            Hi, I'm Nayab — a designer who loves turning tricky problems into simple, human-centered solutions. 
+            With fresh ideas and a creative toolkit I've built through lots of practice, I'm all about creating 
+            digital experiences that stick with people.
           </p>
         </div>
 
-        {/* Scroll Indicator (Mobile Only) */}
         <button 
           onClick={scrollToProjects}
           className="md:hidden absolute bottom-8 animate-bounce-slow p-4 hover:text-white/80 transition-colors focus:outline-none"
@@ -104,15 +108,11 @@ function HomePage() {
         </button>
       </main>
 
-      {/* Projects Section */}
       <div ref={projectsRef}>
         <ProjectsSection />
       </div>
 
-      {/* Work History Section */}
       <WorkHistorySection />
-
-      {/* Work With Me Section */}
       <WorkWithMeSection />
     </>
   );

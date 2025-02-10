@@ -14,16 +14,10 @@ const skills = [
   "Usability Testing"
 ];
 
-const galleryItems = [
-  { image: ga1 },
-  { image: ga2 },
-  { image: ga3 },
-  { image: ga4 }
-];
-
 function GoogleAssistantPage() {
   return (
     <div className="min-h-screen pt-24">
+      {/* Header Section */}
       <section className="px-4 sm:px-6 md:px-8 mb-24">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
@@ -63,10 +57,32 @@ function GoogleAssistantPage() {
               <AnimatedSection animation="fade-in" delay={600}>
                 <div>
                   <h2 className="text-2xl text-gray-400">Outcome</h2>
-                  <p className="text-lg text-gray-300 leading-relaxed mt-4">
+                  <p className="text-lg text-gray-300 leading-relaxed mt-4 mb-8">
                     Designed an intuitive voice-first wellness coach that seamlessly integrates with Google 
                     Assistant, featuring personalized recommendations and cross-device consistency.
                   </p>
+                  <a 
+                    href="https://assistant.google.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-black bg-white rounded-full hover:bg-white/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
+                  >
+                    View Project
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      className="h-6 w-6 ml-2 transform transition-transform group-hover:translate-x-1 animate-bounce" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M13 7l5 5m0 0l-5 5m5-5H6" 
+                      />
+                    </svg>
+                  </a>
                 </div>
               </AnimatedSection>
             </div>
@@ -74,100 +90,124 @@ function GoogleAssistantPage() {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-20">
-        <div className="overflow-hidden">
-          <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory no-scrollbar">
-            {galleryItems.map((item, index) => (
-              <div 
-                key={index} 
-                className={`flex-shrink-0 w-[500px] h-[500px] ${index === 0 ? 'first:pl-8' : ''} ${
-                  index === galleryItems.length - 1 ? 'last:pr-8' : ''
-                }`}
-              >
-                <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-full h-full overflow-hidden">
-                  <div className="relative h-full w-full">
-                    <img 
-                      src={item.image} 
-                      alt="Google Assistant Project" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
+      {/* First Horizontal Image */}
+      <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 overflow-hidden transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl">
+            <div className="relative">
+              <img 
+                src={ga1} 
+                alt="Google Assistant Overview"
+                className="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Design Process Section */}
+      {/* Research & Discovery Section */}
       <section className="px-4 sm:px-6 md:px-8 py-24">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-16">Design Process</h2>
+          <div className="space-y-8">
+            <h3 className="text-2xl font-bold">1. Research & Discovery</h3>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              Analyzed current wellness tracking applications and voice assistant behaviors.
+            </p>
 
-          <div className="space-y-20">
-            <div className="space-y-8">
-              <h3 className="text-2xl font-bold">1. Research & Discovery</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Analyzed current wellness tracking applications and voice assistant behaviors.
-              </p>
-
-              <div className="pl-6 border-l border-gray-700 space-y-8">
-                <div>
-                  <h4 className="text-xl font-bold mb-4">Market Analysis</h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    Studied existing wellness apps' limitations and voice assistant capabilities 
-                    to identify opportunities for innovation.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="text-xl font-bold mb-4">User Research</h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    Identified key user needs: hands-free tracking, privacy concerns, and 
-                    preference for simple, actionable insights.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-8">
-              <h3 className="text-2xl font-bold">2. Solution Development</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Created comprehensive voice-first wellness experience.
-              </p>
-
-              <div className="pl-6 border-l border-gray-700">
-                <h4 className="text-xl font-bold mb-4">Feature Design</h4>
+            <div className="pl-6 border-l border-gray-700 space-y-8">
+              <div>
+                <h4 className="text-xl font-bold mb-4">Market Analysis</h4>
                 <p className="text-gray-300 leading-relaxed">
-                  Developed voice commands, visual components, and personalized suggestions 
-                  while ensuring consistent experience across devices.
+                  Studied existing wellness apps' limitations and voice assistant capabilities 
+                  to identify opportunities for innovation.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-bold mb-4">User Research</h4>
+                <p className="text-gray-300 leading-relaxed">
+                  Identified key user needs: hands-free tracking, privacy concerns, and 
+                  preference for simple, actionable insights.
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="space-y-8">
-              <h3 className="text-2xl font-bold">3. Implementation & Testing</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Refined the design through iterative testing and feedback.
+      {/* Solution Development Section */}
+      <section className="px-4 sm:px-6 md:px-8 py-24">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-8">
+            <h3 className="text-2xl font-bold">2. Solution Development</h3>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              Created comprehensive voice-first wellness experience.
+            </p>
+
+            <div className="pl-6 border-l border-gray-700">
+              <h4 className="text-xl font-bold mb-4">Feature Design</h4>
+              <p className="text-gray-300 leading-relaxed">
+                Developed voice commands, visual components, and personalized suggestions 
+                while ensuring consistent experience across devices.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div className="pl-6 border-l border-gray-700 space-y-8">
-                <div>
-                  <h4 className="text-xl font-bold mb-4">Interface Design</h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    Created minimalist visual design aligned with Google's Material Design 
-                    principles and clear data visualization patterns.
-                  </p>
-                </div>
+      {/* Mobile Screens Section */}
+      <section className="px-4 sm:px-6 md:px-8 py-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
+              <img 
+                src={ga2} 
+                alt="Google Assistant Mobile Screen 1"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
+              <img 
+                src={ga3} 
+                alt="Google Assistant Mobile Screen 2"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
+              <img 
+                src={ga4} 
+                alt="Google Assistant Mobile Screen 3"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-                <div>
-                  <h4 className="text-xl font-bold mb-4">Privacy Implementation</h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    Integrated robust privacy measures and transparent AI-driven suggestions 
-                    to build user trust.
-                  </p>
-                </div>
+      {/* Implementation Section */}
+      <section className="px-4 sm:px-6 md:px-8 py-24">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-8">
+            <h3 className="text-2xl font-bold">3. Implementation & Testing</h3>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              Refined the design through iterative testing and feedback.
+            </p>
+
+            <div className="pl-6 border-l border-gray-700 space-y-8">
+              <div>
+                <h4 className="text-xl font-bold mb-4">Interface Design</h4>
+                <p className="text-gray-300 leading-relaxed">
+                  Created minimalist visual design aligned with Google's Material Design 
+                  principles and clear data visualization patterns.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-bold mb-4">Privacy Implementation</h4>
+                <p className="text-gray-300 leading-relaxed">
+                  Integrated robust privacy measures and transparent AI-driven suggestions 
+                  to build user trust.
+                </p>
               </div>
             </div>
           </div>

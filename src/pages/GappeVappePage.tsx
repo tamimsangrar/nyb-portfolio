@@ -9,7 +9,6 @@ import gp5 from "../images/GV/5.png";
 import gp6 from "../images/GV/6.png";
 
 const skills = [
-  "Curation",
   "Collaboration",
   "Visual Design",
   "Social Media Content Creation",

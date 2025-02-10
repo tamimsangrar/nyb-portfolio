@@ -41,14 +41,6 @@ function HrxPage() {
             </div>
 
             <div className="space-y-8">
-            <AnimatedSection animation="fade-in" delay={200}>
-                <div>
-                  <h2 className="text-2xl text-gray-400">Year</h2>
-                  <p className="text-lg text-gray-300 leading-relaxed mt-4">
-                    2021
-                  </p>
-                </div>
-              </AnimatedSection>
               <AnimatedSection animation="fade-in" delay={200}>
                 <div>
                   <h2 className="text-2xl text-gray-400">Challenge</h2>
@@ -85,7 +77,7 @@ function HrxPage() {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-20">
+      <section className="py-20 mt-24">
         <div className="overflow-hidden">
           <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory no-scrollbar">
             {galleryItems.map((item, index) => (
@@ -110,8 +102,8 @@ function HrxPage() {
         </div>
       </section>
 
-{/* Design Process Section */}
-<section className="px-4 sm:px-6 md:px-8 py-24">
+      {/* Design Process Section */}
+      <section className="px-4 sm:px-6 md:px-8 py-24">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-16">Design Process</h2>
 

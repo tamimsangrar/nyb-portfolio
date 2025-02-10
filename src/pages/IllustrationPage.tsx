@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
 import illuslogo from "../images/headers/Illustration.svg";
 import illus1 from "../images/Illustration/1.png";
@@ -9,7 +9,7 @@ import illus5 from "../images/Illustration/5.png";
 
 const FlipCard = ({ illustration }) => {
   return (
-    <div className="group min-w-[280px] sm:min-w-[340px] md:min-w-[500px] h-[400px] md:h-[600px] perspective">
+    <div className="group min-w-[280px] sm:min-w-[340px] md:min-w-[500px] h-[400px] md:h-[600px] perspective transition-transform duration-300 hover:scale-[1.02]">
       <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
         {/* Front */}
         <div className="absolute inset-0 backface-hidden">
@@ -120,6 +120,16 @@ const illustrations = [
 ];
 
 function IllustrationPage() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const containerRef = useRef(null);
+
+  const scroll = (scrollOffset) => {
+    if (containerRef.current) {
+      containerRef.current.scrollLeft += scrollOffset;
+      setScrollPosition(containerRef.current.scrollLeft);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-black">
       <section className="min-h-[60vh] md:min-h-[80vh] flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 px-4 sm:px-6 md:px-8 pt-16 md:pt-24">
@@ -144,8 +154,13 @@ function IllustrationPage() {
       </section>
 
       <section className="px-4 sm:px-6 md:px-8 py-16 md:py-24">
-        <div className="max-w-[95vw] mx-auto">
-          <div className="flex overflow-x-auto gap-4 md:gap-8 pb-8 snap-x snap-mandatory hide-scrollbar">
+        <div className="relative max-w-[95vw] mx-auto">
+
+          {/* Carousel */}
+          <div 
+            ref={containerRef}
+            className="flex overflow-x-auto gap-4 md:gap-8 pb-8 snap-x snap-mandatory hide-scrollbar"
+          >
             {illustrations.map((illustration, index) => (
               <AnimatedSection 
                 key={illustration.id} 

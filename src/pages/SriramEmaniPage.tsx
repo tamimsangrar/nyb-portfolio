@@ -12,15 +12,10 @@ const skills = [
   "Brand Identity"
 ];
 
-const galleryItems = [
-  { image: se1 },
-  { image: se2 },
-  { image: se3 }
-];
-
 function SriramEmaniPage() {
   return (
     <div className="min-h-screen pt-24">
+      {/* Header Section - Kept the same */}
       <section className="px-4 sm:px-6 md:px-8 mb-24">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
@@ -93,33 +88,22 @@ function SriramEmaniPage() {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-20">
-        <div className="overflow-hidden">
-          <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory no-scrollbar">
-            {galleryItems.map((item, index) => (
-              <div 
-                key={index} 
-                className={`flex-shrink-0 w-[500px] h-[500px] ${index === 0 ? 'first:pl-8' : ''} ${
-                  index === galleryItems.length - 1 ? 'last:pr-8' : ''
-                }`}
-              >
-                <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-full h-full overflow-hidden">
-                  <div className="relative h-full w-full">
-                    <img 
-                      src={item.image} 
-                      alt="Sriram Emani Project" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
+      {/* Full-width Image Section */}
+      <section className="px-4 sm:px-6 md:px-8 mb-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 overflow-hidden transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl">
+            <div className="relative">
+              <img 
+                src={se1} 
+                alt="Sriram Emani Project Overview"
+                className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Design Process Section */}
+      {/* Design Process Section 1 & 2 */}
       <section className="px-4 sm:px-6 md:px-8 py-24">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-16">Design Process</h2>
@@ -164,27 +148,58 @@ function SriramEmaniPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="space-y-8">
-              <h3 className="text-2xl font-bold">3. Design & Development</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Implemented the design with a focus on visual storytelling and user engagement.
-              </p>
+      {/* Split Image Section */}
+      <section className="px-4 sm:px-6 md:px-8 py-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-[#000000] rounded-3xl border border-gray-800/50 overflow-hidden transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl">
+              <div className="relative">
+                <img 
+                  src={se2} 
+                  alt="Sriram Emani Project Detail 1"
+                  className="w-full h-[400px] object-contain transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+            </div>
+            <div className="bg-[#000000] rounded-3xl border border-gray-800/50 overflow-hidden transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl">
+              <div className="relative">
+                <img 
+                  src={se3} 
+                  alt="Sriram Emani Project Detail 2"
+                  className="w-full h-[400px] object-contain transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div className="pl-6 border-l border-gray-700 space-y-8">
-                <div>
-                  <h4 className="text-xl font-bold mb-4">Visual Design</h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    Created a sophisticated design system that reflects Sriram's professional image.
-                  </p>
-                </div>
+      {/* Design Process Section 3 */}
+      <section className="px-4 sm:px-6 md:px-8 py-24">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-8">
+            <h3 className="text-2xl font-bold">3. Design & Development</h3>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              Implemented the design with a focus on visual storytelling and user engagement.
+            </p>
 
-                <div>
-                  <h4 className="text-xl font-bold mb-4">Interactive Elements</h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    Incorporated engaging interactions and transitions to create an immersive experience.
-                  </p>
-                </div>
+            <div className="pl-6 border-l border-gray-700 space-y-8">
+              <div>
+                <h4 className="text-xl font-bold mb-4">Visual Design</h4>
+                <p className="text-gray-300 leading-relaxed">
+                  Created a sophisticated design system that reflects Sriram's professional image.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-bold mb-4">Interactive Elements</h4>
+                <p className="text-gray-300 leading-relaxed">
+                  Incorporated engaging interactions and transitions to create an immersive experience.
+                </p>
               </div>
             </div>
           </div>
