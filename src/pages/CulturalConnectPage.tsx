@@ -88,18 +88,16 @@ function CulturalConnectPage() {
 
       {/* First Horizontal Image */}
       <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 overflow-hidden transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl">
-            <div className="relative">
-              <img 
-                src={cc1} 
-                alt="Cultural Connect Overview"
-                className="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 hover:scale-105"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="max-w-7xl mx-auto">
+    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105">
+      <img 
+        src={cc1} 
+        alt="Google Assistant Overview"
+        className="w-full h-full object-contain"
+      />
+    </div>
+  </div>
+</section>
 
       {/* Research & Discovery Section */}
       <section className="px-4 sm:px-6 md:px-8 py-24">
@@ -131,19 +129,17 @@ function CulturalConnectPage() {
       </section>
 
       {/* Second Horizontal Image */}
-      <section className="px-4 sm:px-6 md:px-8 mb-24">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 overflow-hidden transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl">
-            <div className="relative">
-              <img 
-                src={cc1} 
-                alt="Cultural Connect Design"
-                className="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 hover:scale-105"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
+  <div className="max-w-7xl mx-auto">
+    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105">
+      <img 
+        src={cc1} 
+        alt="Google Assistant Overview"
+        className="w-full h-full object-contain"
+      />
+    </div>
+  </div>
+</section>
 
       {/* Design Development Section */}
       <section className="px-4 sm:px-6 md:px-8 py-24">
@@ -166,19 +162,17 @@ function CulturalConnectPage() {
       </section>
 
       {/* Third Horizontal Image */}
-      <section className="px-4 sm:px-6 md:px-8 mb-24">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 overflow-hidden transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl">
-            <div className="relative">
-              <img 
-                src={cc1} 
-                alt="Cultural Connect Implementation"
-                className="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 hover:scale-105"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
+  <div className="max-w-7xl mx-auto">
+    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105">
+      <img 
+        src={cc1} 
+        alt="Google Assistant Overview"
+        className="w-full h-full object-contain"
+      />
+    </div>
+  </div>
+</section>
 
       {/* Feature Implementation Section */}
       <section className="px-4 sm:px-6 md:px-8 py-24">
@@ -210,7 +204,7 @@ function CulturalConnectPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 md:px-8">
           <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
             <h3 className="text-5xl font-bold text-white/90">50%</h3>
@@ -225,7 +219,7 @@ function CulturalConnectPage() {
             <p className="text-white/70 mt-2">Community Engagement</p>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

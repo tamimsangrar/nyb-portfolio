@@ -89,6 +89,7 @@ function SriramEmaniPage() {
       </section>
 
       {/* Full-width Image Section */}
+      <AnimatedSection animation="fade-in" delay={200}>
       <section className="px-4 sm:px-6 md:px-8 mb-24">
         <div className="max-w-7xl mx-auto">
           <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 overflow-hidden transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl">
@@ -102,8 +103,10 @@ function SriramEmaniPage() {
           </div>
         </div>
       </section>
+      </AnimatedSection>
 
       {/* Design Process Section 1 & 2 */}
+      <AnimatedSection animation="fade-in" delay={200}>
       <section className="px-4 sm:px-6 md:px-8 py-24">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-16">Design Process</h2>
@@ -151,8 +154,10 @@ function SriramEmaniPage() {
           </div>
         </div>
       </section>
+      </AnimatedSection>
 
       {/* Split Image Section */}
+      <AnimatedSection animation="fade-in" delay={200}>
       <section className="px-4 sm:px-6 md:px-8 py-24">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -177,8 +182,10 @@ function SriramEmaniPage() {
           </div>
         </div>
       </section>
+      </AnimatedSection>
 
       {/* Design Process Section 3 */}
+      <AnimatedSection animation="fade-in" delay={200}>
       <section className="px-4 sm:px-6 md:px-8 py-24">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-8">
@@ -205,8 +212,10 @@ function SriramEmaniPage() {
           </div>
         </div>
       </section>
+      </AnimatedSection>
 
       {/* Stats Section */}
+      <AnimatedSection animation="fade-in" delay={200}>
       <section className="py-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 md:px-8">
           <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
@@ -223,6 +232,7 @@ function SriramEmaniPage() {
           </div>
         </div>
       </section>
+      </AnimatedSection>
     </div>
   );
 }
