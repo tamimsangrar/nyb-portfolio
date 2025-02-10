@@ -65,7 +65,7 @@ function CulturalConnectPage() {
                     rel="noopener noreferrer"
                     className="group inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-black bg-white rounded-full hover:bg-white/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
                   >
-                    View Project
+                    View Project Video
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 
                       className="h-6 w-6 ml-2 transform transition-transform group-hover:translate-x-1 animate-bounce" 

@@ -58,6 +58,28 @@ function FortunaInsightPage() {
                     Delivered a modern, intuitive website that effectively communicates Fortuna's vision, 
                     resulting in improved user engagement and brand consistency.
                   </p>
+                  <a 
+                    href="#" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-black bg-white rounded-full hover:bg-white/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
+                  >
+                    View Brand Book
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      className="h-6 w-6 ml-2 transform transition-transform group-hover:translate-x-1 animate-bounce" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M13 7l5 5m0 0l-5 5m5-5H6" 
+                      />
+                    </svg>
+                  </a>
                 </div>
               </AnimatedSection>
             </div>
@@ -68,11 +90,11 @@ function FortunaInsightPage() {
       {/* First Horizontal Image */}
       <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
   <div className="max-w-7xl mx-auto">
-    <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
+    <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-full sm:w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
       <img 
         src={fi1} 
         alt="Fortuna Insight Strategy"
-        className="w-full h-full object-contain rounded-3xl"
+        className="w-full h-auto object-contain rounded-3xl"
       />
     </div>
   </div>
@@ -111,11 +133,11 @@ function FortunaInsightPage() {
       {/* Second Horizontal Image */}
       <section className="px-4 sm:px-6 md:px-8 mb-24">
   <div className="max-w-7xl mx-auto">
-    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
+    <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-full sm:w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
       <img 
         src={fi2} 
         alt="Fortuna Insight Information Architecture"
-        className="w-full h-full object-contain rounded-3xl"
+        className="w-full h-auto object-contain rounded-3xl"
       />
     </div>
   </div>
@@ -144,11 +166,11 @@ function FortunaInsightPage() {
       {/* Third Horizontal Image */}
       <section className="px-4 sm:px-6 md:px-8 mb-24">
   <div className="max-w-7xl mx-auto">
-    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
+    <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-full sm:w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
       <img 
         src={fi3} 
         alt="Fortuna Insight Brand Guidelines"
-        className="w-full h-full object-contain rounded-3xl"
+        className="w-full h-auto object-contain rounded-3xl"
       />
     </div>
   </div>

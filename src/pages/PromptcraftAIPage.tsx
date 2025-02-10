@@ -61,12 +61,12 @@ function PromptcraftAIPage() {
                     featuring AI-powered suggestions and customization options.
                   </p>
                   <a 
-                    href="https://promptcraft.ai/" 
+                    href="https://drive.google.com/file/d/1in3iYmhzcDi1Ts9jbwd4nmYiLgIxhD06/view?usp=sharing" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="group inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-black bg-white rounded-full hover:bg-white/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
                   >
-                    View Project
+                    View Project Video
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 
                       className="h-6 w-6 ml-2 transform transition-transform group-hover:translate-x-1 animate-bounce" 
@@ -92,11 +92,11 @@ function PromptcraftAIPage() {
       {/* First Horizontal Image */}
       <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
   <div className="max-w-7xl mx-auto">
-    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[60%] mx-auto transform transition-transform duration-500 hover:scale-105">
+    <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-full sm:w-[60%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
       <img 
         src={pc4} 
-        alt="Google Assistant Overview"
-        className="w-full h-full object-contain"
+        alt="Promptcraft Overview"
+        className="w-full h-auto object-contain rounded-3xl"
       />
     </div>
   </div>
@@ -133,11 +133,11 @@ function PromptcraftAIPage() {
       {/* Second Horizontal Image */}
       <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
   <div className="max-w-7xl mx-auto">
-    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[60%] mx-auto transform transition-transform duration-500 hover:scale-105">
+    <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-full sm:w-[60%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
       <img 
         src={pc2} 
-        alt="Google Assistant Overview"
-        className="w-full h-full object-contain"
+        alt="Promptcraft Prompt"
+        className="w-full h-auto object-contain rounded-3xl"
       />
     </div>
   </div>
@@ -166,11 +166,11 @@ function PromptcraftAIPage() {
       {/* Third Horizontal Image */}
       <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
   <div className="max-w-7xl mx-auto">
-    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[60%] mx-auto transform transition-transform duration-500 hover:scale-105">
+    <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-full sm:w-[60%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
       <img 
         src={pc3} 
-        alt="Google Assistant Overview"
-        className="w-full h-full object-contain"
+        alt="Promptcraft Result Overview"
+        className="w-full h-auto object-contain rounded-3xl"
       />
     </div>
   </div>

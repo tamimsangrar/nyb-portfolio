@@ -63,12 +63,12 @@ function StyleAIPage() {
                     features to help users maximize their wardrobes and make informed fashion choices.
                   </p>
                   <a 
-                    href="https://styleai.com/" 
+                    href="https://drive.google.com/file/d/1rloTgKoX4gV5hq1rtKmbZjzCWXcoBSLU/view?usp=sharing" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="group inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-black bg-white rounded-full hover:bg-white/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
                   >
-                    View Project
+                    View Project Video
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 
                       className="h-6 w-6 ml-2 transform transition-transform group-hover:translate-x-1 animate-bounce" 
@@ -92,12 +92,16 @@ function StyleAIPage() {
       </section>
 
       {/* First Horizontal Image */}
-      <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36"> 
-  <div className="max-w-7xl mx-auto"> 
-    <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-[80%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden"> 
-      <img src={sa1} alt="StyleAI Overview" className="w-full h-full object-contain rounded-3xl" /> 
-    </div> 
-  </div> 
+      <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
+  <div className="max-w-7xl mx-auto">
+    <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-full sm:w-[80%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
+      <img 
+        src={sa1} 
+        alt="StyleAI Overview"
+        className="w-full h-auto object-contain rounded-3xl"
+      />
+    </div>
+  </div>
 </section>
 
       {/* Research & Analysis Section */}
