@@ -66,9 +66,10 @@ const Navigation = () => {
         { path: '/projects/uiux-design/sriram-emani', label: 'sriram emani' },
         { path: '/projects/uiux-design/fortuna-insight', label: 'fortuna insight' },
         { path: '/projects/uiux-design/google-assistant', label: 'google assistant' },
-        { path: '/projects/uiux-design/cultural-connect', label: 'cultural connect' },
+        // { path: '/projects/uiux-design/cultural-connect', label: 'cultural connect' },
         { path: '/projects/uiux-design/styleai', label: 'styleAI' },
-        { path: '/projects/uiux-design/promptcraft-ai', label: 'promptcraftAI' }
+        { path: '/projects/uiux-design/promptcraft-ai', label: 'promptcraftAI' },
+        { path: '/projects/uiux-design/quicksnack', label: 'quicksnack' }
       ]
     },
     commDesign: {

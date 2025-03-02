@@ -18,6 +18,7 @@ import GoogleAssistantPage from './pages/GoogleAssistantPage';
 import CulturalConnectPage from './pages/CulturalConnectPage';
 import StyleAIPage from './pages/StyleAIPage';
 import PromptcraftAIPage from './pages/PromptcraftAIPage';
+import QuickSnackPage from './pages/QuickSnack'; // Add this import
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route path="/projects/uiux-design/cultural-connect" element={<CulturalConnectPage />} />
           <Route path="/projects/uiux-design/styleai" element={<StyleAIPage />} />
           <Route path="/projects/uiux-design/promptcraft-ai" element={<PromptcraftAIPage />} />
+          <Route path="/projects/uiux-design/quicksnack" element={<QuickSnackPage />} /> {/* Add this route */}
         </Routes>
         <Footer />
       </div>

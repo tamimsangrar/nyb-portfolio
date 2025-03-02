@@ -90,6 +90,7 @@ function PromptcraftAIPage() {
       </section>
 
       {/* First Horizontal Image */}
+      <AnimatedSection animation="fade-in" delay={200}>
       <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
   <div className="max-w-7xl mx-auto">
     <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-full sm:w-[60%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
@@ -101,36 +102,66 @@ function PromptcraftAIPage() {
     </div>
   </div>
 </section>
-
+</AnimatedSection>
+<AnimatedSection animation="fade-in" delay={200}>
+<section className="px-4 sm:px-6 md:px-8 py-24">
+  <div className="max-w-4xl mx-auto">
+    <div className="space-y-8">
+      <h3 className="text-2xl font-bold">Problem Statement</h3>
+      <p className="text-lg text-gray-300 leading-relaxed">
+        Designers face challenges in content creation, which is often time-consuming and detracts from their core focus on design. They need an efficient solution to generate contextually relevant content that seamlessly aligns with the project's tone and style, enabling them to enhance productivity and creativity.
+      </p>
+      
+      <div className="pl-6 border-l border-gray-700">
+        <h4 className="text-xl font-bold mb-4">Pain Points Analysis</h4>
+        <ul className="list-disc pl-6 space-y-2 text-gray-300">
+          <li>Time constraints in content creation</li>
+          <li>Consistency issues across projects</li>
+          <li>Creative blocks during writing</li>
+          <li>Workflow disruption switching between tools</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</AnimatedSection>
       {/* Research & Discovery Section */}
+      <AnimatedSection animation="fade-in" delay={200}>
       <section className="px-4 sm:px-6 md:px-8 py-24">
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold">1. Research & Discovery</h3>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Investigated designer pain points and content creation needs.
-            </p>
+  <div className="max-w-4xl mx-auto">
+    <div className="space-y-8">
+      <h3 className="text-2xl font-bold">1. Research & Discovery</h3>
+      <p className="text-lg text-gray-300 leading-relaxed">
+        Investigated designer pain points and content creation needs.
+      </p>
 
-            <div className="pl-6 border-l border-gray-700 space-y-8">
-              <div>
-                <h4 className="text-xl font-bold mb-4">User Research</h4>
-                <p className="text-gray-300 leading-relaxed">
-                  Identified key challenges: time constraints, consistency issues, and creativity blocks.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-xl font-bold mb-4">Market Analysis</h4>
-                <p className="text-gray-300 leading-relaxed">
-                  Studied existing tools and identified opportunities for AI integration.
-                </p>
-              </div>
-            </div>
-          </div>
+      <div className="pl-6 border-l border-gray-700 space-y-8">
+        <div>
+          <h4 className="text-xl font-bold mb-4">User Research Findings</h4>
+          <p className="text-gray-300 leading-relaxed mb-3">
+            Key insights from designer interviews:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <li>70% struggle with content creation tasks</li>
+            <li>Average 2-3 hours spent on copy per project</li>
+            <li>Need for maintaining consistent tone across projects</li>
+            <li>Desire for seamless integration with existing tools</li>
+          </ul>
         </div>
-      </section>
 
+        <div>
+          <h4 className="text-xl font-bold mb-4">Market Analysis</h4>
+          <p className="text-gray-300 leading-relaxed">
+            Studied existing tools and identified opportunities for AI integration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</AnimatedSection>
       {/* Second Horizontal Image */}
+      <AnimatedSection animation="fade-in" delay={200}>
       <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
   <div className="max-w-7xl mx-auto">
     <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-full sm:w-[60%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
@@ -142,8 +173,9 @@ function PromptcraftAIPage() {
     </div>
   </div>
 </section>
-
+</AnimatedSection>
       {/* Feature Development Section */}
+      <AnimatedSection animation="fade-in" delay={200}>
       <section className="px-4 sm:px-6 md:px-8 py-24">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-8">
@@ -162,8 +194,9 @@ function PromptcraftAIPage() {
           </div>
         </div>
       </section>
-
+      </AnimatedSection>
       {/* Third Horizontal Image */}
+      <AnimatedSection animation="fade-in" delay={200}>
       <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
   <div className="max-w-7xl mx-auto">
     <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-full sm:w-[60%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
@@ -175,35 +208,47 @@ function PromptcraftAIPage() {
     </div>
   </div>
 </section>
-
+</AnimatedSection>
       {/* Integration & Testing Section */}
+      <AnimatedSection animation="fade-in" delay={200}>
       <section className="px-4 sm:px-6 md:px-8 py-24">
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold">3. Integration & Testing</h3>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Implemented plugin across design platforms.
-            </p>
+  <div className="max-w-4xl mx-auto">
+    <div className="space-y-8">
+      <h3 className="text-2xl font-bold">3. User Research and Insights</h3>
+      <p className="text-lg text-gray-300 leading-relaxed">
+        Our target audience included designers and content creators who need content for projects frequently. Through interviews and surveys, we identified common pain points:
+      </p>
 
-            <div className="pl-6 border-l border-gray-700 space-y-8">
-              <div>
-                <h4 className="text-xl font-bold mb-4">Software Integration</h4>
-                <p className="text-gray-300 leading-relaxed">
-                  Ensured seamless functionality with Figma, Adobe XD, and Sketch.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-xl font-bold mb-4">User Testing</h4>
-                <p className="text-gray-300 leading-relaxed">
-                  Conducted extensive testing to refine features and user experience.
-                </p>
-              </div>
-            </div>
-          </div>
+      <div className="pl-6 border-l border-gray-700 space-y-8">
+        <div>
+          <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <li><span className="font-semibold">Time Constraints:</span> Difficulty allocating time for content creation.</li>
+            <li><span className="font-semibold">Consistency Issues:</span> Challenges in maintaining a consistent tone across projects.</li>
+            <li><span className="font-semibold">Creativity Blocks:</span> Need for inspiration and overcoming writer's block.</li>
+          </ul>
         </div>
-      </section>
-
+        
+        <div>
+          <h4 className="text-xl font-bold mb-4">User Journey</h4>
+          <ol className="list-decimal pl-6 space-y-3 text-gray-300">
+            <li><span className="font-semibold">Discovery and Installation:</span> Users find the plugin online and install it within their design tool.</li>
+            <li><span className="font-semibold">Initial Use:</span> They configure settings (tone, style) and test content generation.</li>
+            <li><span className="font-semibold">Regular Use:</span> Plugin becomes a part of their workflow, used for generating and customizing content for projects.</li>
+            <li><span className="font-semibold">Continuous Improvement:</span> Users benefit from plugin updates and ongoing support.</li>
+          </ol>
+        </div>
+        
+        <div>
+          <h4 className="text-xl font-bold mb-4">Outcome</h4>
+          <p className="text-gray-300 leading-relaxed">
+            This project enhanced user productivity by allowing designers to quickly generate on-brand content, leading to faster project completion and improved consistency across designs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      </AnimatedSection>
       {/* Final Horizontal Image */}
       {/* <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
   <div className="max-w-7xl mx-auto">

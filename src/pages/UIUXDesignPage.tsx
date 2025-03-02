@@ -4,7 +4,7 @@ import { AnimatedSection } from '../components/AnimatedSection';
 import se_logo from '../images/cards/se.png';
 import fi_logo from '../images/cards/Fortuna.png';
 import ga_logo from '../images/cards/google.png';
-import cc_logo from '../images/cards/cc.png';
+import cc_logo from '../images/cards/QS.png';
 import sa_logo from '../images/cards/sa.png';
 import pc_logo from '../images/cards/pcai.png';
 import uiuxlogo from '../images/headers/uxdesign.svg';
@@ -32,11 +32,11 @@ const projects = [
     path: '/projects/uiux-design/google-assistant'
   },
   {
-    id: 'cultural-connect',
-    title: 'Cultural Connect',
-    description: 'Community platform design',
+    id: 'quicksnack',
+    title: 'Quick Snack',
+    description: 'Snack ordering app',
     image: cc_logo,
-    path: '/projects/uiux-design/cultural-connect'
+    path: '/projects/uiux-design/quicksnack'
   },
   {
     id: 'styleai',

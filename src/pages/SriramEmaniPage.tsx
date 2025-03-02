@@ -34,9 +34,8 @@ function SriramEmaniPage() {
                 <div>
                   <h2 className="text-2xl text-gray-400">Challenge</h2>
                   <p className="text-lg text-gray-300 leading-relaxed mt-4">
-                    Develop a portfolio website that effectively showcases the diverse talents and achievements 
-                    of a TEDx speaker, entrepreneur, and multi-disciplinary artist to elevate his visibility 
-                    in Hollywood.
+                  Sriram sought our expertise to elevate his portfolio, showcasing his talents in acting, singing, and dance. 
+                  His goal: to boost visibility in Hollywood with a sleek, intuitive platform that highlights his achievements and resonates with industry professionals.
                   </p>
                 </div>
               </AnimatedSection>
@@ -108,52 +107,67 @@ function SriramEmaniPage() {
       {/* Design Process Section 1 & 2 */}
       <AnimatedSection animation="fade-in" delay={200}>
       <section className="px-4 sm:px-6 md:px-8 py-24">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-16">Design Process</h2>
-
-          <div className="space-y-20">
-            <div className="space-y-8">
-              <h3 className="text-2xl font-bold">1. Discovery & Strategy</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Conducted in-depth interviews to understand Sriram's vision, goals, and unique value proposition.
-              </p>
-
-              <div className="pl-6 border-l border-gray-700 space-y-8">
-                <div>
-                  <h4 className="text-xl font-bold mb-4">Personal Brand Analysis</h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    Analyzed Sriram's existing online presence and identified opportunities 
-                    to better showcase his diverse talents and achievements.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="text-xl font-bold mb-4">Competitor Research</h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    Studied successful performer portfolios to identify best practices and 
-                    differentiation opportunities.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-8">
-              <h3 className="text-2xl font-bold">2. Information Architecture</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Developed a content strategy that effectively communicates Sriram's multi-faceted career.
-              </p>
-
-              <div className="pl-6 border-l border-gray-700">
-                <h4 className="text-xl font-bold mb-4">Content Organization</h4>
-                <p className="text-gray-300 leading-relaxed">
-                  Created intuitive navigation and content hierarchy that highlights key achievements 
-                  while maintaining a cohesive narrative.
-                </p>
-              </div>
-            </div>
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-3xl font-bold mb-16">Design Process</h2>
+    <div className="space-y-20">
+      <div className="space-y-8">
+        <h3 className="text-2xl font-bold">1. Research and Analysis</h3>
+        <div className="pl-6 border-l border-gray-700 space-y-8">
+          <div>
+            <h4 className="text-xl font-bold mb-4">User Research</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Conducted comprehensive research to understand the entertainment industry's needs:
+            </p>
+            <ul className="list-disc pl-6 mt-3 space-y-2 text-gray-300">
+              <li>Analyzed competitor websites in the entertainment industry</li>
+              <li>Studied user behavior patterns on artist portfolios</li>
+              <li>Reviewed successful Hollywood portfolio examples</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-xl font-bold mb-4">Key Findings</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Research revealed important insights for the design:
+            </p>
+            <ul className="list-disc pl-6 mt-3 space-y-2 text-gray-300">
+              <li>Users prefer clean, intuitive layouts with easy access to key information</li>
+              <li>Visual storytelling is crucial for entertainment industry portfolios</li>
+              <li>Press coverage and media mentions need prominent placement</li>
+              <li>Mobile responsiveness is essential for industry professionals</li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
+
+      <div className="space-y-8">
+        <h3 className="text-2xl font-bold">2. Information Architecture</h3>
+        <p className="text-lg text-gray-300 leading-relaxed">
+          Carefully crafted the website structure to ensure optimal user experience.
+        </p>
+        <div className="pl-6 border-l border-gray-700 space-y-8">
+          <div>
+            <h4 className="text-xl font-bold mb-4">Content Organization</h4>
+            <ul className="list-disc pl-6 mt-3 space-y-2 text-gray-300">
+              <li>Clear categorization of Sriram's diverse talents</li>
+              <li>Prominent display of media coverage and achievements</li>
+              <li>Intuitive navigation between different sections</li>
+              <li>Strategic content hierarchy that tells his story</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-xl font-bold mb-4">Visual Design Decisions</h4>
+            <ul className="list-disc pl-6 mt-3 space-y-2 text-gray-300">
+              <li>Implemented a film strip motif to connect with the entertainment industry</li>
+              <li>Used a dark theme to create theatrical ambiance</li>
+              <li>Created clear visual hierarchy with varying typography</li>
+              <li>Designed responsive layouts optimized for all devices</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       </AnimatedSection>
 
       {/* Split Image Section */}
@@ -187,31 +201,36 @@ function SriramEmaniPage() {
       {/* Design Process Section 3 */}
       <AnimatedSection animation="fade-in" delay={200}>
       <section className="px-4 sm:px-6 md:px-8 py-24">
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold">3. Design & Development</h3>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Implemented the design with a focus on visual storytelling and user engagement.
-            </p>
+  <div className="max-w-4xl mx-auto">
+    <div className="space-y-8">
+      <h3 className="text-2xl font-bold">3. Implementation and Results</h3>
+      <p className="text-lg text-gray-300 leading-relaxed">
+        Transformed strategy and design into a fully functional portfolio website.
+      </p>
 
-            <div className="pl-6 border-l border-gray-700 space-y-8">
-              <div>
-                <h4 className="text-xl font-bold mb-4">Visual Design</h4>
-                <p className="text-gray-300 leading-relaxed">
-                  Created a sophisticated design system that reflects Sriram's professional image.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-xl font-bold mb-4">Interactive Elements</h4>
-                <p className="text-gray-300 leading-relaxed">
-                  Incorporated engaging interactions and transitions to create an immersive experience.
-                </p>
-              </div>
-            </div>
-          </div>
+      <div className="pl-6 border-l border-gray-700 space-y-8">
+        <div>
+          <h4 className="text-xl font-bold mb-4">Development Collaboration</h4>
+          <p className="text-gray-300 leading-relaxed mb-3">
+            Worked closely with Sriram throughout the development process:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <li>Incorporated his valuable insights at each stage</li>
+            <li>Ensured seamless integration of media content</li>
+            <li>Maintained design integrity across all breakpoints</li>
+          </ul>
         </div>
-      </section>
+
+        <div>
+          <h4 className="text-xl font-bold mb-4">Final Delivery</h4>
+          <p className="text-gray-300 leading-relaxed">
+            Successfully delivered a portfolio that effectively showcases Sriram's multifaceted career and achievements while providing an engaging user experience.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       </AnimatedSection>
 
       {/* Stats Section */}

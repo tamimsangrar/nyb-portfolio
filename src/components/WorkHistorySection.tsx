@@ -13,21 +13,21 @@ const workHistory = [
     id: 'aiolos',
     role: "UX designer",
     company: "Aiolos Cloud",
-    period: "October 22 - January 2023",
+    period: "Mumbai, India",
     description: "Led the conceptualization and development of visual strategies, aligning designs with project objectives and stakeholder expectations. Developed comprehensive brand guidelines to ensure a cohesive and consistent visual identity across all elements. Recognized for expertise in organizing information architecture across multiple projects."
   },
   {
     id: 'howl',
-    role: "Graphic/UX designer",
+    role: "UX and graphic designer",
     company: "Howl Digital",
-    period: "December 21 - October 2022",
+    period: "Mumbai, India",
     description: "Collaborated closely with the design and content teams as a multimedia designer, creating a range of visuals including web pages, social media posts, email campaigns, product labels, and menus. Notable clients included HRX, American Express, and Almond House."
   },
   {
     id: 'freelance',
-    role: "Freelance",
+    role: "Freelance UX Designer",
     company: "",
-    period: "Various projects",
+    period: "Mumbai, Vancouver",
     description: "During my free time and in-between roles, I took on freelance projects to explore new skills and areas of design. This work let me dive into creative projects I was genuinely passionate about, while continuously honing my abilities and expanding my expertise in a variety of fields."
   }
 ] as const;
@@ -99,7 +99,7 @@ export function WorkHistorySection() {
   return (
     <section className="min-h-screen bg-black px-4 sm:px-6 py-24">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 md:mb-16">Work History</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 md:mb-16">Work Adventures</h2>
         {workHistory.map((item) => (
           <WorkExperience key={item.id} {...item} />
         ))}
