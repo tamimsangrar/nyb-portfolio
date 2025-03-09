@@ -7,9 +7,9 @@ import fi3 from "../images/Fortuna/3.png";
 
 const skills = [
   "Visual Design",
-  "Creative Direction and Guidance",
+  "Creative Direction",
   "Information Architecture",
-  "Design Iteration and Feedback"
+  "Rapid Iteration via Feedback"
 ];
 
 function FortunaInsightPage() {
@@ -34,7 +34,7 @@ function FortunaInsightPage() {
                 <div>
                   <h2 className="text-2xl text-gray-400">Challenge</h2>
                   <p className="text-lg text-gray-300 leading-relaxed mt-4">
-                  Develop a marketing website that simplifies AI legal research for potential users, establishes a modern and trustworthy brand, showcases key features, and drives conversions through clear call-to-actions.
+                  Develop a product website that simplifies AI legal research concepts for potential users, establishes a modern and trustworthy brand, showcases key features, and drives conversions through clear call-to-actions.
                   </p>
                 </div>
               </AnimatedSection>
@@ -54,7 +54,7 @@ function FortunaInsightPage() {
                 <div>
                   <h2 className="text-2xl text-gray-400">Outcome</h2>
                   <p className="text-lg text-gray-300 leading-relaxed mt-4 mb-8">
-                    Delivered a modern, intuitive website that effectively communicates Fortuna's vision, 
+                    Delivered a modern website that effectively communicated Fortuna's vision, 
                     resulting in improved user engagement and brand consistency.
                   </p>
                   <a 
@@ -63,7 +63,7 @@ function FortunaInsightPage() {
                     rel="noopener noreferrer"
                     className="group inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-black bg-white rounded-full hover:bg-white/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
                   >
-                    View Brand Book
+                    Brand Book
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 
                       className="h-6 w-6 ml-2 transform transition-transform group-hover:translate-x-1 animate-bounce" 
@@ -105,8 +105,40 @@ function FortunaInsightPage() {
   <div className="max-w-4xl mx-auto">
     <h2 className="text-3xl font-bold mb-16">Design Process</h2>
     <div className="space-y-20">
+    <div className="space-y-8">
+      <h3 className="text-2xl font-bold">1. Research and Analysis</h3>
+      <p className="text-lg text-gray-300 leading-relaxed">
+        Conducted thorough market research to inform design decisions and strategy.
+      </p>
+
+      <div className="pl-6 border-l border-gray-700 space-y-8">
+        <div>
+          <h4 className="text-xl font-bold mb-4">Market Research</h4>
+          <p className="text-gray-300 leading-relaxed mb-3">
+            Analyzed competitive landscape:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <li>Reviewed leading legal tech marketing websites</li>
+            <li>Identified effective messaging patterns</li>
+            <li>Studied successful SaaS landing page structures</li>
+            <li>Evaluated current design trends in legal tech</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-xl font-bold mb-4">Key Insights</h4>
+          <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <li>Clear, benefit-focused messaging resonates best with legal professionals</li>
+            <li>Visual demonstrations of features increase understanding</li>
+            <li>Trust signals and social proof are crucial for conversion</li>
+            <li>Professional yet innovative design aesthetic is essential</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
       <div className="space-y-8">
-        <h3 className="text-2xl font-bold">1. Information Architecture</h3>
+        <h3 className="text-2xl font-bold">2. Information Architecture</h3>
         <p className="text-lg text-gray-300 leading-relaxed">
           Developed website structure focusing on optimal user experience and content organization.
         </p>
@@ -123,11 +155,33 @@ function FortunaInsightPage() {
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+</AnimatedSection>
 
-      <div className="space-y-8">
-        <h3 className="text-2xl font-bold">2. Brand Guidelines Development</h3>
+      {/* Second Horizontal Image */}
+      <AnimatedSection animation="fade-in" delay={200}>
+      <section className="px-4 sm:px-6 md:px-8 mb-24">
+  <div className="max-w-7xl mx-auto">
+    <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-full sm:w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
+      <img 
+        src={fi2} 
+        alt="Fortuna Insight Information Architecture"
+        className="w-full h-auto object-contain rounded-3xl"
+      />
+    </div>
+  </div>
+</section>
+</AnimatedSection>
+      {/* Information Architecture Section */}
+      <AnimatedSection animation="fade-in" delay={200}>
+      <section className="px-4 sm:px-6 md:px-8 py-24">
+  <div className="max-w-4xl mx-auto">
+  <div className="space-y-8">
+        <h3 className="text-2xl font-bold">3. Brand Guidelines Development</h3>
         <p className="text-lg text-gray-300 leading-relaxed">
-          Created comprehensive brand guidelines to ensure visual consistency and effective communication.
+          Established comprehensive brand guidelines to ensure visual consistency and effective communication.
         </p>
 
         <div className="pl-6 border-l border-gray-700 space-y-8">
@@ -165,67 +219,12 @@ function FortunaInsightPage() {
             <h4 className="text-xl font-bold mb-4">Implementation</h4>
             <ul className="list-disc pl-6 space-y-2 text-gray-300">
               <li>Created dark theme design to align with tech-forward positioning</li>
-              <li>Implemented responsive layouts following brand guidelines</li>
-              <li>Developed custom animations for key interactions</li>
-              <li>Ensured consistent application across all pages</li>
+              <li>Designed responsive layouts following brand guidelines</li>
+              <li>Curated custom animations for key interactions</li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-</AnimatedSection>
-
-      {/* Second Horizontal Image */}
-      <AnimatedSection animation="fade-in" delay={200}>
-      <section className="px-4 sm:px-6 md:px-8 mb-24">
-  <div className="max-w-7xl mx-auto">
-    <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-full sm:w-[90%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
-      <img 
-        src={fi2} 
-        alt="Fortuna Insight Information Architecture"
-        className="w-full h-auto object-contain rounded-3xl"
-      />
-    </div>
-  </div>
-</section>
-</AnimatedSection>
-      {/* Information Architecture Section */}
-      <AnimatedSection animation="fade-in" delay={200}>
-      <section className="px-4 sm:px-6 md:px-8 py-24">
-  <div className="max-w-4xl mx-auto">
-    <div className="space-y-8">
-      <h3 className="text-2xl font-bold">2. Research and Analysis</h3>
-      <p className="text-lg text-gray-300 leading-relaxed">
-        Conducted thorough market research to inform design decisions and strategy.
-      </p>
-
-      <div className="pl-6 border-l border-gray-700 space-y-8">
-        <div>
-          <h4 className="text-xl font-bold mb-4">Market Research</h4>
-          <p className="text-gray-300 leading-relaxed mb-3">
-            Analyzed competitive landscape:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-gray-300">
-            <li>Reviewed leading legal tech marketing websites</li>
-            <li>Identified effective messaging patterns</li>
-            <li>Studied successful SaaS landing page structures</li>
-            <li>Evaluated current design trends in legal tech</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="text-xl font-bold mb-4">Key Insights</h4>
-          <ul className="list-disc pl-6 space-y-2 text-gray-300">
-            <li>Clear, benefit-focused messaging resonates best with legal professionals</li>
-            <li>Visual demonstrations of features increase understanding</li>
-            <li>Trust signals and social proof are crucial for conversion</li>
-            <li>Professional yet innovative design aesthetic is essential</li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
       </AnimatedSection>
@@ -248,7 +247,7 @@ function FortunaInsightPage() {
       <section className="px-4 sm:px-6 md:px-8 py-24">
   <div className="max-w-4xl mx-auto">
     <div className="space-y-8">
-      <h3 className="text-2xl font-bold">3. Collaboration and Iteration</h3>
+      <h3 className="text-2xl font-bold">4. Implementation & Results</h3>
       <p className="text-lg text-gray-300 leading-relaxed">
         Engaged in an iterative design process with consistent client feedback to refine the final product.
       </p>
@@ -290,7 +289,7 @@ function FortunaInsightPage() {
       </AnimatedSection>
       {/* Implementation Section */}
       {/* Stats Section */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 md:px-8">
           <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
             <h3 className="text-5xl font-bold text-white/90">70%</h3>
@@ -305,7 +304,7 @@ function FortunaInsightPage() {
             <p className="text-white/70 mt-2">Increase in NPS score</p>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

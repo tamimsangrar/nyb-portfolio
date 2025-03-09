@@ -26,7 +26,7 @@ const projectCards = [
   {
     id: 'se',
     title: "Sriram Emani",
-    description: "Digital portfolio for a multifaceted performer",
+    description: "Digital portfolio for a versatile performer",
     bgColor: "bg-[#1E1E1E]",
     bgImage: SEImage,  // Use imported image
     path: "/projects/uiux-design/sriram-emani"

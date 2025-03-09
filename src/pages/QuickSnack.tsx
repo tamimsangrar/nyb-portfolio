@@ -5,6 +5,8 @@ import qs1 from "../images/QS/1.png";
 import qs2 from "../images/QS/2.png";
 import qs3 from "../images/QS/3.png";
 import qs4 from "../images/QS/4.png";
+import qs5 from "../images/QS/5.png";
+import qs6 from "../images/QS/6.png";
 
 const skills = [
   "UX Design",
@@ -57,14 +59,6 @@ function QuickSnackPage() {
                   <p className="text-lg text-gray-300 leading-relaxed mt-4 mb-8">
                   QuickSnack proposes to transform the theater snack ordering experience with a seamless, inclusive digital solution. 
                   It streamlines operations, improved inventory management, and creates a new digital revenue stream while enhancing convenience for moviegoers.
-
-
-
-
-
-
-
-
                   </p>
                   <a 
                     href="#" 
@@ -98,84 +92,103 @@ function QuickSnackPage() {
       {/* First Horizontal Image */}
       <AnimatedSection animation="fade-in" delay={200}>
       <section className="px-4 sm:px-6 md:px-8 py-24">
-  <div className="max-w-7xl mx-auto">
-    <div className="flex justify-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-        <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
-          <img 
-            src={qs1} 
-            alt="QuickSnack Mobile Screen 1"
-            className="w-full h-full object-contain"
-          />
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
+              <img 
+                src={qs1} 
+                alt="QuickSnack Mobile Screen 1"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
+              <img 
+                src={qs2} 
+                alt="QuickSnack Mobile Screen 2"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
+              <img 
+                src={qs3} 
+                alt="QuickSnack Mobile Screen 3"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
         </div>
-        <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
-          <img 
-            src={qs2} 
-            alt="QuickSnack Mobile Screen 2"
-            className="w-full h-full object-contain"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
       </AnimatedSection>
 
       {/* Problem Statement Section */}
-      <AnimatedSection animation="fade-in" delay={200}>
-        <section className="px-4 sm:px-6 md:px-8 py-24">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              <h3 className="text-2xl font-bold">Problem Statement</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Movie-goers often face frustrating wait times at concession stands, leading to:
-              </p>
-              <div className="pl-6 border-l border-gray-700">
-                <ul className="list-disc pl-6 space-y-2 text-gray-300">
-                  <li>Missed movie moments</li>
-                  <li>Reduced customer satisfaction</li>
-                  <li>Lost sales opportunities for theaters</li>
-                  <li>Rushed ordering decisions</li>
-                  <li>Congestion in theater lobbies</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-      </AnimatedSection>
+{/* Problem Statement & Solution Section */}
+<AnimatedSection animation="fade-in" delay={200}>
+<section className="px-4 sm:px-6 md:px-8 py-24">
+  <div className="max-w-4xl mx-auto">
+    <div className="space-y-20">
+      <div className="space-y-8">
+        <h3 className="text-2xl font-bold">Problem Statement</h3>
+        <p className="text-lg text-gray-300 leading-relaxed">
+          Movie-goers frequently encounter long wait times at theater concession stands, leading to missed movie moments, diminished customer satisfaction, and lost revenue opportunities for theaters. The objective was to create an accessible digital solution that streamlines the food ordering process without disrupting existing theater operations or excluding any customer segments.
+        </p>
+      </div>
 
-      {/* Mobile Screens Section */}
-      <AnimatedSection animation="fade-in" delay={200}>
-      <section className="px-4 sm:px-6 md:px-8 py-24">
-  <div className="max-w-7xl mx-auto">
-    <div className="flex justify-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-        <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
-          <img 
-            src={qs3} 
-            alt="QuickSnack Mobile Screen 1"
-            className="w-full h-full object-contain"
-          />
-        </div>
-        <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
-          <img 
-            src={qs4} 
-            alt="QuickSnack Mobile Screen 2"
-            className="w-full h-full object-contain"
-          />
+      <div className="space-y-8">
+        <h3 className="text-2xl font-bold">Solution</h3>
+        <p className="text-lg text-gray-300 leading-relaxed">
+          QuickSnack delivers an intuitive mobile ordering experience for theater concessions, featuring:
+        </p>
+
+        <div className="pl-6 border-l border-gray-700 space-y-8">
+          <div>
+            <h4 className="text-xl font-bold mb-4">Mobile Ordering System</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Convenient in-app browsing and ordering from anywhere in the theater.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-bold mb-4">Express Pickup</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Dedicated collection points to eliminate waiting in traditional lines.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-bold mb-4">Accessibility Features</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Screen reader compatibility, adequate contrast ratios, and inclusive design principles.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-bold mb-4">Personalization Options</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Saved preferences and order history for faster future transactions.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-bold mb-4">Theater Integration</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Seamless connection with theater inventory and ticketing systems.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-      </AnimatedSection>
+</AnimatedSection>
 
+      {/* Mobile Screens Section */}
+ 
       {/* Research Process Section */}
       <AnimatedSection animation="fade-in" delay={200}>
         <section className="px-4 sm:px-6 md:px-8 py-24">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
-              <h3 className="text-2xl font-bold">1. Research Process</h3>
+              <h3 className="text-2xl font-bold">1. Research & Analysis</h3>
               <p className="text-lg text-gray-300 leading-relaxed">
                 Our primary objective was to understand the pain points in the current snack ordering process at movie theaters.
               </p>
@@ -223,12 +236,89 @@ function QuickSnackPage() {
         </section>
       </AnimatedSection>
 
+      <AnimatedSection animation="fade-in" delay={200}>
+<section className="px-4 sm:px-6 md:px-8 py-24">
+  <div className="max-w-4xl mx-auto">
+    <div className="space-y-8">
+      <h3 className="text-2xl font-bold">2. Design Process</h3>
+      <p className="text-lg text-gray-300 leading-relaxed">
+        Created a comprehensive mobile experience with user-friendly features and inclusive design principles.
+      </p>
+
+      <div className="pl-6 border-l border-gray-700 space-y-8">
+        <div>
+          <h4 className="text-xl font-bold mb-4">Interface Design</h4>
+          <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <li>Created intuitive navigation structure with clear category organization</li>
+            <li>Designed visually appealing food displays with essential information</li>
+            <li>Developed streamlined checkout flow to minimize friction</li>
+            <li>Implemented consistent visual language throughout the app</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-xl font-bold mb-4">Accessibility Considerations</h4>
+          <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <li>Ensured WCAG 2.1 compliance across all screens and interactions</li>
+            <li>Optimized for screen readers with appropriate labels and landmarks</li>
+            <li>Maintained adequate color contrast for all text and interactive elements</li>
+            <li>Designed with multiple input methods in mind (touch, voice, switch devices)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-xl font-bold mb-4">User Experience Refinement</h4>
+          <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <li>Simplified profile creation to reduce onboarding friction</li>
+            <li>Enhanced navigation cues for seamless movement between sections</li>
+            <li>Streamlined checkout process with clear progress indicators</li>
+            <li>Developed intuitive order modification and customization options</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</AnimatedSection>
+
+      
+{/* Second Horizontal Image */}
+<AnimatedSection animation="fade-in" delay={200}>
+      <section className="px-4 sm:px-6 md:px-8 py-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
+              <img 
+                src={qs4} 
+                alt="QuickSnack Mobile Screen 1"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
+              <img 
+                src={qs5} 
+                alt="QuickSnack Mobile Screen 2"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="relative aspect-[9/19] max-w-[240px] md:max-w-[320px] mx-auto transition-transform duration-500 hover:scale-105">
+              <img 
+                src={qs6} 
+                alt="QuickSnack Mobile Screen 3"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      </AnimatedSection>
+
       {/* Usability Testing Section */}
       <AnimatedSection animation="fade-in" delay={200}>
         <section className="px-4 sm:px-6 md:px-8 py-24">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
-              <h3 className="text-2xl font-bold">2. Usability Testing</h3>
+              <h3 className="text-2xl font-bold">3. Usability Testing</h3>
               <p className="text-lg text-gray-300 leading-relaxed">
                 We employed several key performance indicators (KPIs) to measure success and guide our testing process.
               </p>
@@ -260,9 +350,6 @@ function QuickSnackPage() {
                 <div>
                   <h4 className="text-xl font-bold mb-4">Key Findings</h4>
                   <p className="text-gray-300 leading-relaxed mb-3">
-                    (Note: This section would be populated with actual results from your usability study)
-                  </p>
-                  <p className="text-gray-300 leading-relaxed mb-3">
                     Preliminary feedback areas to monitor:
                   </p>
                   <ul className="list-disc pl-6 space-y-2 text-gray-300">
@@ -283,7 +370,7 @@ function QuickSnackPage() {
         <section className="px-4 sm:px-6 md:px-8 py-24">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
-              <h3 className="text-2xl font-bold">3. Results & Impact</h3>
+              <h3 className="text-2xl font-bold">4. Results & Impact</h3>
               <p className="text-lg text-gray-300 leading-relaxed">
                 We implemented comprehensive measurements to track the success of QuickSnack.
               </p>
@@ -337,61 +424,6 @@ function QuickSnackPage() {
         </section>
       </AnimatedSection>
 
-      {/* Impact & Lessons Section */}
-      <AnimatedSection animation="fade-in" delay={200}>
-        <section className="px-4 sm:px-6 md:px-8 py-24">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              <h3 className="text-2xl font-bold">4. Lessons & Recommendations</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                The QuickSnack project provided valuable insights and demonstrated significant impact.
-              </p>
-
-              <div className="pl-6 border-l border-gray-700 space-y-8">
-                <div>
-                  <h4 className="text-xl font-bold mb-4">Recommendations</h4>
-                  <p className="text-gray-300 leading-relaxed mb-3">
-                    Potential areas for improvement might include:
-                  </p>
-                  <ol className="list-decimal pl-6 space-y-2 text-gray-300">
-                    <li>Streamlined profile creation</li>
-                    <li>Enhanced navigation cues</li>
-                    <li>Simplified checkout process</li>
-                    <li>Clear order modification options</li>
-                  </ol>
-                </div>
-
-                <div>
-                  <h4 className="text-xl font-bold mb-4">Impact & Results</h4>
-                  <p className="text-gray-300 leading-relaxed mb-3">
-                    Expected outcomes:
-                  </p>
-                  <ul className="list-disc pl-6 space-y-2 text-gray-300">
-                    <li>Reduced wait times</li>
-                    <li>Increased customer satisfaction</li>
-                    <li>Higher average order value</li>
-                    <li>Improved accessibility</li>
-                    <li>Enhanced user experience</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="text-xl font-bold mb-4">Lessons Learned</h4>
-                  <p className="text-gray-300 leading-relaxed mb-3">
-                    Key takeaways from the research process:
-                  </p>
-                  <ol className="list-decimal pl-6 space-y-2 text-gray-300">
-                    <li>Importance of diverse user testing</li>
-                    <li>Value of accessibility considerations</li>
-                    <li>Need for clear user flows</li>
-                    <li>Significance of post-task feedback</li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </AnimatedSection>
     </div>
   );
 }

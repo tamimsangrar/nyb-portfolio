@@ -13,21 +13,21 @@ const projects = [
   {
     id: 'sriram-emani',
     title: 'Sriram Emani',
-    description: 'Personal portfolio website design',
+    description: 'Digital portfolio for a versatile performer',
     image: se_logo,
     path: '/projects/uiux-design/sriram-emani'
   },
   {
     id: 'fortuna-insight',
     title: 'Fortuna Insight',
-    description: 'Financial analytics platform interface',
+    description: 'Website design for an AI-powered legal solutions app',
     image: fi_logo,
     path: '/projects/uiux-design/fortuna-insight'
   },
   {
     id: 'google-assistant',
     title: 'Google Assistant',
-    description: 'Voice interface design system',
+    description: 'Personalized wellness coach for Google Assistant',
     image: ga_logo,
     path: '/projects/uiux-design/google-assistant'
   },
@@ -48,7 +48,7 @@ const projects = [
   {
     id: 'promptcraft-ai',
     title: 'Promptcraft AI',
-    description: 'AI prompt engineering platform',
+    description: 'AI-powered design plugin',
     image: pc_logo,
     path: '/projects/uiux-design/promptcraft-ai'
   }

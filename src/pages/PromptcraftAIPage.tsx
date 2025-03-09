@@ -103,24 +103,75 @@ function PromptcraftAIPage() {
   </div>
 </section>
 </AnimatedSection>
+{/* Problem Statement & Solution Section */}
 <AnimatedSection animation="fade-in" delay={200}>
 <section className="px-4 sm:px-6 md:px-8 py-24">
   <div className="max-w-4xl mx-auto">
-    <div className="space-y-8">
-      <h3 className="text-2xl font-bold">Problem Statement</h3>
-      <p className="text-lg text-gray-300 leading-relaxed">
-        Designers face challenges in content creation, which is often time-consuming and detracts from their core focus on design. They need an efficient solution to generate contextually relevant content that seamlessly aligns with the project's tone and style, enabling them to enhance productivity and creativity.
-      </p>
-      
-      <div className="pl-6 border-l border-gray-700">
-        <h4 className="text-xl font-bold mb-4">Pain Points Analysis</h4>
-        <ul className="list-disc pl-6 space-y-2 text-gray-300">
-          <li>Time constraints in content creation</li>
-          <li>Consistency issues across projects</li>
-          <li>Creative blocks during writing</li>
-          <li>Workflow disruption switching between tools</li>
-        </ul>
+    <div className="space-y-20">
+      <div className="space-y-8">
+        <h3 className="text-2xl font-bold">Problem Statement</h3>
+        <p className="text-lg text-gray-300 leading-relaxed">
+          Designers frequently struggle with content creation, a task that can be time-consuming and distracts from their core design work. The objective was to create an AI-powered solution that seamlessly integrates with design software, allowing designers to generate high-quality, contextually relevant content without disrupting their creative workflow or switching between multiple tools.
+        </p>
       </div>
+
+      <div className="space-y-8">
+        <h3 className="text-2xl font-bold">Solution</h3>
+        <p className="text-lg text-gray-300 leading-relaxed">
+          The PromptcraftAI plugin delivers an intuitive content generation experience within design software, featuring:
+        </p>
+
+        <div className="pl-6 border-l border-gray-700 space-y-8">
+          <div>
+            <h4 className="text-xl font-bold mb-4">Contextual Content Generation</h4>
+            <p className="text-gray-300 leading-relaxed">
+              AI-powered suggestions based on design elements and project context.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-bold mb-4">Tone & Style Customization</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Adjustable parameters to match brand voice and communication goals.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-bold mb-4">Seamless Integration</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Native plugin experience within popular design software interfaces.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-bold mb-4">Version History</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Ability to save and revisit previous content iterations.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-bold mb-4">Learning Capabilities</h4>
+            <p className="text-gray-300 leading-relaxed">
+              AI that adapts to user preferences and improves suggestions over time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</AnimatedSection>
+      {/* Second Horizontal Image */}
+      <AnimatedSection animation="fade-in" delay={200}>
+      <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
+  <div className="max-w-7xl mx-auto">
+    <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-full sm:w-[60%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
+      <img 
+        src={pc2} 
+        alt="Promptcraft Prompt"
+        className="w-full h-auto object-contain rounded-3xl"
+      />
     </div>
   </div>
 </section>
@@ -130,7 +181,7 @@ function PromptcraftAIPage() {
       <section className="px-4 sm:px-6 md:px-8 py-24">
   <div className="max-w-4xl mx-auto">
     <div className="space-y-8">
-      <h3 className="text-2xl font-bold">1. Research & Discovery</h3>
+      <h3 className="text-2xl font-bold">1. Research & Analysis</h3>
       <p className="text-lg text-gray-300 leading-relaxed">
         Investigated designer pain points and content creation needs.
       </p>
@@ -160,41 +211,39 @@ function PromptcraftAIPage() {
   </div>
 </section>
 </AnimatedSection>
-      {/* Second Horizontal Image */}
+
+      {/* Feature Development Section */}
       <AnimatedSection animation="fade-in" delay={200}>
-      <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">
-  <div className="max-w-7xl mx-auto">
-    <div className="bg-[#000000] rounded-3xl border border-gray-800/50 w-full sm:w-[60%] mx-auto transform transition-transform duration-500 hover:scale-105 overflow-hidden">
-      <img 
-        src={pc2} 
-        alt="Promptcraft Prompt"
-        className="w-full h-auto object-contain rounded-3xl"
-      />
+<section className="px-4 sm:px-6 md:px-8 py-24">
+  <div className="max-w-4xl mx-auto">
+    <div className="space-y-8">
+      <h3 className="text-2xl font-bold">2. Design Process</h3>
+      <p className="text-lg text-gray-300 leading-relaxed">
+        Designed a comprehensive plugin experience with AI-powered features and intuitive interface design.
+      </p>
+
+      <div className="pl-6 border-l border-gray-700 space-y-8">
+        <div>
+          <h4 className="text-xl font-bold mb-4">Interface Design</h4>
+          <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <li>Designed intuitive plugin layout that respects native design tool aesthetics</li>
+            <li>Curated minimalist controls to prevent workflow disruption</li>
+            <li>Designed clear visual hierarchy for generation options</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-xl font-bold mb-4">User Experience Flow</h4>
+          <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <li>Streamlined content request process to three clicks or less</li>
+            <li>Designed intuitive content editing and refinement workflow</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 </AnimatedSection>
-      {/* Feature Development Section */}
-      <AnimatedSection animation="fade-in" delay={200}>
-      <section className="px-4 sm:px-6 md:px-8 py-24">
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold">2. Feature Development</h3>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Created core plugin functionality and interface.
-            </p>
-
-            <div className="pl-6 border-l border-gray-700">
-              <h4 className="text-xl font-bold mb-4">Key Features</h4>
-              <p className="text-gray-300 leading-relaxed">
-                Developed contextual content generation, customization options, version history, 
-                and design tool integration.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      </AnimatedSection>
       {/* Third Horizontal Image */}
       <AnimatedSection animation="fade-in" delay={200}>
       <section className="px-4 sm:px-6 md:px-8 mb-24 mt-36">

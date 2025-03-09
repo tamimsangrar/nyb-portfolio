@@ -1,8 +1,10 @@
 import React from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
+import StatCard from '../components/StatCard';
+import { History, TrendingUp, CheckCircle } from 'lucide-react';
 import ah_logo from '../images/headers/ah_logo.svg';
-import ah1 from "../images/AH/1.png";
-import ah2 from "../images/AH/2.png";
+import ah1 from "../images/AH/1.jpg";
+import ah2 from "../images/AH/2.jpg";
 import ah3 from "../images/AH/3.png";
 import ah4 from "../images/AH/4.png";
 
@@ -19,6 +21,12 @@ const galleryItems = [
   { image: ah3 },
   { image: ah4 }
 ];
+
+// Custom style for scroll indicator - more subtle gradient
+const scrollIndicatorStyle = {
+  WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0.85), black 15%, black 85%, rgba(0,0,0,0.85))',
+  maskImage: 'linear-gradient(to right, rgba(0,0,0,0.85), black 15%, black 85%, rgba(0,0,0,0.85))'
+};
 
 function AlmondHousePage() {
   return (
@@ -74,16 +82,14 @@ function AlmondHousePage() {
 
       {/* Gallery Section */}
       <section className="py-20">
-        <div className="overflow-hidden">
-          <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory no-scrollbar">
+        <div className="overflow-x-auto" style={scrollIndicatorStyle}>
+          <div className="flex justify-start md:justify-center gap-8 pb-8 min-w-max px-4 md:px-0">
             {galleryItems.map((item, index) => (
               <div 
                 key={index} 
-                className={`flex-shrink-0 w-[500px] h-[500px] ${index === 0 ? 'first:pl-8' : ''} ${
-                  index === galleryItems.length - 1 ? 'last:pr-8' : ''
-                }`}
+                className="flex-shrink-0 w-[250px] md:w-[500px] h-[250px] md:h-[500px]"
               >
-                <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-full h-full overflow-hidden">
+                <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-full h-full overflow-hidden transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl">
                   <div className="relative h-full w-full">
                     <img 
                       src={item.image} 
@@ -176,22 +182,32 @@ function AlmondHousePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 md:px-8">
-          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
-            <h3 className="text-5xl font-bold text-white/90">30+</h3>
-            <p className="text-white/70 mt-2">Years of Legacy</p>
+      <AnimatedSection animation="fade-in" delay={200}>
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <StatCard 
+                value={30} 
+                label="Years of Legacy" 
+                suffix="+" 
+                accentColor="#AB315C" // Purple color
+              />
+              <StatCard 
+                value={40} 
+                label="Brand Recognition Increase" 
+                suffix="%" 
+                accentColor="#F6DD76" // Orange color
+              />
+              <StatCard 
+                value={100} 
+                label="Platform Consistency" 
+                suffix="%" 
+                accentColor="#F29C38" // Teal color
+              />
+            </div>
           </div>
-          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
-            <h3 className="text-5xl font-bold text-white/90">40%</h3>
-            <p className="text-white/70 mt-2">Brand Recognition Increase</p>
-          </div>
-          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
-            <h3 className="text-5xl font-bold text-white/90">100%</h3>
-            <p className="text-white/70 mt-2">Platform Consistency</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </AnimatedSection>
     </div>
   );
 }

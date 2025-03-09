@@ -106,14 +106,54 @@ function StyleAIPage() {
 </section>
 </AnimatedSection>
 {/* Problem Statement Section */}
+{/* Problem Statement & Solution Section */}
 <AnimatedSection animation="fade-in" delay={200}>
 <section className="px-4 sm:px-6 md:px-8 py-24">
   <div className="max-w-4xl mx-auto">
-    <div className="space-y-8">
-      <h3 className="text-2xl font-bold">Problem Statement</h3>
-      <p className="text-lg text-gray-300 leading-relaxed">
-        People often struggle to style their existing clothes and make smart fashion purchases, leading to underused wardrobes and impulsive buying. StyleAI addresses these challenges by offering an intuitive, AI-driven styling assistant that provides outfit ideas and strategic shopping suggestions.
-      </p>
+    <div className="space-y-20">
+      <div className="space-y-8">
+        <h3 className="text-2xl font-bold">Problem Statement</h3>
+        <p className="text-lg text-gray-300 leading-relaxed">
+          Many people struggle to maximize their existing wardrobe and make informed fashion purchases, leading to underutilized clothes and impulsive buying decisions. The objective was to create an AI-driven styling solution that helps users efficiently plan outfits, enhance their fashion confidence, and make smarter shopping choices based on their personal style and existing wardrobe.
+        </p>
+      </div>
+
+      <div className="space-y-8">
+        <h3 className="text-2xl font-bold">Solution</h3>
+        <p className="text-lg text-gray-300 leading-relaxed">
+          The AI-powered StyleAI app delivers an intuitive styling experience with personalized fashion recommendations, featuring:
+        </p>
+
+        <div className="pl-6 border-l border-gray-700 space-y-8">
+          <div>
+            <h4 className="text-xl font-bold mb-4">Digital Wardrobe Management</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Simple cataloging system to organize and visualize all clothing items.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-bold mb-4">AI-Powered Outfit Generation</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Personalized outfit suggestions based on style preferences, occasions, and weather.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-bold mb-4">Style Community Integration</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Social features for sharing outfits and receiving feedback from fashion enthusiasts.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-bold mb-4">Personalized Style Journey</h4>
+            <p className="text-gray-300 leading-relaxed">
+              Evolving recommendations that learn from user preferences and fashion choices over time.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -123,7 +163,7 @@ function StyleAIPage() {
       <section className="px-4 sm:px-6 md:px-8 py-24">
   <div className="max-w-4xl mx-auto">
     <div className="space-y-8">
-      <h3 className="text-2xl font-bold">1. Research & Discovery</h3>
+      <h3 className="text-2xl font-bold">1. Research & Analysis</h3>
       <p className="text-lg text-gray-300 leading-relaxed">
         Conducted user research to understand fashion planning and shopping habits.
       </p>
@@ -236,7 +276,7 @@ function StyleAIPage() {
       <section className="px-4 sm:px-6 md:px-8 py-24">
   <div className="max-w-4xl mx-auto">
     <div className="space-y-8">
-      <h3 className="text-2xl font-bold">3. User Journey Highlights</h3>
+      <h3 className="text-2xl font-bold">3. User Research and Insights</h3>
       <p className="text-lg text-gray-300 leading-relaxed">
         Designed a seamless experience from onboarding to advanced feature usage.
       </p>

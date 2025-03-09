@@ -1,18 +1,21 @@
 import React from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
+import StatCard from '../components/StatCard';
 import se_header from '../images/headers/se_header.svg';
 import se1 from "../images/SE/1.png";
 import se2 from "../images/SE/2.png";
 import se3 from "../images/SE/3.png";
+// For icons
+import { TrendingUp, Clock, Share2 } from 'lucide-react';
 
-const skills = [
+const skills: string[] = [
   "UX Leadership",
   "Information Architecture",
   "Portfolio Website Design",
   "Brand Identity"
 ];
 
-function SriramEmaniPage() {
+const SriramEmaniPage: React.FC = () => {
   return (
     <div className="min-h-screen pt-24">
       {/* Header Section - Kept the same */}
@@ -35,7 +38,7 @@ function SriramEmaniPage() {
                   <h2 className="text-2xl text-gray-400">Challenge</h2>
                   <p className="text-lg text-gray-300 leading-relaxed mt-4">
                   Sriram sought our expertise to elevate his portfolio, showcasing his talents in acting, singing, and dance. 
-                  His goal: to boost visibility in Hollywood with a sleek, intuitive platform that highlights his achievements and resonates with industry professionals.
+                  His goal: Boost visibility in Hollywood with a sleek, intuitive website that highlights his achievements and resonates with industry professionals.
                   </p>
                 </div>
               </AnimatedSection>
@@ -55,8 +58,8 @@ function SriramEmaniPage() {
                 <div>
                   <h2 className="text-2xl text-gray-400">Outcome</h2>
                   <p className="text-lg text-gray-300 leading-relaxed mt-4 mb-8">
-                    Created an engaging portfolio that effectively communicates Sriram's diverse talents, 
-                    leading to increased industry visibility and new performance opportunities.
+                    Built an engaging portfolio that effectively communicates Sriram's diverse talents, 
+                    leading to increased industry visibility and potentially new performance opportunities.
                   </p>
                   <a 
                     href="https://www.sriramemani.com/" 
@@ -204,15 +207,11 @@ function SriramEmaniPage() {
   <div className="max-w-4xl mx-auto">
     <div className="space-y-8">
       <h3 className="text-2xl font-bold">3. Implementation and Results</h3>
-      <p className="text-lg text-gray-300 leading-relaxed">
-        Transformed strategy and design into a fully functional portfolio website.
-      </p>
-
       <div className="pl-6 border-l border-gray-700 space-y-8">
         <div>
           <h4 className="text-xl font-bold mb-4">Development Collaboration</h4>
           <p className="text-gray-300 leading-relaxed mb-3">
-            Worked closely with Sriram throughout the development process:
+            Worked closely with Sriram and the engineering team throughout the development process:
           </p>
           <ul className="list-disc pl-6 space-y-2 text-gray-300">
             <li>Incorporated his valuable insights at each stage</li>
@@ -235,22 +234,31 @@ function SriramEmaniPage() {
 
       {/* Stats Section */}
       <AnimatedSection animation="fade-in" delay={200}>
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 md:px-8">
-          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
-            <h3 className="text-5xl font-bold text-white/90">50%</h3>
-            <p className="text-white/70 mt-2">Increase in Inquiries</p>
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <StatCard 
+                value={40} 
+                label="Increase in Inquiries" 
+                prefix="+" 
+                accentColor="#AB315C" // Emerald color
+              />
+              <StatCard 
+                value={18} 
+                label="Average Time on Site" 
+                suffix=" min" 
+                prefix="" 
+                accentColor="#F6DD76" // Indigo color
+              />
+              <StatCard 
+                value={5} 
+                suffix=" " 
+                label="Average pages per visit" 
+                accentColor="#F29C38" // Pink color
+              />
+            </div>
           </div>
-          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
-            <h3 className="text-5xl font-bold text-white/90">35%</h3>
-            <p className="text-white/70 mt-2">Time on Site</p>
-          </div>
-          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
-            <h3 className="text-5xl font-bold text-white/90">40%</h3>
-            <p className="text-white/70 mt-2">Engagement Rate</p>
-          </div>
-        </div>
-      </section>
+        </section>
       </AnimatedSection>
     </div>
   );

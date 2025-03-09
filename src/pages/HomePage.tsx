@@ -93,9 +93,8 @@ function HomePage() {
 
         <div ref={introTextRef} className="max-w-3xl text-center px-4 sm:px-6 transition-all duration-300">
           <p className="text-lg sm:text-xl md:text-2xl leading-relaxed fade-in opacity-0" style={{ animationDelay: '1.2s' }}>
-            Hi, I'm Nayab — a designer who loves turning tricky problems into simple, human-centered solutions. 
-            With fresh ideas and a creative toolkit I've built through lots of practice, I'm all about creating 
-            digital experiences that stick with people.
+            Hi, I'm Nayab—a UX designer passionate about transforming complex challenges into intuitive, human-centered solutions. 
+            Driven by curiosity and creativity, and equipped with my creative toolkit, I build digital experiences that stick.
           </p>
         </div>
 

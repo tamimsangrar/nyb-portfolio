@@ -198,7 +198,7 @@ function GoogleAssistantPage() {
       <section className="px-4 sm:px-6 md:px-8 py-24">
   <div className="max-w-4xl mx-auto">
     <div className="space-y-8">
-      <h3 className="text-2xl font-bold">1. Research & Discovery</h3>
+      <h3 className="text-2xl font-bold">1. Research & Analysis</h3>
       <p className="text-lg text-gray-300 leading-relaxed">
         Analyzed current wellness tracking applications and voice assistant behaviors.
       </p>
@@ -268,7 +268,7 @@ function GoogleAssistantPage() {
       </AnimatedSection>
 
       {/* Implementation Section */}
-      <AnimatedSection animation="fade-in" delay={200}>
+      {/* <AnimatedSection animation="fade-in" delay={200}>
       <section className="px-4 sm:px-6 md:px-8 py-24">
   <div className="max-w-4xl mx-auto">
     <div className="space-y-8">
@@ -308,7 +308,7 @@ function GoogleAssistantPage() {
     </div>
   </div>
 </section>
-      </AnimatedSection>
+      </AnimatedSection> */}
       {/* Stats Section */}
       {/* <section className="py-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 md:px-8">

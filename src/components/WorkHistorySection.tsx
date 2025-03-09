@@ -21,7 +21,7 @@ const workHistory = [
     role: "UX and graphic designer",
     company: "Howl Digital",
     period: "Mumbai, India",
-    description: "Collaborated closely with the design and content teams as a multimedia designer, creating a range of visuals including web pages, social media posts, email campaigns, product labels, and menus. Notable clients included HRX, American Express, and Almond House."
+    description: "Collaborated closely with the design and content teams as a visual designer, creating a range of visuals including web pages, social media posts, email campaigns, product labels, and menus. Notable clients included HRX, American Express, and Almond House."
   },
   {
     id: 'freelance',
@@ -29,6 +29,13 @@ const workHistory = [
     company: "",
     period: "Mumbai, Vancouver",
     description: "During my free time and in-between roles, I took on freelance projects to explore new skills and areas of design. This work let me dive into creative projects I was genuinely passionate about, while continuously honing my abilities and expanding my expertise in a variety of fields."
+  },
+  {
+    id: 'fashion-designer',
+    role: "Fashion Designer",
+    company: "multiple boutique studios",
+    period: "Mumbai",
+    description: "In a previous life I was engrossed in building rich fashion experiences, from sketching and pattern making to fabric selection and garment construction. I worked with multiple boutique studios, where I honed my skills in creating unique, high-quality pieces that resonated with clients and the market."
   }
 ] as const;
 
@@ -99,7 +106,7 @@ export function WorkHistorySection() {
   return (
     <section className="min-h-screen bg-black px-4 sm:px-6 py-24">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 md:mb-16">Work Adventures</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 md:mb-16">Work Experience</h2>
         {workHistory.map((item) => (
           <WorkExperience key={item.id} {...item} />
         ))}

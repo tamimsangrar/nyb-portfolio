@@ -41,8 +41,9 @@ export function WorkWithMeSection() {
         {/* Description */}
         <AnimatedSection animation="slide-from-bottom" delay={400} className="mb-8 sm:mb-16">
           <p className="text-sm sm:text-lg md:text-xl leading-relaxed opacity-90">
-          I create designs that help your audience connect with you effortlessly, <br className="hidden sm:block"></br>
-          combining storytelling, sharp writing, and a true reflection of your unique identity.
+          I create designs that enable your audience to connect with you effortlessly. <br className="hidden sm:block"></br>
+          Integrating storytelling and a true reflection of your unique identity, <br className="hidden sm:block"></br>
+          I craft experiences that resonate deeply with your users.
           </p>
         </AnimatedSection>
 

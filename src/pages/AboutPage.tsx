@@ -51,24 +51,21 @@ function AboutPage() {
             <div className="space-y-8 text-base sm:text-lg leading-relaxed font-light text-white/90">
               <AnimatedSection animation="fade-in" delay={300}>
                 <p className="text-left">
-                A designer who traded fashion runways for user journeys - bringing five years of haute couture thinking 
-                to digital experiences. Armed with Figma, Adobe Suite, Sketch and a human-centered mindset, I transform 
-                complex problems into clean, intuitive experiences that users actually love to use.
+                I'm a designer who transitioned from fashion runways to user journeys, bringing five years of haute couture expertise into crafting exceptional digital experiences. 
+                Proficient in Figma, Adobe Suite, Sketch, and a deep commitment to human-centered design, I specialize in transforming complex challenges into seamless, intuitive solutions users genuinely enjoy.
                 </p>
               </AnimatedSection>
 
               <AnimatedSection animation="fade-in" delay={600}>
                 <p className="text-left">
-                My toolkit includes web and mobile app design, UI/UX, user research, information architecture, prototyping, and 
-                illustration - all with a strong emphasis on identity and accessibility. Recently moved to Seattle where the 
-                coffee is as strong as my passion for pixel-perfect designs.
+                My toolkit encompasses web and mobile app design, UI/UX, user research, information architecture, prototyping, and illustration—all grounded in strong principles of identity and accessibility. 
+                Recently relocated to Seattle, where my passion for creating pixel-perfect designs matches the strength of the local coffee.
                 </p>
               </AnimatedSection>
 
               <AnimatedSection animation="fade-in" delay={600}>
                 <p className="text-left">
-                Outside the design world (but let's be honest, everything is design), you'll find me writing on Substack, 
-                watching anime and cooking shows, playing video games, hiking, or plotting my next creative project.
+                Beyond design (though isn't everything design?), you'll often find me writing on Substack, binge-watching anime or cooking shows, gaming, exploring scenic hiking trails, or planning my next creative adventure.
                 </p>
               </AnimatedSection>
             </div>

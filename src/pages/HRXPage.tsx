@@ -1,5 +1,7 @@
 import React from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
+import StatCard from '../components/StatCard';
+import { Users, Award, Star } from 'lucide-react';
 import header from '../images/headers/HRX_logo.svg';
 import endurancePost from '../images/HRX/1.png';
 import achievementPost from '../images/HRX/2.png';
@@ -23,6 +25,12 @@ const galleryItems = [
   { image: marathonPost },
   { image: trackingPost }
 ];
+
+// Custom style for scroll indicator
+const scrollIndicatorStyle = {
+  WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0.85), black 15%, black 85%, rgba(0,0,0,0.85))',
+  maskImage: 'linear-gradient(to right, rgba(0,0,0,0.85), black 15%, black 85%, rgba(0,0,0,0.85))'
+};
 
 function HrxPage() {
   return (
@@ -78,16 +86,14 @@ function HrxPage() {
 
       {/* Gallery Section */}
       <section className="py-20 mt-24">
-        <div className="overflow-hidden">
-          <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory no-scrollbar">
+        <div className="overflow-x-auto" style={scrollIndicatorStyle}>
+          <div className="flex justify-start md:justify-center gap-8 pb-8 min-w-max px-4 md:px-0">
             {galleryItems.map((item, index) => (
               <div 
                 key={index} 
-                className={`flex-shrink-0 w-[500px] h-[500px] ${index === 0 ? 'first:pl-8' : ''} ${
-                  index === galleryItems.length - 1 ? 'last:pr-8' : ''
-                }`}
+                className={`flex-shrink-0 w-[250px] md:w-[500px] h-[250px] md:h-[500px]`}
               >
-                <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-full h-full overflow-hidden">
+                <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 w-full h-full overflow-hidden transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl">
                   <div className="relative h-full w-full">
                     <img 
                       src={item.image} 
@@ -110,7 +116,7 @@ function HrxPage() {
           <div className="space-y-20">
             {/* Research & Discovery */}
             <div className="space-y-8">
-              <h3 className="text-2xl font-bold">1. Research & Discovery</h3>
+              <h3 className="text-2xl font-bold">1. Research & Analysis</h3>
               <p className="text-lg text-gray-300 leading-relaxed">
                 When COVID-19 disrupted traditional marathons, we needed to understand how to 
                 translate the physical experience into a meaningful virtual event. I led a 
@@ -139,28 +145,9 @@ function HrxPage() {
               </div>
             </div>
 
-            {/* Design & Iteration */}
-            <div className="space-y-8">
-              <h3 className="text-2xl font-bold">2. Design & Iteration</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Based on our research insights, I developed a design strategy that focused 
-                on three key areas:
-              </p>
-
-              <div className="pl-6 border-l border-gray-700">
-                <h4 className="text-xl font-bold mb-4">User Experience Framework</h4>
-                <p className="text-gray-300 leading-relaxed">
-                  Created detailed user journey maps highlighting key touchpoints from 
-                  registration to completion. This helped identify potential pain points 
-                  and opportunities for engagement. I developed wireframes for critical 
-                  features like progress tracking and virtual achievement displays.
-                </p>
-              </div>
-            </div>
-
             {/* Implementation & Launch */}
             <div className="space-y-8">
-              <h3 className="text-2xl font-bold">3. Implementation & Launch</h3>
+              <h3 className="text-2xl font-bold">2. Implementation & Launch</h3>
               <p className="text-lg text-gray-300 leading-relaxed">
                 The implementation phase focused on bringing the design to life while 
                 maintaining user engagement:
@@ -191,22 +178,35 @@ function HrxPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 md:px-8">
-          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
-            <h3 className="text-5xl font-bold text-white/90">1,500+</h3>
-            <p className="text-white/70 mt-2">Active Participants</p>
+      <AnimatedSection animation="fade-in" delay={200}>
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <StatCard 
+                value={10500} 
+                label="Active Participants" 
+                suffix="+" 
+                prefix="" 
+                accentColor="#AB315C" // Blue color
+              />
+              <StatCard 
+                value={85} 
+                label="Completion Rate" 
+                suffix="%" 
+                prefix="" 
+                accentColor="#F6DD76" // Green color
+              />
+              <StatCard 
+                value={4.8} 
+                label="User Satisfaction" 
+                suffix="/5" 
+                prefix="" 
+                accentColor="#F29C38" // Amber color
+              />
+            </div>
           </div>
-          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
-            <h3 className="text-5xl font-bold text-white/90">80%</h3>
-            <p className="text-white/70 mt-2">Completion Rate</p>
-          </div>
-          <div className="bg-[#1C1C1C] rounded-3xl border border-gray-800/50 p-8 text-center">
-            <h3 className="text-5xl font-bold text-white/90">4.8/5</h3>
-            <p className="text-white/70 mt-2">User Satisfaction</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </AnimatedSection>
     </div>
   );
 }
