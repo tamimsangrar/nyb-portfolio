@@ -183,7 +183,7 @@ function HrxPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <StatCard 
-                value={10500} 
+                value={1500} 
                 label="Active Participants" 
                 suffix="+" 
                 prefix="" 

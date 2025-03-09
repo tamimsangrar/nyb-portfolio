@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
 import pixeplaylogo from "../images/headers/pixelplay.svg";
 import pp1 from "../images/Pixelplay/1.jpg";
@@ -10,7 +10,7 @@ import pp6 from "../images/Pixelplay/6.jpg";
 
 const FlipCard = ({ study }) => {
   return (
-    <div className="group min-w-[280px] sm:min-w-[340px] md:min-w-[500px] h-[400px] md:h-[600px] perspective">
+    <div className="group min-w-[280px] sm:min-w-[340px] md:min-w-[500px] h-[400px] md:h-[600px] perspective transition-transform duration-300 hover:scale-[1.02]">
       <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
         {/* Front */}
         <div className="absolute inset-0 backface-hidden">
@@ -32,7 +32,7 @@ const FlipCard = ({ study }) => {
               </div>
               <div>
                 <h2 className="text-lg md:text-2xl font-bold text-white/90 mb-1 md:mb-2">{study.title}</h2>
-                <h3 className="text-base md:text-lg text-white/70">{study.subtitle}</h3>
+                <h3 className="text-base md:text-lg text-white/70">{study.category || 'Experimental Design'}</h3>
               </div>
             </div>
             
@@ -47,18 +47,16 @@ const FlipCard = ({ study }) => {
             <div className="space-y-4 md:space-y-6">
               <div>
                 <h4 className="text-base md:text-lg font-medium text-white/80 mb-2 md:mb-3">Process</h4>
-                <ul className="space-y-2 md:space-y-3">
-                  {study.process.map((step, index) => (
-                    <li key={index} className="text-sm md:text-base text-white/70 flex items-center gap-2 md:gap-3">
-                      <span className="w-1 h-1 md:w-1.5 md:h-1.5 bg-white/30 rounded-full"></span>
-                      {step}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-sm md:text-base text-white/70">{study.process || 'Created through experimental techniques, focusing on pushing creative boundaries and exploring new digital art possibilities.'}</p>
               </div>
 
               <div>
-                <h4 className="text-base md:text-lg font-medium text-white/80 mb-2 md:mb-3">Impact</h4>
+                <h4 className="text-base md:text-lg font-medium text-white/80 mb-2 md:mb-3">Creative Challenge</h4>
+                <p className="text-sm md:text-base text-white/70">{study.challenge || 'Self-imposed challenges to explore new tools, techniques, and creative approaches outside of client constraints.'}</p>
+              </div>
+
+              <div>
+                <h4 className="text-base md:text-lg font-medium text-white/80 mb-2 md:mb-3">Design Impact</h4>
                 <p className="text-sm md:text-base text-white/70">{study.impact}</p>
               </div>
             </div>
@@ -72,72 +70,57 @@ const FlipCard = ({ study }) => {
 const caseStudies = [
   {
     id: 'eye-of-ra',
-    title: 'Visual Systems & Symbolism',
-    subtitle: 'Eye of Ra',
+    title: 'Eye of Ra',
+    category: 'Visual Symbolism',
     image: pp3,
     tools: ['Midjourney','Illustrator', 'Photoshop'],
-    process: [
-      'Creating the image, refining it for the final design',
-      'Sacred geometry principles in modern design',
-      'Pattern recognition in UI systems'
-    ],
-    impact: 'This exploration of sacred geometry enhanced my understanding of balance and symbolism in UI design. The principles learned were applied to create more harmonious icon systems and meaningful visual hierarchies in enterprise applications, resulting in a 25% improvement in user navigation efficiency.'
+    process: 'Created through blending traditional symbolism with modern digital techniques, exploring the intersection of ancient and contemporary visual language.',
+    challenge: 'Maintaining the integrity of historical symbolism while adding a contemporary digital interpretation.',
+    impact: 'The Eye of Ra project showcases my ability to blend traditional and modern design elements.'
   },
   {
     id: 'mosaic',
-    title: 'Typography & Motion',
-    subtitle: 'I am a mosaic',
+    title: 'I am a mosaic',
+    category: 'Typography Exploration',
     image: pp6,
     tools: ['Midjourney', 'Illustrator'],
-    process: [
-      'Static to dynamic typography',
-      'Color psychology in design',
-      'Animation in user experience'
-    ],
+    process: 'Developed through iterative exploration of circular typography patterns, gradually building complexity through layering techniques.',
+    challenge: 'Creating visual coherence while experimenting with unconventional typographic arrangements and movement.',
     impact: 'The experimentation with circular typography and motion led to innovative approaches in UI animation. These concepts were later implemented in micro-interactions for a client portfolio, increasing user engagement by 40% and reducing bounce rates by 15%.'
   },
   {
     id: 'digital-art',
-    title: 'Digital Art Experimentation',
-    subtitle: 'Beyond Boundaries',
+    title: 'Why am i here?',
+    category: 'Conceptual Digital Art',
     image: pp4,
     tools: ['Midjourney', 'After Effects', 'Photoshop'],
-    process: [
-      'Exploring new digital art techniques',
-      'Combining traditional and AI methods',
-      'Creating unique visual narratives'
-    ],
+    process: 'Explored existential themes through digital manipulation, combining AI-generated imagery with manual post-processing techniques.',
+    challenge: 'Translating abstract philosophical concepts into visually compelling imagery while maintaining emotional resonance.',
     impact: 'This experimental approach to digital art creation opened new possibilities in visual storytelling. The techniques developed were applied to a series of marketing campaigns, resulting in a 35% increase in audience engagement and creative recognition in the industry.'
   },
   {
     id: 'abstract-forms',
-    title: 'Abstract Form Studies',
-    subtitle: 'Shape Language',
+    title: 'Its not reality',
+    category: 'Abstract Composition',
     image: pp5,
     tools: ['Midjourney', 'Illustrator', 'Blender'],
-    process: [
-      'Developing abstract visual language',
-      'Form studies in 3D space',
-      'Color theory application'
-    ],
+    process: 'Built from fundamental shape studies, progressively adding complexity through 3D modeling and texture experimentation.',
+    challenge: 'Balancing compositional harmony with intentional visual tension to create compelling abstract forms.',
     impact: 'The abstract form studies contributed to a deeper understanding of shape language in UI design. These principles were implemented in a major app redesign project, improving user interface clarity by 45% according to user testing metrics.'
-  },
-  {
-    id: 'future-vision',
-    title: 'Future Vision Concepts',
-    subtitle: 'Tomorrow\'s Interface',
-    image: pp6,
-    tools: ['Midjourney', 'Figma', 'After Effects'],
-    process: [
-      'Conceptualizing future interfaces',
-      'Prototyping innovative interactions',
-      'Testing new design paradigms'
-    ],
-    impact: 'These forward-thinking concepts influenced the development of several innovative interface features. When implemented in client projects, they resulted in a 30% improvement in user task completion rates and received multiple design awards for innovation.'
   }
 ];
 
 function PixelPlayPage() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const containerRef = useRef(null);
+
+  const scroll = (scrollOffset) => {
+    if (containerRef.current) {
+      containerRef.current.scrollLeft += scrollOffset;
+      setScrollPosition(containerRef.current.scrollLeft);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-black">
       <section className="min-h-[60vh] md:min-h-[80vh] flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 px-4 sm:px-6 md:px-8 pt-16 md:pt-24">
@@ -162,8 +145,11 @@ function PixelPlayPage() {
       </section>
 
       <section className="px-4 sm:px-6 md:px-8 py-16 md:py-24">
-        <div className="max-w-[95vw] mx-auto">
-          <div className="flex overflow-x-auto gap-4 md:gap-8 pb-8 snap-x snap-mandatory hide-scrollbar">
+        <div className="relative max-w-[95vw] mx-auto">
+          <div 
+            ref={containerRef}
+            className="flex overflow-x-auto gap-4 md:gap-8 pb-8 snap-x snap-mandatory hide-scrollbar"
+          >
             {caseStudies.map((study, index) => (
               <AnimatedSection 
                 key={study.id} 

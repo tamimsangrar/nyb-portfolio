@@ -83,15 +83,31 @@ const Navigation = () => {
     }
   };
 
-  const NavLink = ({ to, children, className = '', onClick }) => (
-    <Link
-      to={to}
-      className={`hover:text-gray-300 transition-colors ${isActive(to) ? 'text-white' : 'text-gray-400'} ${className}`}
-      onClick={onClick}
-    >
-      {children}
-    </Link>
-  );
+  const NavLink = ({ to, children, className = '', onClick, external = false }) => {
+    if (external) {
+      return (
+        <a
+          href={to}
+          className={`hover:text-gray-300 transition-colors text-gray-400 ${className}`}
+          onClick={onClick}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {children}
+        </a>
+      );
+    }
+    
+    return (
+      <Link
+        to={to}
+        className={`hover:text-gray-300 transition-colors ${isActive(to) ? 'text-white' : 'text-gray-400'} ${className}`}
+        onClick={onClick}
+      >
+        {children}
+      </Link>
+    );
+  };
 
   return (
     <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50">
@@ -104,7 +120,11 @@ const Navigation = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8">
           {menuItems.main.map((item) => (
-            <NavLink key={item.path} to={item.path}>
+            <NavLink 
+              key={item.path} 
+              to={item.path}
+              external={item.external}
+            >
               {item.label}
             </NavLink>
           ))}
@@ -174,6 +194,12 @@ const Navigation = () => {
               ))}
             </div>
           </div>
+          <NavLink 
+            to="https://drive.google.com/your-resume-link"
+            external={true}
+          >
+            resume
+          </NavLink>
         </div>
 
         {/* Mobile Menu Button */}
@@ -202,6 +228,7 @@ const Navigation = () => {
             <NavLink
               key={item.path}
               to={item.path}
+              external={item.external}
               className="block py-3 text-lg"
               onClick={() => setIsOpen(false)}
             >
@@ -273,6 +300,15 @@ const Navigation = () => {
               {item.label}
             </NavLink>
           ))}
+          
+          <NavLink
+            to="https://drive.google.com/your-resume-link"
+            external={true}
+            className="block py-3 text-lg"
+            onClick={() => setIsOpen(false)}
+          >
+            resume
+          </NavLink>
         </div>
       </div>
     </nav>
