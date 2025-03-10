@@ -16,7 +16,6 @@ const scrollIndicatorStyle = {
 };
 
 const skills = [
-  "Collaboration",
   "Visual Design",
   "Social Media Content Creation",
   "Brand Identity Development"
@@ -57,7 +56,7 @@ function GappeVappePage() {
                   <h2 className="text-2xl text-gray-400">Challenge</h2>
                   <p className="text-lg text-gray-300 leading-relaxed mt-4">
                     Create a distinctive brand identity and social media presence for Almond House's 
-                    new snack sub-brand while maintaining connection to the parent brand.
+                    new snack sub-brand Gappe Vappe while maintaining connection to the parent brand.
                   </p>
                 </div>
               </AnimatedSection>
@@ -78,7 +77,7 @@ function GappeVappePage() {
                   <h2 className="text-2xl text-gray-400">Outcome</h2>
                   <p className="text-lg text-gray-300 leading-relaxed mt-4">
                     Successfully launched sub-brand with distinct identity, resulting in 45% increase 
-                    in social media engagement and 30% growth in snack category sales.
+                    in social media engagement and 30% growth in category sales.
                   </p>
                 </div>
               </AnimatedSection>
@@ -279,7 +278,8 @@ function GappeVappePage() {
               <StatCard 
                 value={10} 
                 label="Social Media Followers" 
-                suffix="K+" 
+                prefix="+" 
+                suffix="k"
                 accentColor="#F29C38" // Blue color
               />
             </div>

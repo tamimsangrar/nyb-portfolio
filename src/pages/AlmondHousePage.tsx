@@ -50,7 +50,7 @@ function AlmondHousePage() {
                   <h2 className="text-2xl text-gray-400">Challenge</h2>
                   <p className="text-lg text-gray-300 leading-relaxed mt-4">
                     Develop comprehensive brand guidelines for a 30-year legacy brand while maintaining 
-                    consistency across all platforms and strengthening the established image.
+                    consistency across all platforms and strengthening their established image.
                   </p>
                 </div>
               </AnimatedSection>
@@ -187,20 +187,22 @@ function AlmondHousePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <StatCard 
-                value={30} 
-                label="Years of Legacy" 
-                suffix="+" 
+                value={60} 
+                label="Engagement across platforms" 
+                prefix="+"
+                suffix="%" 
                 accentColor="#AB315C" // Purple color
               />
               <StatCard 
                 value={40} 
-                label="Brand Recognition Increase" 
-                suffix="%" 
+                label="Followers on social media"
+                prefix="+" 
+                suffix="k"
                 accentColor="#F6DD76" // Orange color
               />
               <StatCard 
-                value={100} 
-                label="Platform Consistency" 
+                value={30} 
+                label="Increase in brand awareness"
                 suffix="%" 
                 accentColor="#F29C38" // Teal color
               />

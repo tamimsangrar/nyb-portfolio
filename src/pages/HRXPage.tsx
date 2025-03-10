@@ -11,10 +11,10 @@ import marathonPost from '../images/HRX/5.png';
 import trackingPost from '../images/HRX/6.png';
 
 const skills = [
-  "Virtual Engagement",
+  "Interaction Design",
+  "Branding",
   "Social Media Strategy",
-  "Content Collaboration",
-  "Adaptability and Innovation"
+  "User Research"
 ];
 
 const galleryItems = [
@@ -127,7 +127,7 @@ function HrxPage() {
                 <div>
                   <h4 className="text-xl font-bold mb-4">User Research</h4>
                   <p className="text-gray-300 leading-relaxed">
-                    Conducted in-depth interviews with 20 regular marathon participants to 
+                    Conducted in-depth interviews with 40 regular marathon participants to 
                     understand their motivations, concerns, and what aspects of physical 
                     marathons they valued most. Key findings revealed that community 
                     engagement and progress tracking were essential elements.

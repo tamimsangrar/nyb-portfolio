@@ -278,7 +278,6 @@ function FortunaInsightPage() {
           <ul className="list-disc pl-6 space-y-2 text-gray-300">
             <li>Importance of clear communication when presenting complex features</li>
             <li>Value of consistent client collaboration throughout the design process</li>
-            <li>Balance between innovative design and professional credibility</li>
             <li>Effectiveness of iterative design in achieving client goals</li>
           </ul>
         </div>

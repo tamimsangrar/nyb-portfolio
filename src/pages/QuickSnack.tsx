@@ -10,9 +10,7 @@ import qs6 from "../images/QS/6.png";
 
 const skills = [
   "UX Design",
-  "Research and Analysis",
-  "Project Management",
-  "Technical Understanding"
+  "Research and Analysis"
 ];
 
 function QuickSnackPage() {
@@ -37,7 +35,7 @@ function QuickSnackPage() {
                 <div>
                   <h2 className="text-2xl text-gray-400">Challenge</h2>
                   <p className="text-lg text-gray-300 leading-relaxed mt-4">
-                  Eliminating long concession stand lines at theaters with QuickSnack—an accessible digital solution that streamlines ordering without disrupting operations, ensuring a seamless, trustworthy experience for all users.
+                  Eliminate long stand lines at theaters with QuickSnack - an accessible digital solution that streamlines ordering without disrupting operations, ensuring a seamless, trustworthy experience for all users.
                   </p>
                 </div>
               </AnimatedSection>
@@ -58,7 +56,7 @@ function QuickSnackPage() {
                   <h2 className="text-2xl text-gray-400">Outcomes</h2>
                   <p className="text-lg text-gray-300 leading-relaxed mt-4 mb-8">
                   QuickSnack proposes to transform the theater snack ordering experience with a seamless, inclusive digital solution. 
-                  It streamlines operations, improved inventory management, and creates a new digital revenue stream while enhancing convenience for moviegoers.
+                  It streamlines operations, improved inventory management while enhancing convenience for moviegoers.
                   </p>
                   <a 
                     href="#" 
@@ -129,7 +127,8 @@ function QuickSnackPage() {
       <div className="space-y-8">
         <h3 className="text-2xl font-bold">Problem Statement</h3>
         <p className="text-lg text-gray-300 leading-relaxed">
-          Movie-goers frequently encounter long wait times at theater concession stands, leading to missed movie moments, diminished customer satisfaction, and lost revenue opportunities for theaters. The objective was to create an accessible digital solution that streamlines the food ordering process without disrupting existing theater operations or excluding any customer segments.
+          Movie-goers frequently encounter long wait times at theater concession stands, leading to missed movie moments, diminished customer satisfaction, and lost revenue opportunities for theaters. 
+          The objective was to create an accessible digital solution that streamlines the food ordering process without disrupting existing theater operations or excluding any customer segments.
         </p>
       </div>
 
@@ -167,7 +166,6 @@ function QuickSnackPage() {
               Saved preferences and order history for faster future transactions.
             </p>
           </div>
-
           <div>
             <h4 className="text-xl font-bold mb-4">Theater Integration</h4>
             <p className="text-gray-300 leading-relaxed">
@@ -259,7 +257,6 @@ function QuickSnackPage() {
         <div>
           <h4 className="text-xl font-bold mb-4">Accessibility Considerations</h4>
           <ul className="list-disc pl-6 space-y-2 text-gray-300">
-            <li>Ensured WCAG 2.1 compliance across all screens and interactions</li>
             <li>Optimized for screen readers with appropriate labels and landmarks</li>
             <li>Maintained adequate color contrast for all text and interactive elements</li>
             <li>Designed with multiple input methods in mind (touch, voice, switch devices)</li>
@@ -272,7 +269,6 @@ function QuickSnackPage() {
             <li>Simplified profile creation to reduce onboarding friction</li>
             <li>Enhanced navigation cues for seamless movement between sections</li>
             <li>Streamlined checkout process with clear progress indicators</li>
-            <li>Developed intuitive order modification and customization options</li>
           </ul>
         </div>
       </div>
@@ -346,19 +342,6 @@ function QuickSnackPage() {
                     <li>Overall experience</li>
                   </ul>
                 </div>
-
-                <div>
-                  <h4 className="text-xl font-bold mb-4">Key Findings</h4>
-                  <p className="text-gray-300 leading-relaxed mb-3">
-                    Preliminary feedback areas to monitor:
-                  </p>
-                  <ul className="list-disc pl-6 space-y-2 text-gray-300">
-                    <li>Profile creation complexity</li>
-                    <li>Navigation intuitiveness</li>
-                    <li>Checkout process clarity</li>
-                    <li>Overall app learnability</li>
-                  </ul>
-                </div>
               </div>
             </div>
           </div>
@@ -411,8 +394,6 @@ function QuickSnackPage() {
                     The application was designed with accessibility in mind:
                   </p>
                   <ul className="list-disc pl-6 space-y-2 text-gray-300">
-                    <li>Screen reader compatibility</li>
-                    <li>Switch device support</li>
                     <li>Clear navigation patterns</li>
                     <li>Adequate contrast ratios</li>
                     <li>Inclusive design principles</li>

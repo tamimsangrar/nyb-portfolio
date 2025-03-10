@@ -59,7 +59,7 @@ function StyleAIPage() {
                 <div>
                   <h2 className="text-2xl text-gray-400">Outcome</h2>
                   <p className="text-lg text-gray-300 leading-relaxed mt-4 mb-8">
-                    Developed an intuitive styling assistant that combines AI technology with user-friendly 
+                    Developed an intuitive styling assistant that combines AI with user-friendly 
                     features to help users maximize their wardrobes and make informed fashion choices.
                   </p>
                   <a 
@@ -114,7 +114,8 @@ function StyleAIPage() {
       <div className="space-y-8">
         <h3 className="text-2xl font-bold">Problem Statement</h3>
         <p className="text-lg text-gray-300 leading-relaxed">
-          Many people struggle to maximize their existing wardrobe and make informed fashion purchases, leading to underutilized clothes and impulsive buying decisions. The objective was to create an AI-driven styling solution that helps users efficiently plan outfits, enhance their fashion confidence, and make smarter shopping choices based on their personal style and existing wardrobe.
+          Many people struggle to maximize their existing wardrobe and make informed fashion purchases, leading to underutilized clothes and impulsive buying decisions. 
+          The objective was to create an AI-driven styling solution that helps users efficiently plan outfits, enhance their fashion confidence, and make smarter shopping choices based on their personal style and existing wardrobe.
         </p>
       </div>
 
@@ -213,20 +214,9 @@ function StyleAIPage() {
             <li>Created streamlined onboarding with style quiz</li>
             <li>Developed intuitive wardrobe digitization process</li>
             <li>Designed AI-powered outfit suggestion system</li>
-            <li>Implemented social sharing and community features</li>
+            <li>Designed social sharing and community features</li>
           </ul>
         </div>
-
-        <div>
-          <h4 className="text-xl font-bold mb-4">AI Integration</h4>
-          <ul className="list-disc pl-6 space-y-2 text-gray-300">
-            <li>Designed AI algorithms for style matching</li>
-            <li>Created personalized recommendation engine</li>
-            <li>Implemented weather-based outfit suggestions</li>
-            <li>Developed smart shopping recommendations</li>
-          </ul>
-        </div>
-
         <div>
           <h4 className="text-xl font-bold mb-4">Interface Design</h4>
           <ul className="list-disc pl-6 space-y-2 text-gray-300">
@@ -291,18 +281,6 @@ function StyleAIPage() {
             <li><span className="font-semibold">Social Engagement:</span> Users can share and receive feedback on outfits within the StyleAI community.</li>
             <li><span className="font-semibold">Advanced Features:</span> Tools like AI chatbot deepen engagement and confidence in styling choices.</li>
           </ol>
-        </div>
-
-        <div>
-          <h4 className="text-xl font-bold mb-4">User Insights</h4>
-          <p className="text-gray-300 leading-relaxed mb-3">
-            After conducting surveys and interviews with users aged 18-45, we found that:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-gray-300">
-            <li>65% shop monthly but feel they don't maximize their wardrobe.</li>
-            <li>55% struggle with outfit creation.</li>
-            <li>Many desire personalized guidance without extensive effort.</li>
-          </ul>
         </div>
       </div>
     </div>

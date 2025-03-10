@@ -10,8 +10,7 @@ const skills = [
   "Voice UI Design",
   "UX Design",
   "UX Research",
-  "Prototyping",
-  "Usability Testing"
+  "Prototyping"
 ];
 
 function GoogleAssistantPage() {
@@ -36,7 +35,7 @@ function GoogleAssistantPage() {
                 <div>
                   <h2 className="text-2xl text-gray-400">Challenge</h2>
                   <p className="text-lg text-gray-300 leading-relaxed mt-4">
-                    Create a hands-free, personalized wellness solution that integrates with users' daily 
+                    Create a personalized wellness solution that integrates with users' daily 
                     routines using Google Assistant's voice and AI capabilities, eliminating the need for 
                     manual tracking.
                   </p>
@@ -112,7 +111,8 @@ function GoogleAssistantPage() {
       <div className="space-y-8">
         <h3 className="text-2xl font-bold">Problem Statement</h3>
         <p className="text-lg text-gray-300 leading-relaxed">
-          Maintaining healthy habits is challenging for busy individuals, and existing wellness apps often require time-consuming manual inputs. The objective was to create a hands-free, personalised wellness solution that fits into users' routines without requiring significant effort, using Google Assistant's voice and AI capabilities.
+          Maintaining healthy habits is challenging for busy individuals, and existing wellness apps often require time-consuming manual inputs. 
+          The objective was to create a hands-free, personalised wellness solution that fits into users' routines without requiring significant effort, using Google Assistant's voice and AI capabilities.
         </p>
       </div>
 
@@ -141,20 +141,6 @@ function GoogleAssistantPage() {
             <h4 className="text-xl font-bold mb-4">Personalized Suggestions</h4>
             <p className="text-gray-300 leading-relaxed">
               Wellness tips triggered by user behavior and routines.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="text-xl font-bold mb-4">Consistent Experience</h4>
-            <p className="text-gray-300 leading-relaxed">
-              A unified design across devices, from phones to smart displays.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="text-xl font-bold mb-4">User-Friendly Onboarding</h4>
-            <p className="text-gray-300 leading-relaxed">
-              Simple setup to personalize goals and connect devices.
             </p>
           </div>
         </div>
@@ -200,7 +186,7 @@ function GoogleAssistantPage() {
     <div className="space-y-8">
       <h3 className="text-2xl font-bold">1. Research & Analysis</h3>
       <p className="text-lg text-gray-300 leading-relaxed">
-        Analyzed current wellness tracking applications and voice assistant behaviors.
+        Analyzed current wellness tracking apps and voice assistant behaviors.
       </p>
 
       <div className="pl-6 border-l border-gray-700 space-y-8">
@@ -220,8 +206,7 @@ function GoogleAssistantPage() {
         <div>
           <h4 className="text-xl font-bold mb-4">User Needs Analysis</h4>
           <ul className="list-disc pl-6 space-y-2 text-gray-300">
-            <li>Users want hands-free tracking options during busy routines</li>
-            <li>Privacy is a major concern with health data</li>
+            <li>Users want convenient tracking options for busy routines</li>
             <li>Personalization is crucial for maintaining engagement</li>
             <li>Simple, actionable insights are preferred over complex data</li>
           </ul>
@@ -248,7 +233,6 @@ function GoogleAssistantPage() {
             <li>Created minimalist visual design aligned with Google's Material Design</li>
             <li>Developed clear data visualization patterns for tracking progress</li>
             <li>Designed conversational UI flows for voice interactions</li>
-            <li>Implemented consistent experience across devices</li>
           </ul>
         </div>
 

@@ -36,7 +36,7 @@ function PromptcraftAIPage() {
                 <div>
                   <h2 className="text-2xl text-gray-400">Challenge</h2>
                   <p className="text-lg text-gray-300 leading-relaxed mt-4">
-                    Create an AI writing assistant plugin that seamlessly integrates with design software 
+                    Create an AI writing assistant plugin that seamlessly integrates with Figma 
                     to help designers generate high-quality content without disrupting their workflow.
                   </p>
                 </div>
@@ -57,7 +57,7 @@ function PromptcraftAIPage() {
                 <div>
                   <h2 className="text-2xl text-gray-400">Outcome</h2>
                   <p className="text-lg text-gray-300 leading-relaxed mt-4 mb-8">
-                    Developed a user-friendly plugin that streamlines content creation within design tools, 
+                    Designed a user-friendly plugin that streamlines content creation within design tools, 
                     featuring AI-powered suggestions and customization options.
                   </p>
                   <a 
@@ -111,7 +111,8 @@ function PromptcraftAIPage() {
       <div className="space-y-8">
         <h3 className="text-2xl font-bold">Problem Statement</h3>
         <p className="text-lg text-gray-300 leading-relaxed">
-          Designers frequently struggle with content creation, a task that can be time-consuming and distracts from their core design work. The objective was to create an AI-powered solution that seamlessly integrates with design software, allowing designers to generate high-quality, contextually relevant content without disrupting their creative workflow or switching between multiple tools.
+          Designers frequently struggle with content creation, a task that can be time-consuming and distracts from their core design work. 
+          The objective was to create an AI-powered solution that seamlessly integrates with design software, allowing designers to generate high-quality, contextually relevant content without disrupting their workflow or switching between multiple tools.
         </p>
       </div>
 
@@ -135,25 +136,10 @@ function PromptcraftAIPage() {
               Adjustable parameters to match brand voice and communication goals.
             </p>
           </div>
-
-          <div>
-            <h4 className="text-xl font-bold mb-4">Seamless Integration</h4>
-            <p className="text-gray-300 leading-relaxed">
-              Native plugin experience within popular design software interfaces.
-            </p>
-          </div>
-
           <div>
             <h4 className="text-xl font-bold mb-4">Version History</h4>
             <p className="text-gray-300 leading-relaxed">
               Ability to save and revisit previous content iterations.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="text-xl font-bold mb-4">Learning Capabilities</h4>
-            <p className="text-gray-300 leading-relaxed">
-              AI that adapts to user preferences and improves suggestions over time.
             </p>
           </div>
         </div>
@@ -290,7 +276,7 @@ function PromptcraftAIPage() {
         <div>
           <h4 className="text-xl font-bold mb-4">Outcome</h4>
           <p className="text-gray-300 leading-relaxed">
-            This project enhanced user productivity by allowing designers to quickly generate on-brand content, leading to faster project completion and improved consistency across designs.
+            This project can potentially enhance user productivity by allowing designers to quickly generate on-brand content, leading to faster project completion and improved consistency across designs.
           </p>
         </div>
       </div>
