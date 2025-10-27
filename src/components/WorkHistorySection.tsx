@@ -11,14 +11,14 @@ const workHistory = [
  
   {
     id: 'aiolos',
-    role: "UX designer",
+    role: "UX Intern",
     company: "Aiolos Cloud",
     period: "Mumbai, India",
-    description: "Led the conceptualization and development of visual strategies, aligning designs with project objectives and stakeholder expectations. Developed comprehensive brand guidelines to ensure a cohesive and consistent visual identity across all elements. Recognized for expertise in organizing information architecture across multiple projects."
+    description: "Helped lead the conceptualization and development of visual strategies, aligning designs with project objectives and stakeholder expectations. Developed comprehensive brand guidelines to ensure a cohesive and consistent visual identity across all elements. Recognized for expertise in organizing information architecture across multiple projects."
   },
   {
     id: 'howl',
-    role: "UX and graphic designer",
+    role: "Graphic designer",
     company: "Howl Digital",
     period: "Mumbai, India",
     description: "Collaborated closely with the design and content teams as a visual designer, creating a range of visuals including web pages, social media posts, email campaigns, product labels, and menus. Notable clients included HRX, American Express, and Almond House."
