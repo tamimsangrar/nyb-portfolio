@@ -14,9 +14,7 @@ const workHistory = [
     role: "UX Designer",
     company: "Aiolos Cloud",
     period: "Seattle, WA",
-    description: "Led visual strategy development for Fortune 500 clients and venture-backed AI startups. Created 50+ marketing assets including pitch decks and product one-pagers that supported $250K in enterprise sales pipeline. Built comprehensive brand identity systems and designed data visualizations for 10+ enterprise clients. Collaborated cross-functionally with engineers and stakeholders to translate complex technical concepts into clear visual solutions.
-
-"
+    description: "Led visual strategy development for Fortune 500 clients and venture-backed AI startups. Created 50+ marketing assets including pitch decks and product one-pagers that supported $250K in enterprise sales pipeline. Built comprehensive brand identity systems and designed data visualizations for 10+ enterprise clients. Collaborated cross-functionally with engineers and stakeholders to translate complex technical concepts into clear visual solutions."
   },
   {
     id: 'howl',
