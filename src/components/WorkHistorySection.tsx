@@ -11,31 +11,33 @@ const workHistory = [
  
   {
     id: 'aiolos',
-    role: "UX Intern",
+    role: "UX Designer",
     company: "Aiolos Cloud",
-    period: "Mumbai, India",
-    description: "Helped lead the conceptualization and development of visual strategies, aligning designs with project objectives and stakeholder expectations. Developed comprehensive brand guidelines to ensure a cohesive and consistent visual identity across all elements. Recognized for expertise in organizing information architecture across multiple projects."
+    period: "Seattle, WA",
+    description: "Led visual strategy development for Fortune 500 clients and venture-backed AI startups. Created 50+ marketing assets including pitch decks and product one-pagers that supported $250K in enterprise sales pipeline. Built comprehensive brand identity systems and designed data visualizations for 10+ enterprise clients. Collaborated cross-functionally with engineers and stakeholders to translate complex technical concepts into clear visual solutions.
+
+"
   },
   {
     id: 'howl',
-    role: "Graphic designer",
+    role: "Graphic and UX Designer",
     company: "Howl Digital",
     period: "Mumbai, India",
-    description: "Collaborated closely with the design and content teams as a visual designer, creating a range of visuals including web pages, social media posts, email campaigns, product labels, and menus. Notable clients included HRX, American Express, and Almond House."
+    description: "Produced 200+ digital ads, social media content, and print collateral for global brands including HRX, American Express, and Almond House. Generated 2M+ impressions and drove 25% CTR growth through data-driven design strategies. Developed 6 campaign style guides and reduced development time by 30% through efficient prototyping workflows."
   },
   {
     id: 'freelance',
     role: "Freelance UX Designer",
     company: "",
-    period: "Mumbai, Vancouver",
-    description: "During my free time and in-between roles, I took on freelance projects to explore new skills and areas of design. This work let me dive into creative projects I was genuinely passionate about, while continuously honing my abilities and expanding my expertise in a variety of fields."
+    period: "Seattle, Vancouver",
+    description: "During my free time and in-between roles, I am open to take on projects as a freelancer to explore new skills and areas of design. This work lets me dive into creative projects I am passionate about, while continuously honing my abilities and expanding my expertise in a variety of expertise."
   },
   {
     id: 'fashion-designer',
     role: "Fashion Designer",
-    company: "multiple boutique studios",
+    company: "Private Couture Label",
     period: "Mumbai",
-    description: "In a previous life I was engrossed in building rich fashion experiences, from sketching and pattern making to fabric selection and garment construction. I worked with multiple boutique studios, where I honed my skills in creating unique, high-quality pieces that resonated with clients and the market."
+    description: "In a previous life I was engrossed in building rich fashion experiences, from sketching and pattern making to fabric selection and garment construction. I worked with a private couture label, where I honed my skills in creating unique, high-quality pieces that resonated with clients and the market."
   }
 ] as const;
 
